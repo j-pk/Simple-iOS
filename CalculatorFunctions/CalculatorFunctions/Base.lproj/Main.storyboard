@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E11f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="CalculatorFunctions" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="700"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qM1-xk-FM7">
+                                <rect key="frame" x="145" y="277" width="110" height="88"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.4549019608" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="K95-vG-cea"/>
+                                </constraints>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedButton1:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hQj-LC-k5t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36k-mh-WTZ">
+                                <rect key="frame" x="26" y="277" width="109" height="88"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.4549019608" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="FRY-eR-RoU"/>
+                                </constraints>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedButton1:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JmJ-0K-9Af"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rq7-ke-PVf">
+                                <rect key="frame" x="34" y="397" width="141" height="119"/>
+                                <color key="backgroundColor" red="0.60392156860000001" green="0.60784313729999995" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="operatorPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hdO-Oa-JVm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ri-2h-TaP">
+                                <rect key="frame" x="34" y="524" width="141" height="119"/>
+                                <color key="backgroundColor" red="0.60392156860000001" green="0.60784313729999995" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="operatorPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="skY-UD-jjb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apQ-mk-Vqw">
+                                <rect key="frame" x="188" y="397" width="141" height="119"/>
+                                <color key="backgroundColor" red="0.60392156860000001" green="0.60784313729999995" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="=">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="operatorPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Cj4-Ql-e7i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0u-iC-X3y">
+                                <rect key="frame" x="263" y="277" width="109" height="88"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.4549019608" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="ift-uV-iMj"/>
+                                </constraints>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedButton1:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Zvy-Bc-fNt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmY-Af-Frt">
+                                <rect key="frame" x="188" y="524" width="141" height="119"/>
+                                <color key="backgroundColor" red="0.60392156860000001" green="0.60784313729999995" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="/">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="operatorPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Muf-ZA-mjQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qM1-xk-FM7" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="II9-S9-uUz"/>
+                            <constraint firstItem="qM1-xk-FM7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="257" id="KMe-S3-gNJ"/>
+                            <constraint firstItem="N0u-iC-X3y" firstAttribute="leading" secondItem="qM1-xk-FM7" secondAttribute="trailing" constant="8" symbolic="YES" id="NcB-wp-4nR"/>
+                            <constraint firstItem="qM1-xk-FM7" firstAttribute="leading" secondItem="36k-mh-WTZ" secondAttribute="trailing" constant="10" id="ZjT-7a-wBD"/>
+                            <constraint firstItem="N0u-iC-X3y" firstAttribute="baseline" secondItem="qM1-xk-FM7" secondAttribute="baseline" id="ZoW-RZ-4j5"/>
+                            <constraint firstItem="qM1-xk-FM7" firstAttribute="width" secondItem="N0u-iC-X3y" secondAttribute="width" id="aGM-9j-9nj"/>
+                            <constraint firstItem="36k-mh-WTZ" firstAttribute="width" secondItem="qM1-xk-FM7" secondAttribute="width" id="brO-LM-14h"/>
+                            <constraint firstItem="36k-mh-WTZ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="257" id="ldX-8x-EXt"/>
+                            <constraint firstItem="36k-mh-WTZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="v4E-2W-Tnq"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="700"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

@@ -13,6 +13,9 @@
 		C05B1FD91AF7F3D0006A23C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C05B1FD81AF7F3D0006A23C5 /* Images.xcassets */; };
 		C05B1FDC1AF7F3D0006A23C5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05B1FDA1AF7F3D0006A23C5 /* LaunchScreen.xib */; };
 		C05B1FE81AF7F3D0006A23C5 /* SimpleButtonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05B1FE71AF7F3D0006A23C5 /* SimpleButtonsTests.swift */; };
+		C0DD5C1D1AF8094400B80E95 /* Divide Filled-50.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0DD5C1C1AF8094400B80E95 /* Divide Filled-50.jpg */; };
+		C0DD5C1F1AF80BB700B80E95 /* Divide.png in Resources */ = {isa = PBXBuildFile; fileRef = C0DD5C1E1AF80BB700B80E95 /* Divide.png */; };
+		C0DD5C211AF811AF00B80E95 /* plusminus.png in Resources */ = {isa = PBXBuildFile; fileRef = C0DD5C201AF811AF00B80E95 /* plusminus.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		C05B1FE11AF7F3D0006A23C5 /* SimpleButtonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleButtonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C05B1FE61AF7F3D0006A23C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C05B1FE71AF7F3D0006A23C5 /* SimpleButtonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleButtonsTests.swift; sourceTree = "<group>"; };
+		C0DD5C1C1AF8094400B80E95 /* Divide Filled-50.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Divide Filled-50.jpg"; path = "../../../../Downloads/Divide Filled-50.jpg"; sourceTree = "<group>"; };
+		C0DD5C1E1AF80BB700B80E95 /* Divide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Divide.png; path = ../../../../Downloads/Divide.png; sourceTree = "<group>"; };
+		C0DD5C201AF811AF00B80E95 /* plusminus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plusminus.png; path = ../../../../Downloads/plusminus.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,9 @@
 			children = (
 				C05B1FD51AF7F3D0006A23C5 /* Main.storyboard */,
 				C05B1FD81AF7F3D0006A23C5 /* Images.xcassets */,
+				C0DD5C201AF811AF00B80E95 /* plusminus.png */,
+				C0DD5C1E1AF80BB700B80E95 /* Divide.png */,
+				C0DD5C1C1AF8094400B80E95 /* Divide Filled-50.jpg */,
 				C05B1FDA1AF7F3D0006A23C5 /* LaunchScreen.xib */,
 				C05B1FD01AF7F3D0006A23C5 /* Info.plist */,
 			);
@@ -192,8 +201,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0DD5C1F1AF80BB700B80E95 /* Divide.png in Resources */,
 				C05B1FD71AF7F3D0006A23C5 /* Main.storyboard in Resources */,
+				C0DD5C211AF811AF00B80E95 /* plusminus.png in Resources */,
 				C05B1FDC1AF7F3D0006A23C5 /* LaunchScreen.xib in Resources */,
+				C0DD5C1D1AF8094400B80E95 /* Divide Filled-50.jpg in Resources */,
 				C05B1FD91AF7F3D0006A23C5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +355,7 @@
 				INFOPLIST_FILE = SimpleButtons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -353,6 +366,7 @@
 				INFOPLIST_FILE = SimpleButtons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -409,6 +423,7 @@
 				C05B1FED1AF7F3D0006A23C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C05B1FEE1AF7F3D0006A23C5 /* Build configuration list for PBXNativeTarget "SimpleButtonsTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +432,7 @@
 				C05B1FF01AF7F3D0006A23C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
