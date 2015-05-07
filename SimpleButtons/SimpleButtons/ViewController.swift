@@ -17,12 +17,18 @@ class ViewController: UIViewController {
     var currentOperator = ""
     var percentNumber: Double = 0.01
     
-    
+    //This clears the label, AC Button
     @IBAction func clearButton(sender: UIButton) {
 
           printValue.text = "\(value)"
     }
+    @IBAction func decimalPressed(sender: UIButton) {
+        
+        printValue.text = "\(firstNumber)" + "."
+        
+    }
     
+    //This is registering the value of the first and second button pressed
     @IBAction func pressedButton1(sender: UIButton) {
         //sender is an arguement, UIButton is an object
         
@@ -43,20 +49,27 @@ class ViewController: UIViewController {
         
     }
     
+    //This is my partially working value changer for int
     @IBAction func plusMinus(sender: UIButton) {
         
         if firstNumber > 0
         {
             firstNumber = firstNumber * -1
             printValue.text = "\(firstNumber)"
+            println(firstNumber)
         }
+        
         if firstNumber < 0
         {
+            firstNumber = firstNumber * 1
             printValue.text = "\(firstNumber)"
+            println(firstNumber)
         }
         
     }
-
+    
+    //This is my partially working percent or mutliplying a value to 0.01
+    //Let is a static variable
     @IBAction func percentButton(sender: UIButton) {
         
         let value = Double(firstNumber) * percentNumber
@@ -65,6 +78,7 @@ class ViewController: UIViewController {
         
     }
     
+    //This is a switch for operator functionality - THIS IS A CONDITIONAL
     @IBAction func operatorPressed(sender: UIButton) {
         
         let operation = sender.currentTitle!
@@ -87,6 +101,7 @@ class ViewController: UIViewController {
                 
                 println("\(firstNumber) \(currentOperator) \(secondNumber) = \(value)")
                 
+                //In order to clear out the calculator this loop? is needed for each operator 
                 firstNumber = 0
                 secondNumber = 0
                 currentOperator = ""
@@ -115,7 +130,7 @@ class ViewController: UIViewController {
                 currentOperator = ""
                 printValue.text = "\(value)"
                 
-                            case "x":
+            case "x":
                 //do division
                 let value = Double(firstNumber) * Double(secondNumber)
                 
