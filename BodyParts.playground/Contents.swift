@@ -36,7 +36,7 @@ class Mouth: Head {
 
     //properties
     var lipsColor: UIColor!
-    var teethCount: Int!
+    var teethCount: Int
 
     var badBreath: Bool = false
     var fullOfFood: Bool = false
@@ -83,6 +83,11 @@ class Cheeks: Head {
     func beard() {
         //bearded
     }
+    //calling a property
+    var mySmile = Mouth(teeth: 3, lips: <#UIColor#>.blueColor())
+    myBeardSmile.badbreath = true
+    myBeardMouth.fullOfFood = false
+
     
 
 class Eye: Head {
@@ -203,6 +208,11 @@ class LeftArm: Arm {
     func saluteDude() {
         //salute someone or something
     }
+    var myRightA = Arm()
+    myRightA.strongArm = true
+    myRightA.hairyArm = false
+    myRightA.longArm = true
+    myRightA.watchArm = false
     
 }
 
