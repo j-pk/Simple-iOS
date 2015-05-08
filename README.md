@@ -6,7 +6,7 @@ _Leveraging various examples of Swift code to show developmental knowledge overt
 
 ##Simple 
 
-**HackBack** example of codes that randomize color, object shape, opacity, and rotation. 
+**HackBack** example of code that randomize color, object shape, opacity, and rotation. 
 
  - Still working on rotation 
 
