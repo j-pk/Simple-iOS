@@ -32,6 +32,7 @@ class Head: BodyParts {
     
 }
 //class
+//mouth is a subclass of head 
 class Mouth: Head {
 
     //properties
@@ -391,6 +392,6 @@ class RightFoot: Legs {
 //var rightA = RightArm()
 //rightA.strongArm = true
 
-
+}
 
 

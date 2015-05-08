@@ -6,6 +6,10 @@ _Leveraging various examples of Swift code to show developmental knowledge overt
 
 ##Simple 
 
+**HackBack** example of codes that randomize color, object shape, opacity, and rotation. 
+
+ - Still working on rotation 
+
 **Body Parts** is a playground and our second assignment. 
 
   - Make a Class BodyParts
@@ -22,11 +26,11 @@ _Leveraging various examples of Swift code to show developmental knowledge overt
 - Label displays value 
 - Clear button removes value 
 
-Bugs
+ - Bugs
 
-- % function partially works, I think it's my math on this one. 
-- Switching sign (+/-) partially working, again likely my math and code. 
+		- % function partially works, I think it's my math on this one. 
+		- Switching sign (+/-) partially working, again likely my math and code. 
 
-Todo 
+  - Todo 
 
-- Add decimal functionality 
+		- Add decimal functionality 
