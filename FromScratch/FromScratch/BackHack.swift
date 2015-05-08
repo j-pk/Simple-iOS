@@ -12,7 +12,7 @@ class BackHack: UIView {
 
     override func didMoveToWindow() {
         
-        var randomNumber = CGFloat(arc4random_uniform(300))
+        var randomNumber = CGFloat(arc4random_uniform(100))
         var randomShape = CGFloat(arc4random_uniform(20))
         var randomColorRed = CGFloat(arc4random_uniform(255)) / 255
         var randomColorGreen = CGFloat(arc4random_uniform(255)) / 255
