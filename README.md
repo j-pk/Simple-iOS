@@ -8,7 +8,7 @@ _Leveraging various examples of Swift code to show developmental knowledge overt
 
 **HackBack** example of code that randomize color, object shape, opacity, and rotation. 
 
- - Still working on rotation 
+ - <del>Still working</del> on rotation. Got it!
 
 **Body Parts** is a playground and our second assignment. 
 

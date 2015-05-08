@@ -12,7 +12,6 @@ class BackHack: UIView {
 
     override func didMoveToWindow() {
         
-        var label = UIView()
         var randomNumber = CGFloat(arc4random_uniform(300))
         var randomShape = CGFloat(arc4random_uniform(20))
         var randomColorRed = CGFloat(arc4random_uniform(255)) / 255
@@ -26,12 +25,9 @@ class BackHack: UIView {
         frame.size.height = randomNumber
         
         layer.cornerRadius = frame.size.width / randomShape
+
         
         UIView.animateWithDuration(1, delay: 2, options: UIViewAnimationOptions.CurveEaseOut, animations: {self.alpha = 0.0}, completion: {(finished: Bool) -> Void in})
-        
-         //trying to cast UIView as a label to rotate
-        
-        label.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_2))
         
     }
 

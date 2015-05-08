@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        
+        var randomNumber = CGFloat(arc4random_uniform(180))
 
         for touch in touches as! Set<UITouch> {
             
@@ -26,8 +28,8 @@ class ViewController: UIViewController {
             var box = BackHack()
             view.addSubview(box)
             box.center = location
+            box.transform = CGAffineTransformMakeRotation(CGFloat(randomNumber))
             
-
         }
         
     }
