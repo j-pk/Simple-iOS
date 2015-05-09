@@ -31,11 +31,10 @@ class ViewController: UIViewController {
             box.transform = CGAffineTransformMakeRotation(CGFloat(randomNumber))
             
         }
-        
-    }
+    
     
 }
-
+}
 /* 
 
 Normal Mode
