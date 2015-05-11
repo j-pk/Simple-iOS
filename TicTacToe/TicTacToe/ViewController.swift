@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var player1ScoreKeeper: UILabel!
     @IBOutlet weak var player2ScoreKeeper: UILabel!
     @IBOutlet weak var playerTurn: UILabel!
+    @IBOutlet weak var resetButton: UIButton!
     
     var player1Point: Int = 0
     var player2Point: Int = 0
@@ -35,10 +36,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         player1Score.backgroundColor = UIColor(red:0.0, green:0.0, blue:0.0, alpha:0)
-        
+        resetButton.hidden = true
     }
     
     var currentPlayer: Player = .One
+    
+    @IBAction func resetButton(sender: UIButton) {
+    
+        boardSpace.setNeedsLayout()
+    }
     
     @IBAction func buttonPressed(sender: TicButton) {
         
@@ -73,9 +79,9 @@ class ViewController: UIViewController {
             player1Score.textColor = UIColor(red:0.16, green:0.17, blue:0.2, alpha:1)
             playerTurn.backgroundColor = UIColor(red:1, green:1, blue:1, alpha:1)
             
-     
         }
     }
+
     
     //all the possibilities in winning
     var possibilities: [[Int]] = [
@@ -125,9 +131,9 @@ class ViewController: UIViewController {
                     player1ScoreKeeper.text = "\(player1Point)"
                     player2ScoreKeeper.text = "\(player2Point)"
                     
+                    resetButton.hidden = false
                     
                     endGame()
-                    
                 
                 }
                 
