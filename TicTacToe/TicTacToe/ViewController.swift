@@ -95,8 +95,6 @@ class ViewController: UIViewController {
         player1Score.hidden = true
         playerTurn.backgroundColor = UIColor(red:1, green:1, blue:1, alpha:1)
         
-    
-        
     }
     
     func resetGame() {
@@ -127,6 +125,16 @@ class ViewController: UIViewController {
         
         button9.player = nil
         button9.setNeedsDisplay()
+        
+        spaces = [
+        
+        [nil, nil, nil],
+        [nil, nil, nil],
+        [nil, nil, nil]
+        
+        ]
+        
+        winnerWon = false 
         
     }
     
