@@ -19,6 +19,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var playerTurn: UILabel!
     @IBOutlet weak var resetButton: UIButton!
     
+    @IBOutlet weak var button1: TicButton!
+    @IBOutlet weak var button2: TicButton!
+    @IBOutlet weak var button3: TicButton!
+    @IBOutlet weak var button4: TicButton!
+    @IBOutlet weak var button5: TicButton!
+    @IBOutlet weak var button6: TicButton!
+    @IBOutlet weak var button7: TicButton!
+    @IBOutlet weak var button8: TicButton!
+    @IBOutlet weak var button9: TicButton!
+    
     var player1Point: Int = 0
     var player2Point: Int = 0
    
@@ -35,16 +45,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        player1Score.backgroundColor = UIColor(red:0.0, green:0.0, blue:0.0, alpha:0)
+        player1Score.hidden = true
         resetButton.hidden = true
     }
     
     var currentPlayer: Player = .One
-    
-    @IBAction func resetButton(sender: UIButton) {
-    
-        boardSpace.setNeedsLayout()
-    }
     
     @IBAction func buttonPressed(sender: TicButton) {
         
@@ -74,14 +79,56 @@ class ViewController: UIViewController {
                 playerTurn.backgroundColor = UIColor(red:0, green:1, blue:0.72, alpha:1)
             }
             
-        } else {
-            println("Sorry, but there has already been a winner")
-            player1Score.textColor = UIColor(red:0.16, green:0.17, blue:0.2, alpha:1)
-            playerTurn.backgroundColor = UIColor(red:1, green:1, blue:1, alpha:1)
-            
         }
+        
+//        else {
+//            println("Sorry, but there has already been a winner")
+//            player1Score.hidden = false
+//            
+//        }
     }
-
+    
+    @IBAction func resetButton(sender: UIButton) {
+        
+        resetGame()
+        resetButton.hidden = true
+        player1Score.hidden = true
+        playerTurn.backgroundColor = UIColor(red:1, green:1, blue:1, alpha:1)
+        
+    
+        
+    }
+    
+    func resetGame() {
+        
+        button1.player = nil
+        button1.setNeedsDisplay()
+        
+        button2.player = nil
+        button2.setNeedsDisplay()
+        
+        button3.player = nil
+        button3.setNeedsDisplay()
+        
+        button4.player = nil
+        button4.setNeedsDisplay()
+        
+        button5.player = nil
+        button5.setNeedsDisplay()
+        
+        button6.player = nil
+        button6.setNeedsDisplay()
+        
+        button7.player = nil
+        button7.setNeedsDisplay()
+        
+        button8.player = nil
+        button8.setNeedsDisplay()
+        
+        button9.player = nil
+        button9.setNeedsDisplay()
+        
+    }
     
     //all the possibilities in winning
     var possibilities: [[Int]] = [

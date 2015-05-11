@@ -204,13 +204,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5x4-TG-dEm">
-                                <rect key="frame" x="160" y="496" width="93" height="72"/>
+                                <rect key="frame" x="160" y="488" width="93" height="72"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="42"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHR-jm-e3n">
-                                <rect key="frame" x="59" y="496" width="93" height="72"/>
+                                <rect key="frame" x="59" y="488" width="93" height="72"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="42"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -253,10 +253,21 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="resetButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Jen-aI-GHc"/>
-                                    <action selector="resetGame:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="G2x-ed-IVg"/>
+                                    <action selector="resetButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0ku-sw-QFj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLJ-lQ-L7t">
+                                <rect key="frame" x="72" y="539" width="67" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkQ-F3-hh7">
+                                <rect key="frame" x="173" y="539" width="67" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -283,13 +294,22 @@
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="boardSpace" destination="kh9-bI-dsS" id="qh0-XP-tNg"/>
+                        <outlet property="button1" destination="4fP-kg-hFP" id="iag-ZL-JZp"/>
+                        <outlet property="button2" destination="Tww-nz-gXY" id="61O-hN-KIV"/>
+                        <outlet property="button3" destination="Nc2-eR-QaQ" id="kDM-yQ-Rzl"/>
+                        <outlet property="button4" destination="bSD-A7-ZAV" id="iS0-vc-Dg1"/>
+                        <outlet property="button5" destination="pbh-xI-sdy" id="vQA-Qb-pZo"/>
+                        <outlet property="button6" destination="1EC-Kf-dbk" id="qPN-AZ-WMg"/>
+                        <outlet property="button7" destination="cJX-Dp-nzg" id="x7c-NH-avo"/>
+                        <outlet property="button8" destination="70Y-dp-Gzi" id="YNK-ja-BFP"/>
+                        <outlet property="button9" destination="Qbf-io-sFs" id="Mrw-Pm-BLd"/>
                         <outlet property="player1Points" destination="sHR-jm-e3n" id="5gr-NZ-T8A"/>
                         <outlet property="player1Score" destination="aFq-L3-6qG" id="p1o-SC-dvr"/>
                         <outlet property="player1ScoreKeeper" destination="sHR-jm-e3n" id="7m4-Ug-yxb"/>
                         <outlet property="player2Points" destination="5x4-TG-dEm" id="NEL-pe-MBO"/>
                         <outlet property="player2ScoreKeeper" destination="5x4-TG-dEm" id="HuZ-Ya-SUC"/>
                         <outlet property="playerTurn" destination="06R-J5-ksD" id="P06-rW-PX6"/>
-                        <outlet property="resetButton" destination="8GR-oF-U6g" id="uxH-P9-DqG"/>
+                        <outlet property="resetButton" destination="8GR-oF-U6g" id="Qbt-yr-qjD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
