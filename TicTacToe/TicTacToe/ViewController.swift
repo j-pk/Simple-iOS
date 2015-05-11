@@ -144,16 +144,3 @@ class ViewController: UIViewController {
     }
    
 }
-
-
-/*      //comparing if the array values are true
-var player1Win = spaces[0][0] == spaces[0][1] && spaces [0][1] == spaces[0][2] && spaces[0][0] == .One
-
-var player2Win = spaces[0][0] == spaces[0][1] && spaces [0][1] == spaces[0][2] && spaces[0][0] == .Two
-
-for view in self.view.subviews {
-
-view.removeFromSuperView()
-
-
-*/
