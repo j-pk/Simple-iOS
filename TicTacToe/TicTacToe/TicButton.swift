@@ -13,6 +13,7 @@ enum Player {
     
     case One
     case Two
+    case Three
 }
 
 
@@ -49,15 +50,12 @@ enum Player {
                 
                 UIColor(red:0, green:1, blue:0.72, alpha:1).set()
                 
-                
             }
             
             var smallCircleRect = CGRectInset(rect, 40, 40)
             CGContextFillEllipseInRect(context, smallCircleRect)
             
-        }
-        
-    }
-
+         }
+     }
 
 }

@@ -13,7 +13,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var player1Score: UILabel!
     @IBOutlet weak var player1Points: UILabel!
     @IBOutlet weak var player2Points: UILabel!
+    @IBOutlet var boardSpace: UIView!
+    @IBOutlet weak var player1ScoreKeeper: UILabel!
+    @IBOutlet weak var player2ScoreKeeper: UILabel!
+    @IBOutlet weak var playerTurn: UILabel!
     
+    var player1Point: Int = 0
+    var player2Point: Int = 0
+   
     var winnerWon: Bool = false
     
     var spaces: [[Player?]] = [
@@ -51,13 +58,22 @@ class ViewController: UIViewController {
             
             checkForWinner()
             
-            
             //alternates the color of the button between players
             currentPlayer = currentPlayer == .One ? .Two : .One
+            
+            if currentPlayer == .One {
+                playerTurn.backgroundColor = UIColor(red:1, green:0.76, blue:0.26, alpha:1)
+            }
+            if currentPlayer == .Two {
+                playerTurn.backgroundColor = UIColor(red:0, green:1, blue:0.72, alpha:1)
+            }
+            
         } else {
             println("Sorry, but there has already been a winner")
             player1Score.textColor = UIColor(red:0.16, green:0.17, blue:0.2, alpha:1)
-
+            playerTurn.backgroundColor = UIColor(red:1, green:1, blue:1, alpha:1)
+            
+     
         }
     }
     
@@ -78,7 +94,7 @@ class ViewController: UIViewController {
         winnerWon = true
         
     }
-    
+
     func checkForWinner() {
 
         for possibility in possibilities {
@@ -92,18 +108,30 @@ class ViewController: UIViewController {
                 
                 let winner = spaces[0][0]
                 
+                
                 if let winner = firstSpot {
                     
                     println("Player \(winner.hashValue + 1) Wins")
                     
                     player1Score.text = "Player \(winner.hashValue + 1) Wins!"
                     
+                    if winner.hashValue + 1 == 1 {
+                        player1Point++
+                    }
+                    if winner.hashValue + 1 == 2 {
+                        player2Point++
+                    }
+                    
+                    player1ScoreKeeper.text = "\(player1Point)"
+                    player2ScoreKeeper.text = "\(player2Point)"
+                    
+                    
                     endGame()
+                    
                 
                 }
                 
             }
-            
     
         }
     
