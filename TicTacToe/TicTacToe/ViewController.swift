@@ -101,28 +101,20 @@ class ViewController: UIViewController {
         
         button1.player = nil
         button1.setNeedsDisplay()
-        
         button2.player = nil
         button2.setNeedsDisplay()
-        
         button3.player = nil
         button3.setNeedsDisplay()
-        
         button4.player = nil
         button4.setNeedsDisplay()
-        
         button5.player = nil
         button5.setNeedsDisplay()
-        
         button6.player = nil
         button6.setNeedsDisplay()
-        
         button7.player = nil
         button7.setNeedsDisplay()
-        
         button8.player = nil
         button8.setNeedsDisplay()
-        
         button9.player = nil
         button9.setNeedsDisplay()
         
@@ -134,7 +126,7 @@ class ViewController: UIViewController {
         
         ]
         
-        winnerWon = false 
+        winnerWon = false
         
     }
     
