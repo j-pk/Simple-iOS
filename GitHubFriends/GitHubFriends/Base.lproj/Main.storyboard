@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E11f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BG7-Dn-VWi">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="rLT-Rr-arY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BG7-Dn-VWi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cRd-pL-8JD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="suz-Ee-F8k" kind="relationship" relationship="rootViewController" id="2Ta-VX-l6J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="54l-AO-HtU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="307" y="396"/>
+        </scene>
+        <!--Friends Table View Controller-->
+        <scene sceneID="dQu-ze-JDA">
+            <objects>
+                <tableViewController id="suz-Ee-F8k" customClass="FriendsTableViewController" customModule="GitHubFriends" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="22" sectionFooterHeight="22" id="uPF-dK-fpK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="tDv-bR-Knp">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2q-84-DMK">
+                                    <rect key="frame" x="490" y="10" width="100" height="24"/>
+                                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="6eP-Kf-E6c"/>
+                                        <constraint firstAttribute="width" constant="100" id="NEO-C6-Upz"/>
+                                    </constraints>
+                                    <state key="normal" title="Add Friend">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="addFriend:" destination="suz-Ee-F8k" eventType="touchUpInside" id="qoZ-cL-kO4"/>
+                                    </connections>
+                                </button>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Spq-p3-O98">
+                                    <rect key="frame" x="10" y="10" width="470" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Spq-p3-O98" firstAttribute="top" secondItem="tDv-bR-Knp" secondAttribute="top" constant="10" id="2cY-ak-oLO"/>
+                                <constraint firstItem="i2q-84-DMK" firstAttribute="leading" secondItem="Spq-p3-O98" secondAttribute="trailing" constant="10" id="BQP-oM-Egy"/>
+                                <constraint firstItem="Spq-p3-O98" firstAttribute="leading" secondItem="tDv-bR-Knp" secondAttribute="leading" constant="10" id="MNT-ON-Ued"/>
+                                <constraint firstAttribute="bottom" secondItem="Spq-p3-O98" secondAttribute="bottom" constant="10" id="X1p-5C-JSZ"/>
+                                <constraint firstItem="i2q-84-DMK" firstAttribute="top" secondItem="Spq-p3-O98" secondAttribute="top" id="eXn-NB-18B"/>
+                                <constraint firstAttribute="trailing" secondItem="i2q-84-DMK" secondAttribute="trailing" constant="10" id="xIa-zC-6qr"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendCell" rowHeight="71" id="eNE-x9-wXg" customClass="ProfileTableViewCell" customModule="GitHubFriends" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eNE-x9-wXg" id="21D-Oi-KUB">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vx7-XY-o4r" customClass="profileImage">
+                                            <rect key="frame" x="16" y="8" width="50" height="50"/>
+                                            <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obj-Y2-KLK" customClass="profileLabel">
+                                            <rect key="frame" x="82" y="8" width="110" height="33"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6b-mZ-HXk">
+                                            <rect key="frame" x="200" y="8" width="105" height="50"/>
+                                            <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="reposClick:" destination="eNE-x9-wXg" eventType="touchUpInside" id="Bbf-Np-u6y"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdR-Bx-WHy">
+                                            <rect key="frame" x="324" y="8" width="105" height="50"/>
+                                            <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="gistsClick:" destination="eNE-x9-wXg" eventType="touchUpInside" id="ndj-Bz-0yK"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="gistButtonText" destination="pdR-Bx-WHy" id="ktG-Lu-Mor"/>
+                                    <outlet property="profileImage" destination="Vx7-XY-o4r" id="8mG-4P-Czf"/>
+                                    <outlet property="profileLabel" destination="obj-Y2-KLK" id="pQ8-6C-4K4"/>
+                                    <outlet property="repoButtonText" destination="E6b-mZ-HXk" id="Xac-2m-7FL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="suz-Ee-F8k" id="r72-wG-BBF"/>
+                            <outlet property="delegate" destination="suz-Ee-F8k" id="EUn-1V-4LR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Rgk-Bk-dyQ"/>
+                    <connections>
+                        <outlet property="addFriend" destination="i2q-84-DMK" id="znl-qH-7gr"/>
+                        <outlet property="friendNameField" destination="Spq-p3-O98" id="u0g-Jc-vkL"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zVK-ta-GfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1016" y="396"/>
+        </scene>
+    </scenes>
+</document>
