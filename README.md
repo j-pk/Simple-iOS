@@ -6,6 +6,11 @@ _Leveraging various examples of Swift code to show developmental knowledge overt
 
 ##Simple 
 
+**Todo List** a todo list that add items from top to bottom.
+
+- Captures priority when creating new item
+- Swipe to delete 
+
 **Tic Tac Toe** designing a tic tac toe game from scratch. 
 
 **HackBack** example of code that randomize color, object shape, opacity, and rotation. 
@@ -56,3 +61,4 @@ Hard Mode
   - Todo 
 
 		- Add decimal functionality 
+

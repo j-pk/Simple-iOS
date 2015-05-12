@@ -10,7 +10,7 @@ import UIKit
 
 let priorityColors = [
     UIColor(red:1, green:0.16, blue:0.24, alpha:1),
-    UIColor(red:1, green:0.68, blue:0.44, alpha:1),
+    UIColor(red:1, green:0.46, blue:0.33, alpha:1),
     UIColor(red:1, green:0.68, blue:0.44, alpha:1),
 
 ]
