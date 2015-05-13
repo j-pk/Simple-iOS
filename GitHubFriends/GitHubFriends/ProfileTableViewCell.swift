@@ -14,13 +14,16 @@ class ProfileTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var repoButtonText: UIButton!
     @IBOutlet weak var gistButtonText: UIButton!
-
+    @IBOutlet weak var repoName: UILabel!
+    
     var friendInfo: [String:AnyObject?]! {
     
         didSet {
 
-            profileImage.layer.cornerRadius = 10.0
+            profileImage.layer.cornerRadius = 8.0
             profileImage.layer.masksToBounds = true
+            repoButtonText.layer.cornerRadius = 8.0
+            gistButtonText.layer.cornerRadius = 8.0
 
             profileLabel.text = friendInfo["name"] as? String
             
@@ -44,8 +47,9 @@ class ProfileTableViewCell: UITableViewCell {
             
             gistButtonText.setTitle("\(publicGists)", forState: UIControlState.Normal)
             
-//            repoFullName.text = friendInfo["]
-//            
+            
+            
+            
         }
         
     }

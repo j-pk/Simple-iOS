@@ -417,6 +417,7 @@
 				C07291C91B023915000FCB08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C07291CA1B023915000FCB08 /* Build configuration list for PBXNativeTarget "GitHubFriendsTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +426,7 @@
 				C07291CC1B023915000FCB08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

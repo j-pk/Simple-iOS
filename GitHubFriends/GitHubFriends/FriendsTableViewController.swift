@@ -52,10 +52,37 @@ class FriendsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addFriend.layer.cornerRadius = 6
         
        
     }
     @IBAction func gistButton(sender: AnyObject) {
+    }
+
+    @IBAction func repoButton(sender: AnyObject) {
+        let endpoint = "https://api.github.com/users/\(friendNameField.text)?client_id=18c2e67eaf44f4a60b76&client_secret=5528dd41089fd0a5de62e7927b849075b65463a0/"
+        
+        //unwrapping NSURL? - allows to safely unwrap an optional
+        if let url = NSURL(string: endpoint) {
+            
+            let request = NSURLRequest(URL: url)
+            
+            if let data = NSURLConnection.sendSynchronousRequest(request,returningResponse: nil, error: nil){
+                
+                if let friendInfo = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? [String:AnyObject] {
+                    
+                    println(friendInfo)
+                    
+                    friends.insert(friendInfo, atIndex: 0)
+                    tableView.reloadData()
+                }
+                
+            }
+            
+        }
+        
+        
+        
     }
     
     @IBAction func addFriend(sender: AnyObject) {
@@ -105,10 +132,11 @@ class FriendsTableViewController: UITableViewController {
         //array we worked with
         return friends.count
     }
-
     
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("friendCell", forIndexPath: indexPath) as! ProfileTableViewCell
+        
         
         // Configure the cell...
 
