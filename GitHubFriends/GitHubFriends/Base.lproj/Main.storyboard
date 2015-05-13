@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E11f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BG7-Dn-VWi">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -9,7 +10,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BG7-Dn-VWi" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cRd-pL-8JD">
+                    <navigationBar key="navigationBar" alpha="0.49999999999999961" contentMode="scaleToFill" id="cRd-pL-8JD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -65,23 +66,21 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendCell" rowHeight="71" id="eNE-x9-wXg" customClass="ProfileTableViewCell" customModule="GitHubFriends" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="friendCell" rowHeight="100" id="eNE-x9-wXg" customClass="ProfileTableViewCell" customModule="GitHubFriends" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eNE-x9-wXg" id="21D-Oi-KUB">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vx7-XY-o4r" customClass="profileImage">
-                                            <rect key="frame" x="16" y="8" width="50" height="50"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vx7-XY-o4r" customClass="profileImage">
+                                            <rect key="frame" x="8" y="16" width="60" height="60"/>
                                             <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="g8Z-Cl-vw8"/>
+                                                <constraint firstAttribute="height" constant="60" id="vjF-eP-byD"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obj-Y2-KLK" customClass="profileLabel">
-                                            <rect key="frame" x="83" y="-4" width="450" height="33"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6b-mZ-HXk">
-                                            <rect key="frame" x="82" y="25" width="112" height="34"/>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6b-mZ-HXk">
+                                            <rect key="frame" x="83" y="40" width="112" height="34"/>
                                             <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal" title="Test">
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -89,11 +88,11 @@
                                             </state>
                                             <connections>
                                                 <action selector="repoButton:" destination="suz-Ee-F8k" eventType="touchUpInside" id="8IY-HU-jvz"/>
-                                                <segue destination="GJZ-wG-p55" kind="show" id="uU1-hd-LHq"/>
+                                                <segue destination="qAx-vS-Lnl" kind="show" id="eH2-5b-rUa"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdR-Bx-WHy">
-                                            <rect key="frame" x="208" y="25" width="112" height="34"/>
+                                            <rect key="frame" x="208" y="40" width="112" height="34"/>
                                             <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal">
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -103,7 +102,18 @@
                                                 <action selector="gistButton:" destination="suz-Ee-F8k" eventType="touchUpInside" id="7vg-TQ-jgX"/>
                                             </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obj-Y2-KLK" customClass="profileLabel">
+                                            <rect key="frame" x="83" y="8" width="450" height="30"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="E6b-mZ-HXk" firstAttribute="leading" secondItem="Vx7-XY-o4r" secondAttribute="trailing" constant="14" id="NCT-5b-0qs"/>
+                                        <constraint firstItem="Vx7-XY-o4r" firstAttribute="leading" secondItem="21D-Oi-KUB" secondAttribute="leadingMargin" id="lQr-u2-q66"/>
+                                        <constraint firstItem="Vx7-XY-o4r" firstAttribute="top" secondItem="21D-Oi-KUB" secondAttribute="topMargin" constant="8" id="xd5-xo-fg0"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="gistButtonText" destination="pdR-Bx-WHy" id="ktG-Lu-Mor"/>
@@ -130,47 +140,31 @@
             </objects>
             <point key="canvasLocation" x="1211" y="344"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="5Lx-xu-9Y2">
+        <!--Repos Table View Controller-->
+        <scene sceneID="Hku-MG-rue">
             <objects>
-                <viewController id="GJZ-wG-p55" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="G0S-a5-si7"/>
-                        <viewControllerLayoutGuide type="bottom" id="J9q-6Z-oX8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="11j-OU-6KH" customClass="ProfileTableViewCell" customModule="GitHubFriends" customModuleProvider="target">
+                <tableViewController id="qAx-vS-Lnl" customClass="ReposTableViewController" customModule="GitHubFriends" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5Gc-Uw-JzN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repo Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-ls-pHf">
-                                <rect key="frame" x="29" y="103" width="215" height="39"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="26"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repo description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpf-dZ-5tq">
-                                <rect key="frame" x="29" y="138" width="166" height="28"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7TL-ka-jdf">
-                                <rect key="frame" x="0.0" y="103" width="10" height="63"/>
-                                <color key="backgroundColor" red="0.96078431369999995" green="0.4549019608" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="repoCell" rowHeight="100" id="9h6-nz-0Lh" customClass="RepoTableViewCell" customModule="GitHubFriends" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9h6-nz-0Lh" id="99N-q2-m1X">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
-                            <outlet property="repoName" destination="2O0-ls-pHf" id="meC-Cg-rya"/>
+                            <outlet property="dataSource" destination="qAx-vS-Lnl" id="60I-H9-ns9"/>
+                            <outlet property="delegate" destination="qAx-vS-Lnl" id="3lW-QS-v0e"/>
                         </connections>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p8k-kb-ffd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lIc-OH-e6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1952" y="344"/>
+            <point key="canvasLocation" x="1970" y="718"/>
         </scene>
     </scenes>
 </document>
