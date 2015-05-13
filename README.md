@@ -12,7 +12,6 @@ _Leveraging various examples of Swift code to show developmental knowledge overt
 - Swipe to delete 
 	- Need todo.. 
 	 	- Swipe to right reveal more options 
-	 	- 
 
 **Tic Tac Toe** designing a tic tac toe game from scratch. 
 

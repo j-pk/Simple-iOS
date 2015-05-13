@@ -55,6 +55,8 @@ class FriendsTableViewController: UITableViewController {
         
        
     }
+    @IBAction func gistButton(sender: AnyObject) {
+    }
     
     @IBAction func addFriend(sender: AnyObject) {
         

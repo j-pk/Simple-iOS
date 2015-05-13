@@ -14,15 +14,7 @@ class ProfileTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var repoButtonText: UIButton!
     @IBOutlet weak var gistButtonText: UIButton!
-   
-    
-    
-    @IBAction func reposClick(sender: AnyObject) {
-    }
-    
-    @IBAction func gistsClick(sender: AnyObject) {
-    }
-    
+
     var friendInfo: [String:AnyObject?]! {
     
         didSet {
@@ -38,8 +30,22 @@ class ProfileTableViewCell: UITableViewCell {
            
             profileImage.image = profileUIImage
             
-            repoButtonText.text = friendInfo["public_repos"]
+            // Public Repos
+            var publicRepos = (friendInfo["public_repos"]! as! Int)
+            
+            println(publicRepos)
+            
+            repoButtonText.setTitle("\(publicRepos)", forState: UIControlState.Normal)
 
+            // Public Gists
+            var publicGists = (friendInfo["public_gists"]! as! Int)
+            
+            println(publicGists)
+            
+            gistButtonText.setTitle("\(publicGists)", forState: UIControlState.Normal)
+            
+//            repoFullName.text = friendInfo["]
+//            
         }
         
     }

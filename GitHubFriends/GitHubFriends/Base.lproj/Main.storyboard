@@ -22,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="307" y="396"/>
         </scene>
-        <!--Friends Table View Controller-->
+        <!--GitHub Friends-->
         <scene sceneID="dQu-ze-JDA">
             <objects>
                 <tableViewController id="suz-Ee-F8k" customClass="FriendsTableViewController" customModule="GitHubFriends" customModuleProvider="target" sceneMemberID="viewController">
@@ -83,10 +83,11 @@
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6b-mZ-HXk">
                                             <rect key="frame" x="200" y="8" width="105" height="50"/>
                                             <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <state key="normal">
+                                            <state key="normal" title="Test">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
+                                                <action selector="gistButton:" destination="suz-Ee-F8k" eventType="touchUpInside" id="L3F-4n-EwE"/>
                                                 <action selector="reposClick:" destination="eNE-x9-wXg" eventType="touchUpInside" id="Bbf-Np-u6y"/>
                                             </connections>
                                         </button>
@@ -115,15 +116,44 @@
                             <outlet property="delegate" destination="suz-Ee-F8k" id="EUn-1V-4LR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Rgk-Bk-dyQ"/>
+                    <navigationItem key="navigationItem" title="GitHub Friends" id="Rgk-Bk-dyQ">
+                        <barButtonItem key="backBarButtonItem" title="Profiles" id="Bz8-qE-Z4e"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="addFriend" destination="i2q-84-DMK" id="znl-qH-7gr"/>
                         <outlet property="friendNameField" destination="Spq-p3-O98" id="u0g-Jc-vkL"/>
+                        <segue destination="DhN-eN-8d5" kind="show" identifier="nextProfile" id="maW-7v-Fsx"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zVK-ta-GfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016" y="396"/>
+            <point key="canvasLocation" x="1211" y="344"/>
+        </scene>
+        <!--Friends Table View Controller-->
+        <scene sceneID="ocX-n6-HVr">
+            <objects>
+                <tableViewController id="DhN-eN-8d5" customClass="FriendsTableViewController" customModule="GitHubFriends" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oqd-4o-FLg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="WEd-dp-bHM" customClass="ProfileTableViewCell" customModule="GitHubFriends" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WEd-dp-bHM" id="O8x-Y6-mEm">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DhN-eN-8d5" id="0aR-UA-yLE"/>
+                            <outlet property="delegate" destination="DhN-eN-8d5" id="wtW-Wz-uEr"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbu-VQ-twR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1951" y="374"/>
         </scene>
     </scenes>
 </document>
