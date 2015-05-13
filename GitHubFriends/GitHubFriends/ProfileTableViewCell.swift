@@ -23,9 +23,16 @@ class ProfileTableViewCell: UITableViewCell {
             profileImage.layer.cornerRadius = 8.0
             profileImage.layer.masksToBounds = true
             repoButtonText.layer.cornerRadius = 8.0
+            repoButtonText.backgroundColor = UIColor.clearColor()
+            repoButtonText.layer.borderWidth = 0.5
+            repoButtonText.layer.borderColor = UIColor.blackColor().CGColor
             gistButtonText.layer.cornerRadius = 8.0
+            gistButtonText.backgroundColor = UIColor.clearColor()
+            gistButtonText.layer.borderWidth = 0.5
+            gistButtonText.layer.borderColor = UIColor.blackColor().CGColor
 
             profileLabel.text = friendInfo["name"] as? String
+            
             
             let avatarURL = NSURL(string: (friendInfo["avatar_url"] as? String)!)
             let imageData = NSData(contentsOfURL: avatarURL!)
@@ -47,11 +54,10 @@ class ProfileTableViewCell: UITableViewCell {
             
             gistButtonText.setTitle("\(publicGists)", forState: UIControlState.Normal)
             
-            
+//            var repoName = (repoInfo["name"] as? String)
             
             
         }
-        
     }
 
     override func awakeFromNib() {

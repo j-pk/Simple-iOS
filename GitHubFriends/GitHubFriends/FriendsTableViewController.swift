@@ -50,16 +50,61 @@ class FriendsTableViewController: UITableViewController {
         ]
     ]
     
+//    var repo: [[String:AnyObject?]] [{
+//    
+//                "id": 35050945,
+//                "name": "Simple-iOS",
+//                "full_name": "j-pk/Simple-iOS",
+//                "owner": {
+//                "login": "j-pk",
+//                "id": 12202276,
+//                "avatar_url": "https://avatars.githubusercontent.com/u/12202276?v=3",
+//                "gravatar_id": "",
+//                "url": "https://api.github.com/users/j-pk",
+//                "html_url": "https://github.com/j-pk",
+//                "followers_url": "https://api.github.com/users/j-pk/followers",
+//                "following_url": "https://api.github.com/users/j-pk/following{/other_user}",
+//                "gists_url": "https://api.github.com/users/j-pk/gists{/gist_id}",
+//                "starred_url": "https://api.github.com/users/j-pk/starred{/owner}{/repo}",
+//                "subscriptions_url": "https://api.github.com/users/j-pk/subscriptions",
+//                "organizations_url": "https://api.github.com/users/j-pk/orgs",
+//                "repos_url": "https://api.github.com/users/j-pk/repos",
+//                "events_url": "https://api.github.com/users/j-pk/events{/privacy}",
+//                "received_events_url": "https://api.github.com/users/j-pk/received_events",
+//                "type": "User",
+//                "site_admin": false
+//    
+//    }]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addFriend.layer.cornerRadius = 6
-        
-       
+        navigationController!.navigationBar.barTintColor = UIColor(red:0.07, green:0.83, blue:0.73, alpha:1)
+        navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Helvetica Neue", size: 20)!,  NSForegroundColorAttributeName: UIColor.whiteColor()]
     }
     @IBAction func gistButton(sender: AnyObject) {
+        
+        
     }
 
     @IBAction func repoButton(sender: AnyObject) {
+//        
+//        let repopoint = "https://api.github.com/users/\(friendNameField.text)/repos/client_id=18c2e67eaf44f4a60b76&client_secret=5528dd41089fd0a5de62e7927b849075b65463a0/"
+//        if let url = NSURL(string: repopoint) {
+//            
+//            let request = NSURLRequest(URL: url)
+//            
+//            if let data = NSURLConnection.sendSynchronousRequest(request,returningResponse: nil, error: nil){
+//                
+//                if let repoInfo = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? [String:AnyObject] {
+//                    
+//                    println(repoInfo)
+//                    
+//     
+    }
+    
+    @IBAction func addFriend(sender: AnyObject) {
+        
         let endpoint = "https://api.github.com/users/\(friendNameField.text)?client_id=18c2e67eaf44f4a60b76&client_secret=5528dd41089fd0a5de62e7927b849075b65463a0/"
         
         //unwrapping NSURL? - allows to safely unwrap an optional
@@ -77,33 +122,6 @@ class FriendsTableViewController: UITableViewController {
                     tableView.reloadData()
                 }
                 
-            }
-            
-        }
-        
-        
-        
-    }
-    
-    @IBAction func addFriend(sender: AnyObject) {
-        
-        let endpoint = "https://api.github.com/users/\(friendNameField.text)?client_id=18c2e67eaf44f4a60b76&client_secret=5528dd41089fd0a5de62e7927b849075b65463a0/"
-        
-        //unwrapping NSURL? - allows to safely unwrap an optional
-        if let url = NSURL(string: endpoint) {
-            
-            let request = NSURLRequest(URL: url)
-            
-            if let data = NSURLConnection.sendSynchronousRequest(request,returningResponse: nil, error: nil){
-             
-                if let friendInfo = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? [String:AnyObject] {
-                    
-                    println(friendInfo)
-                    
-                          friends.insert(friendInfo, atIndex: 0)
-                          tableView.reloadData()
-                }
-
             }
             
         }

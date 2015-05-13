@@ -26,7 +26,7 @@
         <scene sceneID="dQu-ze-JDA">
             <objects>
                 <tableViewController id="suz-Ee-F8k" customClass="FriendsTableViewController" customModule="GitHubFriends" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="22" sectionFooterHeight="22" id="uPF-dK-fpK">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="71" sectionHeaderHeight="22" sectionFooterHeight="22" id="uPF-dK-fpK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -70,7 +70,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eNE-x9-wXg" id="21D-Oi-KUB">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vx7-XY-o4r" customClass="profileImage">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vx7-XY-o4r" customClass="profileImage">
                                             <rect key="frame" x="16" y="8" width="50" height="50"/>
                                             <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
@@ -116,9 +116,7 @@
                             <outlet property="delegate" destination="suz-Ee-F8k" id="EUn-1V-4LR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="GitHub Friends" id="Rgk-Bk-dyQ">
-                        <barButtonItem key="backBarButtonItem" title="Profiles" id="Bz8-qE-Z4e"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="GitHub Friends" id="Rgk-Bk-dyQ"/>
                     <connections>
                         <outlet property="addFriend" destination="i2q-84-DMK" id="znl-qH-7gr"/>
                         <outlet property="friendNameField" destination="Spq-p3-O98" id="u0g-Jc-vkL"/>
