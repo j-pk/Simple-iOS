@@ -81,6 +81,8 @@ class FriendsTableViewController: UITableViewController {
         addFriend.layer.cornerRadius = 6
         navigationController!.navigationBar.barTintColor = UIColor(red:0.07, green:0.83, blue:0.73, alpha:1)
         navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Helvetica Neue", size: 20)!,  NSForegroundColorAttributeName: UIColor.whiteColor()]
+//        self.navigationItem.backBarButtonItem = "" 
+        
     }
     @IBAction func gistButton(sender: AnyObject) {
         

@@ -45,14 +45,14 @@ class ProfileTableViewCell: UITableViewCell {
             
             println(publicRepos)
             
-            repoButtonText.setTitle("\(publicRepos)", forState: UIControlState.Normal)
+            repoButtonText.setTitle("Repos \(publicRepos)", forState: UIControlState.Normal)
 
             // Public Gists
             var publicGists = (friendInfo["public_gists"]! as! Int)
             
             println(publicGists)
             
-            gistButtonText.setTitle("\(publicGists)", forState: UIControlState.Normal)
+            gistButtonText.setTitle("Gists \(publicGists)", forState: UIControlState.Normal)
             
 //            var repoName = (repoInfo["name"] as? String)
             
