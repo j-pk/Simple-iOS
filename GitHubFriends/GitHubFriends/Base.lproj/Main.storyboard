@@ -31,40 +31,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="tDv-bR-Knp">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2q-84-DMK">
-                                    <rect key="frame" x="490" y="10" width="100" height="24"/>
-                                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="24" id="6eP-Kf-E6c"/>
-                                        <constraint firstAttribute="width" constant="100" id="NEO-C6-Upz"/>
-                                    </constraints>
-                                    <state key="normal" title="Add Friend">
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="addFriend:" destination="suz-Ee-F8k" eventType="touchUpInside" id="qoZ-cL-kO4"/>
-                                    </connections>
-                                </button>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Spq-p3-O98">
-                                    <rect key="frame" x="10" y="10" width="470" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="Spq-p3-O98" firstAttribute="top" secondItem="tDv-bR-Knp" secondAttribute="top" constant="10" id="2cY-ak-oLO"/>
-                                <constraint firstItem="i2q-84-DMK" firstAttribute="leading" secondItem="Spq-p3-O98" secondAttribute="trailing" constant="10" id="BQP-oM-Egy"/>
-                                <constraint firstItem="Spq-p3-O98" firstAttribute="leading" secondItem="tDv-bR-Knp" secondAttribute="leading" constant="10" id="MNT-ON-Ued"/>
-                                <constraint firstAttribute="bottom" secondItem="Spq-p3-O98" secondAttribute="bottom" constant="10" id="X1p-5C-JSZ"/>
-                                <constraint firstItem="i2q-84-DMK" firstAttribute="top" secondItem="Spq-p3-O98" secondAttribute="top" id="eXn-NB-18B"/>
-                                <constraint firstAttribute="trailing" secondItem="i2q-84-DMK" secondAttribute="trailing" constant="10" id="xIa-zC-6qr"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="friendCell" rowHeight="100" id="eNE-x9-wXg" customClass="ProfileTableViewCell" customModule="GitHubFriends" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -88,7 +54,7 @@
                                             </state>
                                             <connections>
                                                 <action selector="repoButton:" destination="suz-Ee-F8k" eventType="touchUpInside" id="8IY-HU-jvz"/>
-                                                <segue destination="qAx-vS-Lnl" kind="show" id="eH2-5b-rUa"/>
+                                                <segue destination="qAx-vS-Lnl" kind="show" identifier="reposSegue" id="eH2-5b-rUa"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdR-Bx-WHy">
@@ -130,15 +96,63 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="GitHub Friends" id="Rgk-Bk-dyQ">
                         <barButtonItem key="backBarButtonItem" title=" " id="jKC-ZE-CXw"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="CVe-bx-ZHn">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="5M3-Ua-cCh" kind="presentation" identifier="addSegue" id="8Xx-iu-X5t"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="addFriend" destination="i2q-84-DMK" id="znl-qH-7gr"/>
-                        <outlet property="friendNameField" destination="Spq-p3-O98" id="u0g-Jc-vkL"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zVK-ta-GfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1211" y="344"/>
+        </scene>
+        <!--Add Friend View Controller-->
+        <scene sceneID="mPa-pt-Cf8">
+            <objects>
+                <viewController id="5M3-Ua-cCh" customClass="AddFriendViewController" customModule="GitHubFriends" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qgc-D4-XOA"/>
+                        <viewControllerLayoutGuide type="bottom" id="i3T-wb-OMN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bK-7t-qZt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4a-5t-KFg">
+                                <rect key="frame" x="31" y="20" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="5M3-Ua-cCh" eventType="touchUpInside" id="56E-TH-74m"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="exV-Jf-O8O">
+                                <rect key="frame" x="31" y="58" width="179" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmX-jX-dPq">
+                                <rect key="frame" x="268" y="58" width="80" height="30"/>
+                                <state key="normal" title="Add Friend">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addFriendButton:" destination="5M3-Ua-cCh" eventType="touchUpInside" id="0Ee-UD-jhf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="addFriendField" destination="exV-Jf-O8O" id="cEn-sr-Htl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MOp-cB-BSa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069" y="1156"/>
         </scene>
         <!--Repos Table View Controller-->
         <scene sceneID="Hku-MG-rue">
@@ -164,7 +178,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIc-OH-e6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1970" y="718"/>
+            <point key="canvasLocation" x="1950" y="128"/>
         </scene>
     </scenes>
 </document>

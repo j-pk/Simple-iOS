@@ -12,7 +12,6 @@ class FriendsTableViewController: UITableViewController {
     
     @IBOutlet weak var addFriend: UIButton!
     @IBOutlet weak var friendNameField: UITextField!
-    
  
     var friends: [[String:AnyObject?]] = [
         [
@@ -78,10 +77,8 @@ class FriendsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addFriend.layer.cornerRadius = 6
-        navigationController!.navigationBar.barTintColor = UIColor(red:0.07, green:0.83, blue:0.73, alpha:1)
-        navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Helvetica Neue", size: 20)!,  NSForegroundColorAttributeName: UIColor.whiteColor()]
-//        self.navigationItem.backBarButtonItem = "" 
+//        navigationController!.navigationBar.barTintColor = UIColor(red:0.07, green:0.83, blue:0.73, alpha:1)
+//        navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Helvetica Neue", size: 20)!,  NSForegroundColorAttributeName: UIColor.whiteColor()]
         
     }
     @IBAction func gistButton(sender: AnyObject) {
@@ -204,11 +201,15 @@ class FriendsTableViewController: UITableViewController {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
         
+        if segue.identifier == "reposSegue" {
+        
         var reposTVC = segue.destinationViewController as! ReposTableViewController
         
         var reposButton = sender as! UIButton
         
         reposTVC.friendInfo = friends[reposButton.tag]
+            
+        }
         
     }
 }

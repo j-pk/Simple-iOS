@@ -10,6 +10,7 @@
 		C04B9EB51B038F0100758D07 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B9EB41B038F0100758D07 /* RepoTableViewCell.swift */; };
 		C04B9EB71B038F1800758D07 /* ReposTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B9EB61B038F1800758D07 /* ReposTableViewController.swift */; };
 		C04B9EB91B03979F00758D07 /* GithubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B9EB81B03979F00758D07 /* GithubRequest.swift */; };
+		C04B9EBB1B03AC0D00758D07 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B9EBA1B03AC0D00758D07 /* AddFriendViewController.swift */; };
 		C07291AE1B023915000FCB08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07291AD1B023915000FCB08 /* AppDelegate.swift */; };
 		C07291B31B023915000FCB08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07291B11B023915000FCB08 /* Main.storyboard */; };
 		C07291B51B023915000FCB08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07291B41B023915000FCB08 /* Images.xcassets */; };
@@ -33,6 +34,7 @@
 		C04B9EB41B038F0100758D07 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 		C04B9EB61B038F1800758D07 /* ReposTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposTableViewController.swift; sourceTree = "<group>"; };
 		C04B9EB81B03979F00758D07 /* GithubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRequest.swift; sourceTree = "<group>"; };
+		C04B9EBA1B03AC0D00758D07 /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
 		C07291A81B023914000FCB08 /* GitHubFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07291AC1B023914000FCB08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C07291AD1B023915000FCB08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,12 +87,13 @@
 		C07291AA1B023914000FCB08 /* GitHubFriends */ = {
 			isa = PBXGroup;
 			children = (
-				C04B9EB81B03979F00758D07 /* GithubRequest.swift */,
 				C07291B11B023915000FCB08 /* Main.storyboard */,
-				C04B9EB41B038F0100758D07 /* RepoTableViewCell.swift */,
-				C04B9EB61B038F1800758D07 /* ReposTableViewController.swift */,
 				C07291CD1B02400B000FCB08 /* FriendsTableViewController.swift */,
 				C07291D11B028392000FCB08 /* ProfileTableViewCell.swift */,
+				C04B9EBA1B03AC0D00758D07 /* AddFriendViewController.swift */,
+				C04B9EB41B038F0100758D07 /* RepoTableViewCell.swift */,
+				C04B9EB61B038F1800758D07 /* ReposTableViewController.swift */,
+				C04B9EB81B03979F00758D07 /* GithubRequest.swift */,
 				C07291AB1B023914000FCB08 /* Supporting Files */,
 			);
 			path = GitHubFriends;
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C04B9EB91B03979F00758D07 /* GithubRequest.swift in Sources */,
+				C04B9EBB1B03AC0D00758D07 /* AddFriendViewController.swift in Sources */,
 				C07291D21B028392000FCB08 /* ProfileTableViewCell.swift in Sources */,
 				C07291CE1B02400B000FCB08 /* FriendsTableViewController.swift in Sources */,
 				C07291AE1B023915000FCB08 /* AppDelegate.swift in Sources */,
