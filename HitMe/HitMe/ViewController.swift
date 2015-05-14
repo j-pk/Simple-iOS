@@ -1,41 +1,58 @@
-//
-//  ViewController.swift
-//  HitMe
-//
-//  Created by jpk on 5/13/15.
-//  Copyright (c) 2015 Parker Kirby. All rights reserved.
-//
 
 import UIKit
 
 class ViewController: UIViewController {
+    
 
+    @IBAction func sliderMoved(slider: UISlider) {
+        currentSliderValue = lroundf(slider.value)
+        println("The value of the slider is now: \(slider.value)")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        startNewRound()
+        updateLabels()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func updateLabels() {
+        targetLabel.text = String(targetValue)
+        scoreLabel.text = String(score)
     }
+    
+    func startNewRound() {
+        
+        targetValue = 1 + Int(arc4random_uniform(100))
+        currentSliderValue = 50
+        slider.value = Float(currentSliderValue)
+    }
+    
+    @IBOutlet weak var targetLabel: UILabel!
+    @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    var currentSliderValue = 0
+    var targetValue = 0
+    var score = 0
+    
     @IBAction func showAlert() {
-        let message = "The value of the slider is: \(currentSliderValue)"
+        
+        let difference = abs(currentSliderValue - targetValue)
+        let points = 100 - difference
+        
+        score += points
+        
+        let message = "You scored \(points) points!"
         let alert = UIAlertController(title: "Hit Me!", message: message, preferredStyle: .Alert)
         let action = UIAlertAction(title: "👍🏼", style: .Default, handler: nil)
         
         alert.addAction(action)
         
         presentViewController(alert, animated: true, completion: nil)
+        startNewRound()
+        updateLabels()
     
+        }
     
-    }
-    
-    var currentSliderValue: Int = 0
-    
-    @IBAction func sliderMoved(slider: UISlider) {
-        currentSliderValue = lroundf(slider.value)
-        println("The value of the slider is now: \(slider.value)")
-    }
-}
 
+}

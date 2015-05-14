@@ -104,6 +104,11 @@
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="scoreLabel" destination="8Tg-Vu-1SQ" id="TNJ-0Z-IOq"/>
+                        <outlet property="slider" destination="GiF-AZ-8kg" id="i23-aL-Dp2"/>
+                        <outlet property="targetLabel" destination="ocQ-Nt-c17" id="3Zb-YE-JVd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
