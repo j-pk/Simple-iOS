@@ -63,6 +63,9 @@
                                 <state key="normal" title="Start Over">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="startOver:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YYs-fm-WpM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shP-02-UH7">
                                 <rect key="frame" x="222" y="206" width="50" height="21"/>
@@ -93,6 +96,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="T2v-7w-dvf" kind="modal" modalTransitionStyle="coverVertical" id="fFO-vr-kt1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -103,8 +109,10 @@
                             <constraint firstItem="sdi-B4-r51" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Z7a-DV-Mg1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="PtV-as-uUp"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="roundLabel" destination="c58-BV-PvZ" id="KP0-mO-b6O"/>
                         <outlet property="scoreLabel" destination="8Tg-Vu-1SQ" id="TNJ-0Z-IOq"/>
                         <outlet property="slider" destination="GiF-AZ-8kg" id="i23-aL-Dp2"/>
                         <outlet property="targetLabel" destination="ocQ-Nt-c17" id="3Zb-YE-JVd"/>
@@ -112,7 +120,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="233" y="368"/>
+            <point key="canvasLocation" x="-60" y="449"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="TNp-d9-aBI">
+            <objects>
+                <viewController id="T2v-7w-dvf" customClass="AboutViewController" customModule="HitMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6jT-0g-Gsv"/>
+                        <viewControllerLayoutGuide type="bottom" id="dkT-3W-75j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ORu-ac-z7A">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmE-ua-P2B">
+                                <rect key="frame" x="16" y="20" width="40" height="30"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="T2v-7w-dvf" eventType="touchUpInside" id="sY9-Hn-LbC"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xY-Rz-im5">
+                                <rect key="frame" x="24" y="58" width="555" height="176"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Move the slider as close as you can to the given random number.                             t       The closer you are the more points you score. Good luck! </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IiL-GY-Lgh"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h8K-fM-IHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="560" y="449"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
