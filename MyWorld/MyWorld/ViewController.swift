@@ -56,7 +56,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             requestVenuesWithLocation(location, completion: { (venues) -> () in
                 
-                println (venues)
                 self.allVenues = venues as! [[String:AnyObject]]
                 
                 for (index, venue) in enumerate(venues as! [[String:AnyObject]]) {
@@ -103,12 +102,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
                 
                 //data is the information that is returned
-                
-                println(data)
-                
+            
                 if let returnedInfo = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as? [String:AnyObject] {
-                    
-                    println(returnedInfo)
                     
                     if let responseInfo = returnedInfo["response"] as? [String:AnyObject] {
                         
@@ -160,8 +155,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         var venue = allVenues[sender.tag]
         
-        println(detailVC)
-        
         detailVC.view.backgroundColor = UIColor.whiteColor()
         
         detailVC.navigationItem.title = venue["name"] as? String
@@ -170,7 +163,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             let insideCategoryArray = category[0]
             let venueCat = insideCategoryArray["name"] as! String
-//            let prefix = 
             
             //little circle on the left
             var firstCircle = UIView(frame: CGRectMake(30, 100, 40, 40))
@@ -192,10 +184,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             var boxCat = UILabel(frame: CGRectMake(110, 90, 400, 40))
             var boxCatName = UILabel(frame: CGRectMake(110, 110, 400, 40))
             
-            boxCat.text = "Category"
+            boxCat.text = "CATEGORY"
             boxCatName.text = venueCat
+            boxCatName.textColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            boxCat.textColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
             boxCatName.font = UIFont(name: "HelveticaNeue-Light", size: 22)
-            boxCat.font = UIFont(name: "HelveticaNeue-Light", size: 14)
+            boxCat.font = UIFont(name: "HelveticaNeue-Light", size: 12)
             
             detailVC.view.addSubview(boxCat)
             detailVC.view.addSubview(boxCatName)
@@ -207,22 +201,145 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         if let location = venue["location"] as? [String:AnyObject] {
             
+            println(location)
+            
+            var addressLabel = UILabel(frame: CGRectMake(110, 175, 100, 20))
+            addressLabel.textColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            addressLabel.text = "ADDRESS"
+            addressLabel.font = UIFont(name: "HelveticaNeue-Light", size: 12)
+
             var address = location["address"] as? String
             var city = location["city"] as? String
             var state = location["state"] as? String
             
             //Address Name 
-            var boxAddress = UITextField(frame: CGRectMake(110, 180, 300, 300))
-            var boxAddressDivider = UIView(frame: CGRectMake(90, 180, 5, 180))
+            var boxAddress = UILabel(frame: CGRectMake(110, 170, 200, 80))
+            boxAddress.font = UIFont(name: "HelveticaNeue-Light", size: 22)
+            boxAddress.textColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            var boxCity = UILabel(frame: CGRectMake(110, 190, 200, 80))
+            boxCity.font = UIFont(name: "HelveticaNeue-Light", size: 22)
+            boxCity.textColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            var boxState = UILabel(frame: CGRectMake(110, 210, 200, 80))
+            boxState.font = UIFont(name: "HelveticaNeue-Light", size: 22)
+            boxState.textColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            
+            var boxAddressDivider = UIView(frame: CGRectMake(90, 180, 5, 213))
             boxAddressDivider.backgroundColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            
             
             detailVC.view.addSubview(boxAddressDivider)
             detailVC.view.addSubview(boxAddress)
-
+            detailVC.view.addSubview(boxCity)
+            detailVC.view.addSubview(boxState)
+            detailVC.view.addSubview(addressLabel)
+            
+            
+            boxAddress.numberOfLines = 0
+            boxAddress.lineBreakMode = .ByWordWrapping
             boxAddress.text = address
+            boxCity.text = city
+            boxState.text = state
             
         }
         
+        
+        if let stats = venue["stats"] as? [String:AnyObject] {
+            
+            println(stats)
+            
+            var checkinsCount = stats["checkinsCount"] as! Int
+            var usersCount = stats["usersCount"] as! Int
+            var tipCount = stats["tipCount"] as! Int
+            
+            var statsLabel = UILabel(frame: CGRectMake(110, 275, 100, 20))
+            statsLabel.textColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            statsLabel.text = "STATS"
+            statsLabel.font = UIFont(name: "HelveticaNeue-Light", size: 12)
+            
+            ///////////////Users
+            var usersLabel = UILabel(frame: CGRectMake(127, 377, 80, 20))
+            usersLabel.textColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            usersLabel.text = "USERS"
+            usersLabel.font = UIFont(name: "HelveticaNeue-Light", size: 12)
+            
+            var circleCount = UILabel(frame: CGRectMake(110, 305, 70, 70))
+            circleCount.layer.cornerRadius =  circleCount.frame.size.width / 2
+            circleCount.layer.masksToBounds = true
+            circleCount.backgroundColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            
+            
+            ////////////////Checkins
+            var checkinsLabel = UILabel(frame: CGRectMake(193, 377, 80, 20))
+            checkinsLabel.textColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            checkinsLabel.text = "CHECKINS"
+            checkinsLabel.font = UIFont(name: "HelveticaNeue-Light", size: 12)
+            
+            var circleCheckin = UILabel(frame: CGRectMake(185, 305, 70, 70))
+            circleCheckin.layer.cornerRadius =  circleCheckin.frame.size.width / 2
+            circleCheckin.layer.masksToBounds = true
+            circleCheckin.backgroundColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            
+            
+            /////////////Tips
+            var tipLabel = UILabel(frame: CGRectMake(285, 377, 80, 20))
+            tipLabel.textColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            tipLabel.text = "TIPS"
+            tipLabel.font = UIFont(name: "HelveticaNeue-Light", size: 12)
+            
+            var circleTip = UILabel(frame: CGRectMake(260, 305, 70, 70))
+            circleTip.layer.cornerRadius = circleTip.frame.size.width / 2
+            circleTip.layer.masksToBounds = true
+            circleTip.backgroundColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            
+            detailVC.view.addSubview(circleCheckin)
+            detailVC.view.addSubview(circleCount)
+            detailVC.view.addSubview(circleTip)
+            detailVC.view.addSubview(statsLabel)
+            detailVC.view.addSubview(usersLabel)
+            detailVC.view.addSubview(checkinsLabel)
+            detailVC.view.addSubview(tipLabel)
+            
+            circleCheckin.text = "\(checkinsCount)"
+            circleCheckin.textAlignment = .Center
+            circleCheckin.textColor = UIColor.whiteColor()
+            circleCount.text = "\(usersCount)"
+            circleCount.textAlignment = .Center
+            circleCount.textColor = UIColor.whiteColor()
+            circleTip.text = "\(tipCount)"
+            circleTip.textAlignment = .Center
+            circleTip.textColor = UIColor.whiteColor()
+
+            
+            println(checkinsCount)
+            println(usersCount)
+            println(tipCount)
+            
+        }
+        
+        
+        if let hereNow = venue["hereNow"] as? [String:AnyObject] {
+            
+            var summary = hereNow["summary"] as? String
+            
+            var hereNowDivider = UIView(frame: CGRectMake(90, 430, 5, 36))
+            hereNowDivider.backgroundColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            
+            var hereNowLabel = UILabel(frame: CGRectMake(110, 415, 100, 40))
+            hereNowLabel.textColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            hereNowLabel.text = "HERE NOW"
+            hereNowLabel.font = UIFont(name: "HelveticaNeue-Light", size: 12)
+            
+            var hereNowStat = UILabel(frame: CGRectMake(110, 435, 260, 40))
+            hereNowStat.textColor = UIColor(red:0.69, green:0.69, blue:0.69, alpha:1)
+            hereNowStat.text = summary
+            hereNowStat.font = UIFont(name: "HelveticaNeue-Light", size: 22)
+            
+            detailVC.view.addSubview(hereNowLabel)
+            detailVC.view.addSubview(hereNowDivider)
+            detailVC.view.addSubview(hereNowStat)
+            
+            
+        }
 
         navigationController?.pushViewController(detailVC, animated: true)
 
