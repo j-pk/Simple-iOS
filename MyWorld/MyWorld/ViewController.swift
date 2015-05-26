@@ -8,6 +8,8 @@
 
 import UIKit
 import MapKit
+import Fabric
+import Crashlytics
 
 class myAnnotation : MKPointAnnotation {
     
@@ -45,6 +47,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         navigationController?.navigationBar.barTintColor = UIColor(red:1, green:0.76, blue:0.28, alpha:1)
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
+        Crashlytics.sharedInstance().crash()
         
     }
     
@@ -163,6 +167,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             let insideCategoryArray = category[0]
             let venueCat = insideCategoryArray["name"] as! String
+            
+            var icon = insideCategoryArray["icon"] as? String
+            println(icon)
             
             //little circle on the left
             var firstCircle = UIView(frame: CGRectMake(30, 100, 40, 40))
@@ -316,7 +323,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
         }
         
-        
         if let hereNow = venue["hereNow"] as? [String:AnyObject] {
             
             var summary = hereNow["summary"] as? String
@@ -337,7 +343,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             detailVC.view.addSubview(hereNowLabel)
             detailVC.view.addSubview(hereNowDivider)
             detailVC.view.addSubview(hereNowStat)
-            
             
         }
 

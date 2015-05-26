@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -116,12 +116,12 @@
                                     <constraint firstAttribute="width" secondItem="M0K-iC-tnX" secondAttribute="height" multiplier="1:1" id="XPG-Yz-h5w"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
-                                <state key="normal" title="x">
+                                <state key="normal" title="×">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operatorPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="l1q-T9-UdT"/>
+                                    <action selector="operatorPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rmJ-ac-DMc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ai-XU-zze">
@@ -176,12 +176,12 @@
                                     <constraint firstAttribute="width" secondItem="lgN-Vz-44G" secondAttribute="height" multiplier="1:1" id="iyY-rd-M5C"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
-                                <state key="normal" title="-">
+                                <state key="normal" title="−">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operatorPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="A4o-pD-D6u"/>
+                                    <action selector="operatorPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pT5-J5-PPo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgO-Jo-gDd">
@@ -223,7 +223,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operatorPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wU2-j4-plM"/>
+                                    <action selector="equalsPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oi6-kR-SPy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvY-IV-4dg">
@@ -283,7 +283,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operatorPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nRN-9q-sOG"/>
+                                    <action selector="operatorPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZdH-0B-nBd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkv-7d-gt6">
@@ -292,12 +292,13 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hkv-7d-gt6" secondAttribute="height" multiplier="1:1" id="6cO-Er-lpV"/>
                                 </constraints>
-                                <state key="normal" title="/">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                <state key="normal" title="÷">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operatorPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dMM-pU-jL5"/>
+                                    <action selector="operatorPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uoa-OS-bXh"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGh-dx-B9t">
