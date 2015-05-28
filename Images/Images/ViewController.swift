@@ -13,6 +13,12 @@ class ViewController: UIViewController, UISearchBarDelegate, UISearchDisplayDele
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var albumImageVIew: UIImageView!
     
+    @IBOutlet weak var artistName: UILabel!
+    @IBOutlet weak var albumName: UILabel!
+    @IBOutlet weak var trackCount: UILabel!
+    @IBOutlet weak var releaseDate: UILabel!
+    
+    
     var data: NSMutableData = NSMutableData()
 
     override func viewDidLoad() {
@@ -43,6 +49,15 @@ class ViewController: UIViewController, UISearchBarDelegate, UISearchDisplayDele
                 if let responseInfo = returnedInfo["results"] as? [[String:AnyObject]] {
                     
                     println(responseInfo[0])
+                    
+                    let artistNameFirst = responseInfo[0]["artistName"] as? String
+                    self.artistName.text = artistNameFirst
+                    let albumNameFirst = responseInfo[0]["collectionName"] as? String
+                    self.albumName.text = albumNameFirst
+                    var trackCountFirst = responseInfo[0]["trackCount"] as! Int
+                    self.trackCount.text = "\(trackCountFirst)"
+                    let releaseDateFirst = responseInfo[0]["releaseDate"] as? String
+                    self.releaseDate.text = releaseDateFirst
                     
                     if let albumUrl = responseInfo[0]["artworkUrl100"] as? String {
 //                        println(albumInfo)
