@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C0EA8B001B17AA1C005A38B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EA8AFF1B17AA1C005A38B1 /* AppDelegate.swift */; };
+		C0EA8B021B17AA1C005A38B1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EA8B011B17AA1C005A38B1 /* SignUpViewController.swift */; };
+		C0EA8B051B17AA1C005A38B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0EA8B031B17AA1C005A38B1 /* Main.storyboard */; };
+		C0EA8B071B17AA1C005A38B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0EA8B061B17AA1C005A38B1 /* Images.xcassets */; };
+		C0EA8B0A1B17AA1C005A38B1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0EA8B081B17AA1C005A38B1 /* LaunchScreen.xib */; };
+		C0EA8B161B17AA1C005A38B1 /* ParseLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EA8B151B17AA1C005A38B1 /* ParseLoginTests.swift */; };
+		C0EA8B241B17AD8A005A38B1 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EA8B231B17AD8A005A38B1 /* StartViewController.swift */; };
+		C0EA8B261B17AD9F005A38B1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EA8B251B17AD9F005A38B1 /* LoginViewController.swift */; };
+		C0EA8B2A1B17B0F3005A38B1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA8B281B17B0F3005A38B1 /* Bolts.framework */; };
+		C0EA8B2B1B17B0F3005A38B1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA8B291B17B0F3005A38B1 /* Parse.framework */; };
+		C0EA8B2D1B17B12F005A38B1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA8B2C1B17B12F005A38B1 /* AudioToolbox.framework */; };
+		C0EA8B2F1B17B136005A38B1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA8B2E1B17B136005A38B1 /* CFNetwork.framework */; };
+		C0EA8B311B17B146005A38B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA8B301B17B146005A38B1 /* CoreGraphics.framework */; };
+		C0EA8B331B17B150005A38B1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA8B321B17B150005A38B1 /* CoreLocation.framework */; };
+		C0EA8B351B17B158005A38B1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA8B341B17B158005A38B1 /* MobileCoreServices.framework */; };
+		C0EA8B371B17B15F005A38B1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA8B361B17B15F005A38B1 /* QuartzCore.framework */; };
+		C0EA8B391B17B166005A38B1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA8B381B17B166005A38B1 /* Security.framework */; };
+		C0EA8B3B1B17B16D005A38B1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA8B3A1B17B16D005A38B1 /* StoreKit.framework */; };
+		C0EA8B3D1B17B176005A38B1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA8B3C1B17B176005A38B1 /* SystemConfiguration.framework */; };
+		C0EA8B3F1B17B186005A38B1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA8B3E1B17B186005A38B1 /* libz.dylib */; };
+		C0EA8B411B17B18E005A38B1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA8B401B17B18E005A38B1 /* libsqlite3.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C0EA8B101B17AA1C005A38B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0EA8AF21B17AA1C005A38B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0EA8AF91B17AA1C005A38B1;
+			remoteInfo = ParseLogin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C0EA8AFA1B17AA1C005A38B1 /* ParseLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0EA8AFE1B17AA1C005A38B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0EA8AFF1B17AA1C005A38B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C0EA8B011B17AA1C005A38B1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C0EA8B041B17AA1C005A38B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C0EA8B061B17AA1C005A38B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C0EA8B091B17AA1C005A38B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C0EA8B0F1B17AA1C005A38B1 /* ParseLoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParseLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0EA8B141B17AA1C005A38B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0EA8B151B17AA1C005A38B1 /* ParseLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseLoginTests.swift; sourceTree = "<group>"; };
+		C0EA8B231B17AD8A005A38B1 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ../StartViewController.swift; sourceTree = "<group>"; };
+		C0EA8B251B17AD9F005A38B1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
+		C0EA8B281B17B0F3005A38B1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		C0EA8B291B17B0F3005A38B1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		C0EA8B2C1B17B12F005A38B1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C0EA8B2E1B17B136005A38B1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C0EA8B301B17B146005A38B1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C0EA8B321B17B150005A38B1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C0EA8B341B17B158005A38B1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C0EA8B361B17B15F005A38B1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C0EA8B381B17B166005A38B1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C0EA8B3A1B17B16D005A38B1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C0EA8B3C1B17B176005A38B1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C0EA8B3E1B17B186005A38B1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		C0EA8B401B17B18E005A38B1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C0EA8AF71B17AA1C005A38B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0EA8B411B17B18E005A38B1 /* libsqlite3.dylib in Frameworks */,
+				C0EA8B3F1B17B186005A38B1 /* libz.dylib in Frameworks */,
+				C0EA8B3D1B17B176005A38B1 /* SystemConfiguration.framework in Frameworks */,
+				C0EA8B3B1B17B16D005A38B1 /* StoreKit.framework in Frameworks */,
+				C0EA8B391B17B166005A38B1 /* Security.framework in Frameworks */,
+				C0EA8B371B17B15F005A38B1 /* QuartzCore.framework in Frameworks */,
+				C0EA8B351B17B158005A38B1 /* MobileCoreServices.framework in Frameworks */,
+				C0EA8B331B17B150005A38B1 /* CoreLocation.framework in Frameworks */,
+				C0EA8B311B17B146005A38B1 /* CoreGraphics.framework in Frameworks */,
+				C0EA8B2F1B17B136005A38B1 /* CFNetwork.framework in Frameworks */,
+				C0EA8B2D1B17B12F005A38B1 /* AudioToolbox.framework in Frameworks */,
+				C0EA8B2B1B17B0F3005A38B1 /* Parse.framework in Frameworks */,
+				C0EA8B2A1B17B0F3005A38B1 /* Bolts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0EA8B0C1B17AA1C005A38B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C0EA8AF11B17AA1C005A38B1 = {
+			isa = PBXGroup;
+			children = (
+				C0EA8AFC1B17AA1C005A38B1 /* ParseLogin */,
+				C0EA8B121B17AA1C005A38B1 /* ParseLoginTests */,
+				C0EA8AFB1B17AA1C005A38B1 /* Products */,
+				C0EA8B271B17B0E3005A38B1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C0EA8AFB1B17AA1C005A38B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0EA8AFA1B17AA1C005A38B1 /* ParseLogin.app */,
+				C0EA8B0F1B17AA1C005A38B1 /* ParseLoginTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0EA8AFC1B17AA1C005A38B1 /* ParseLogin */ = {
+			isa = PBXGroup;
+			children = (
+				C0EA8B031B17AA1C005A38B1 /* Main.storyboard */,
+				C0EA8B231B17AD8A005A38B1 /* StartViewController.swift */,
+				C0EA8B011B17AA1C005A38B1 /* SignUpViewController.swift */,
+				C0EA8B251B17AD9F005A38B1 /* LoginViewController.swift */,
+				C0EA8AFD1B17AA1C005A38B1 /* Supporting Files */,
+			);
+			path = ParseLogin;
+			sourceTree = "<group>";
+		};
+		C0EA8AFD1B17AA1C005A38B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0EA8AFF1B17AA1C005A38B1 /* AppDelegate.swift */,
+				C0EA8B061B17AA1C005A38B1 /* Images.xcassets */,
+				C0EA8B081B17AA1C005A38B1 /* LaunchScreen.xib */,
+				C0EA8AFE1B17AA1C005A38B1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C0EA8B121B17AA1C005A38B1 /* ParseLoginTests */ = {
+			isa = PBXGroup;
+			children = (
+				C0EA8B151B17AA1C005A38B1 /* ParseLoginTests.swift */,
+				C0EA8B131B17AA1C005A38B1 /* Supporting Files */,
+			);
+			path = ParseLoginTests;
+			sourceTree = "<group>";
+		};
+		C0EA8B131B17AA1C005A38B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0EA8B141B17AA1C005A38B1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C0EA8B271B17B0E3005A38B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0EA8B401B17B18E005A38B1 /* libsqlite3.dylib */,
+				C0EA8B3E1B17B186005A38B1 /* libz.dylib */,
+				C0EA8B3C1B17B176005A38B1 /* SystemConfiguration.framework */,
+				C0EA8B3A1B17B16D005A38B1 /* StoreKit.framework */,
+				C0EA8B381B17B166005A38B1 /* Security.framework */,
+				C0EA8B361B17B15F005A38B1 /* QuartzCore.framework */,
+				C0EA8B341B17B158005A38B1 /* MobileCoreServices.framework */,
+				C0EA8B321B17B150005A38B1 /* CoreLocation.framework */,
+				C0EA8B301B17B146005A38B1 /* CoreGraphics.framework */,
+				C0EA8B2E1B17B136005A38B1 /* CFNetwork.framework */,
+				C0EA8B2C1B17B12F005A38B1 /* AudioToolbox.framework */,
+				C0EA8B281B17B0F3005A38B1 /* Bolts.framework */,
+				C0EA8B291B17B0F3005A38B1 /* Parse.framework */,
+			);
+			name = Frameworks;
+			path = ParseLogin;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C0EA8AF91B17AA1C005A38B1 /* ParseLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0EA8B191B17AA1C005A38B1 /* Build configuration list for PBXNativeTarget "ParseLogin" */;
+			buildPhases = (
+				C0EA8AF61B17AA1C005A38B1 /* Sources */,
+				C0EA8AF71B17AA1C005A38B1 /* Frameworks */,
+				C0EA8AF81B17AA1C005A38B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParseLogin;
+			productName = ParseLogin;
+			productReference = C0EA8AFA1B17AA1C005A38B1 /* ParseLogin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C0EA8B0E1B17AA1C005A38B1 /* ParseLoginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0EA8B1C1B17AA1C005A38B1 /* Build configuration list for PBXNativeTarget "ParseLoginTests" */;
+			buildPhases = (
+				C0EA8B0B1B17AA1C005A38B1 /* Sources */,
+				C0EA8B0C1B17AA1C005A38B1 /* Frameworks */,
+				C0EA8B0D1B17AA1C005A38B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0EA8B111B17AA1C005A38B1 /* PBXTargetDependency */,
+			);
+			name = ParseLoginTests;
+			productName = ParseLoginTests;
+			productReference = C0EA8B0F1B17AA1C005A38B1 /* ParseLoginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C0EA8AF21B17AA1C005A38B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Parker Kirby";
+				TargetAttributes = {
+					C0EA8AF91B17AA1C005A38B1 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					C0EA8B0E1B17AA1C005A38B1 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = C0EA8AF91B17AA1C005A38B1;
+					};
+				};
+			};
+			buildConfigurationList = C0EA8AF51B17AA1C005A38B1 /* Build configuration list for PBXProject "ParseLogin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C0EA8AF11B17AA1C005A38B1;
+			productRefGroup = C0EA8AFB1B17AA1C005A38B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C0EA8AF91B17AA1C005A38B1 /* ParseLogin */,
+				C0EA8B0E1B17AA1C005A38B1 /* ParseLoginTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C0EA8AF81B17AA1C005A38B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0EA8B051B17AA1C005A38B1 /* Main.storyboard in Resources */,
+				C0EA8B0A1B17AA1C005A38B1 /* LaunchScreen.xib in Resources */,
+				C0EA8B071B17AA1C005A38B1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0EA8B0D1B17AA1C005A38B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C0EA8AF61B17AA1C005A38B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0EA8B261B17AD9F005A38B1 /* LoginViewController.swift in Sources */,
+				C0EA8B241B17AD8A005A38B1 /* StartViewController.swift in Sources */,
+				C0EA8B021B17AA1C005A38B1 /* SignUpViewController.swift in Sources */,
+				C0EA8B001B17AA1C005A38B1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0EA8B0B1B17AA1C005A38B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0EA8B161B17AA1C005A38B1 /* ParseLoginTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C0EA8B111B17AA1C005A38B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0EA8AF91B17AA1C005A38B1 /* ParseLogin */;
+			targetProxy = C0EA8B101B17AA1C005A38B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C0EA8B031B17AA1C005A38B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0EA8B041B17AA1C005A38B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C0EA8B081B17AA1C005A38B1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0EA8B091B17AA1C005A38B1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C0EA8B171B17AA1C005A38B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C0EA8B181B17AA1C005A38B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C0EA8B1A1B17AA1C005A38B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ParseLogin",
+				);
+				INFOPLIST_FILE = ParseLogin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C0EA8B1B1B17AA1C005A38B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ParseLogin",
+				);
+				INFOPLIST_FILE = ParseLogin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C0EA8B1D1B17AA1C005A38B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ParseLoginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParseLogin.app/ParseLogin";
+			};
+			name = Debug;
+		};
+		C0EA8B1E1B17AA1C005A38B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ParseLoginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParseLogin.app/ParseLogin";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C0EA8AF51B17AA1C005A38B1 /* Build configuration list for PBXProject "ParseLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0EA8B171B17AA1C005A38B1 /* Debug */,
+				C0EA8B181B17AA1C005A38B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0EA8B191B17AA1C005A38B1 /* Build configuration list for PBXNativeTarget "ParseLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0EA8B1A1B17AA1C005A38B1 /* Debug */,
+				C0EA8B1B1B17AA1C005A38B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C0EA8B1C1B17AA1C005A38B1 /* Build configuration list for PBXNativeTarget "ParseLoginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0EA8B1D1B17AA1C005A38B1 /* Debug */,
+				C0EA8B1E1B17AA1C005A38B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C0EA8AF21B17AA1C005A38B1 /* Project object */;
+}
