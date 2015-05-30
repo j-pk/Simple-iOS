@@ -19,7 +19,7 @@ class AlbumCollectionViewController: UICollectionViewController, UICollectionVie
         
     var albums: [[String:AnyObject]] = []
     
-    @IBOutlet weak var searchForArtistTextField: UISearchBar!
+//    @IBOutlet weak var searchForArtistTextField: UISearchBar!
 
     
     override func viewDidLoad() {
@@ -31,9 +31,9 @@ class AlbumCollectionViewController: UICollectionViewController, UICollectionVie
         // Register cell classes
         //        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        searchForArtistTextField.delegate = self
+//        searchForArtistTextField.delegate = self
         
-        var artistSearch = searchForArtistTextField.text /*AlbumCollectionViewCell.searchForArtist*/
+        var artistSearch = "weezer" /*searchForArtistTextField.text AlbumCollectionViewCell.searchForArtist*/
         
         var requestManager = AFHTTPRequestOperationManager()
         requestManager.GET(itunesSearchAPI + "?term=\(artistSearch)&entity=album", parameters: nil, success: { (request, data) -> Void in
