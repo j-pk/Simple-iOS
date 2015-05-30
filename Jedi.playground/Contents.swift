@@ -28,7 +28,7 @@ func JediBladeColor (colors: String...) -> () {
 JediBladeColor("red", "green")
 
 let padawans = ["Knox", "Manus", "Avia"]
-padawans.map({(padawans: String) - String in "\(padawan) has been trained!"})
+padawans.map({(padawans: String) -> String in "\(padawan) has been trained!"})
 
 func applyMultiplication(value: Int, multFunction: Int -> Int) -> Int {
     
@@ -39,4 +39,6 @@ applyMultiplication(2, {value in value * 3})
 
 applyMultiplication(2, {$0 * 3})
 
-applyMultiplication(2) {$0 * 3} 
+applyMultiplication(2) {$0 * 3}
+
+
