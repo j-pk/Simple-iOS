@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="CameraPhoto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Fa-nC-kuD">
+                                <rect key="frame" x="16" y="20" width="568" height="509"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbe-RA-auR">
+                                <rect key="frame" x="262" y="550" width="77" height="30"/>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleColor" red="0.12941176469999999" green="0.81176470590000005" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xFG-eO-kJ5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="kbe-RA-auR" secondAttribute="bottom" constant="20" id="3Mn-9J-h36"/>
+                            <constraint firstAttribute="centerX" secondItem="kbe-RA-auR" secondAttribute="centerX" id="4UE-OL-cjU"/>
+                            <constraint firstItem="kbe-RA-auR" firstAttribute="top" secondItem="4Fa-nC-kuD" secondAttribute="bottom" constant="21" id="8Do-hX-EKp"/>
+                            <constraint firstItem="4Fa-nC-kuD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="CaX-cd-vs1"/>
+                            <constraint firstAttribute="centerX" secondItem="4Fa-nC-kuD" secondAttribute="centerX" id="KqZ-8M-Msa"/>
+                            <constraint firstAttribute="trailing" secondItem="4Fa-nC-kuD" secondAttribute="trailing" constant="16" id="S7S-6V-2PS"/>
+                            <constraint firstItem="4Fa-nC-kuD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ha1-hY-9F5"/>
+                            <constraint firstItem="4Fa-nC-kuD" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="s77-Zo-zcf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="4Fa-nC-kuD" id="T1p-34-8P0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

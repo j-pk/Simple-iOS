@@ -47,9 +47,7 @@ class ChecklistViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("ChecklistItem") as! UITableViewCell
-        
-        let label = cell.viewWithTag(1000) as! UILabel
+        if let cell = tableView.cellForRowAtIndexPath(indexPath) {
         
         if indexPath.row == 0 {
             row0checked = !row0checked
@@ -66,17 +64,13 @@ class ChecklistViewController: UITableViewController {
                 cell.accessoryType = .None }
             }
         if indexPath.row == 2 {
-            label.text = row2text
         }
         if indexPath.row == 3 {
-            label.text = row3text
         }
         if indexPath.row == 4 {
-            label.text = row4text
         }
         
-        return cell
-        
+        }
     }
 
 }
