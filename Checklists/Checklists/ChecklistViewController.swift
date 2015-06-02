@@ -20,8 +20,8 @@ class ChecklistViewController: UITableViewController {
     var row2checked = false
     var row3checked = false
     var row4checked = false
-
-        override func viewDidLoad() {
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -39,7 +39,7 @@ class ChecklistViewController: UITableViewController {
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return 5
@@ -48,30 +48,25 @@ class ChecklistViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         if let cell = tableView.cellForRowAtIndexPath(indexPath) {
-        
-        if indexPath.row == 0 {
-            row0checked = !row0checked
-            if row0checked {
+            
+            var isChecked = false
+            if indexPath.row == 0 {
+                ￼
+                isChecked = row0checked
+            } else if indexPath.row == 1 {
+                isChecked = row1checked
+            } else if indexPath.row == 2 {
+                isChecked = row2checked
+            } else if indexPath.row == 3 {
+                isChecked = row3checked
+            } else if indexPath.row == 4 {
+                isChecked = row4checked }
+            if isChecked {
                 cell.accessoryType = .Checkmark
             } else {
-                cell.accessoryType = .None }
-            }
-        if indexPath.row == 1 {
-            row1checked = !row1checked
-            if row1checked {
-                cell.accessoryType = .Checkmark
-            } else {
-                cell.accessoryType = .None }
-            }
-        if indexPath.row == 2 {
-        }
-        if indexPath.row == 3 {
-        }
-        if indexPath.row == 4 {
-        }
-        
-        }
+                cell.accessoryType = .None
+            } }
     }
-
+    
 }
 
