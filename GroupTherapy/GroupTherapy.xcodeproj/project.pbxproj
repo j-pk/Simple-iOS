@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C01705751B1E324C00A9AF90 /* CharacterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C01705741B1E324C00A9AF90 /* CharacterTableViewCell.m */; };
 		C03278E61B1DE2C800A2BD30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C03278E51B1DE2C800A2BD30 /* main.m */; };
 		C03278E91B1DE2C800A2BD30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C03278E81B1DE2C800A2BD30 /* AppDelegate.m */; };
 		C03278EF1B1DE2C800A2BD30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C03278ED1B1DE2C800A2BD30 /* Main.storyboard */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C01705731B1E324C00A9AF90 /* CharacterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CharacterTableViewCell.h; path = ../CharacterTableViewCell.h; sourceTree = "<group>"; };
+		C01705741B1E324C00A9AF90 /* CharacterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CharacterTableViewCell.m; path = ../CharacterTableViewCell.m; sourceTree = "<group>"; };
 		C03278E01B1DE2C800A2BD30 /* GroupTherapy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupTherapy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C03278E41B1DE2C800A2BD30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C03278E51B1DE2C800A2BD30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,6 +84,8 @@
 		C03278E21B1DE2C800A2BD30 /* GroupTherapy */ = {
 			isa = PBXGroup;
 			children = (
+				C01705731B1E324C00A9AF90 /* CharacterTableViewCell.h */,
+				C01705741B1E324C00A9AF90 /* CharacterTableViewCell.m */,
 				C03279091B1DE6D800A2BD30 /* CharacterTableViewController.h */,
 				C032790A1B1DE6D800A2BD30 /* CharacterTableViewController.m */,
 				C03278ED1B1DE2C800A2BD30 /* Main.storyboard */,
@@ -222,6 +227,7 @@
 				C032790B1B1DE6D800A2BD30 /* CharacterTableViewController.m in Sources */,
 				C03278E91B1DE2C800A2BD30 /* AppDelegate.m in Sources */,
 				C03278E61B1DE2C800A2BD30 /* main.m in Sources */,
+				C01705751B1E324C00A9AF90 /* CharacterTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +422,7 @@
 				C03279051B1DE2C800A2BD30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C03279061B1DE2C800A2BD30 /* Build configuration list for PBXNativeTarget "GroupTherapyTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +431,7 @@
 				C03279081B1DE2C800A2BD30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

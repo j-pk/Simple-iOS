@@ -8,16 +8,66 @@
         <scene sceneID="V0T-pu-MzK">
             <objects>
                 <tableViewController id="0Za-Fd-w1s" customClass="CharacterTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="SQC-LL-pZk">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="94" sectionHeaderHeight="22" sectionFooterHeight="22" id="SQC-LL-pZk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="charCell" rowHeight="50" id="lF5-51-icR">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="charCell" rowHeight="94" id="lF5-51-icR" customClass="CharacterTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lF5-51-icR" id="hN8-Jg-FyO">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pt3-Dz-GtW">
+                                            <rect key="frame" x="8" y="8" width="50" height="75"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="75" id="NOm-Gp-UsK"/>
+                                                <constraint firstAttribute="width" constant="50" id="cEf-u9-dl6"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVc-YJ-ToC">
+                                            <rect key="frame" x="71" y="19" width="434" height="48"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="434" id="J5e-OE-NaI"/>
+                                                <constraint firstAttribute="height" constant="48" id="VmZ-1f-Pgc"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                            <color key="textColor" red="0.0078431377187371254" green="0.84313732385635376" blue="0.69019609689712524" alpha="1" colorSpace="deviceRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeM-JT-PiH">
+                                            <rect key="frame" x="532" y="13" width="60" height="60"/>
+                                            <color key="backgroundColor" red="0.070588238537311554" green="0.16470588743686676" blue="0.27058824896812439" alpha="1" colorSpace="deviceRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="6Ye-d2-QTu"/>
+                                                <constraint firstAttribute="width" constant="60" id="KC7-ma-qTi"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.99215692280000001" green="0.99607849120000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="pt3-Dz-GtW" secondAttribute="bottom" constant="10" id="4JR-NV-dzj"/>
+                                        <constraint firstItem="JeM-JT-PiH" firstAttribute="top" secondItem="hN8-Jg-FyO" secondAttribute="top" constant="13" id="96Y-ZT-IT1"/>
+                                        <constraint firstItem="DVc-YJ-ToC" firstAttribute="leading" secondItem="pt3-Dz-GtW" secondAttribute="trailing" constant="13" id="HpB-9u-VCj"/>
+                                        <constraint firstAttribute="bottom" secondItem="DVc-YJ-ToC" secondAttribute="bottom" constant="26" id="Jsc-qA-aCv"/>
+                                        <constraint firstAttribute="trailing" secondItem="JeM-JT-PiH" secondAttribute="trailing" constant="8" id="Mje-S6-azN"/>
+                                        <constraint firstItem="DVc-YJ-ToC" firstAttribute="top" secondItem="hN8-Jg-FyO" secondAttribute="top" constant="19" id="VlM-Kt-wpi"/>
+                                        <constraint firstItem="pt3-Dz-GtW" firstAttribute="top" secondItem="hN8-Jg-FyO" secondAttribute="top" constant="8" id="Zi7-Ca-00i"/>
+                                        <constraint firstItem="pt3-Dz-GtW" firstAttribute="leading" secondItem="hN8-Jg-FyO" secondAttribute="leading" constant="8" id="bPR-SA-Phm"/>
+                                        <constraint firstItem="JeM-JT-PiH" firstAttribute="leading" secondItem="DVc-YJ-ToC" secondAttribute="trailing" constant="27" id="k4C-KK-nvW"/>
+                                        <constraint firstItem="DVc-YJ-ToC" firstAttribute="leading" secondItem="pt3-Dz-GtW" secondAttribute="trailing" constant="13" id="pm3-fC-trR"/>
+                                        <constraint firstAttribute="bottom" secondItem="JeM-JT-PiH" secondAttribute="bottom" constant="20" id="sDX-wg-Glw"/>
+                                        <constraint firstItem="JeM-JT-PiH" firstAttribute="leading" secondItem="DVc-YJ-ToC" secondAttribute="trailing" constant="27" id="yvf-dW-f5r"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.078431375319999996" green="0.02745098248" blue="0.019607843829999999" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="charComicCountLabel" destination="JeM-JT-PiH" id="0ci-bj-7N4"/>
+                                    <outlet property="charImage" destination="pt3-Dz-GtW" id="COm-H7-O1k"/>
+                                    <outlet property="charNameTextLabel" destination="DVc-YJ-ToC" id="Swd-Xk-j48"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -28,7 +78,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iln-gA-ofz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="961" y="375"/>
+            <point key="canvasLocation" x="740" y="369"/>
         </scene>
     </scenes>
 </document>
