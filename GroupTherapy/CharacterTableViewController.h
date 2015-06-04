@@ -11,5 +11,6 @@
 @interface CharacterTableViewController : UITableViewController
 
 
+@property (weak, nonatomic) IBOutlet UISearchBar *characterSearchBar;
 
 @end

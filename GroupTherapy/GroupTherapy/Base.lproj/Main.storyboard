@@ -12,6 +12,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Ule-iv-psu">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uXp-UY-Rbu">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="charCell" rowHeight="94" id="lF5-51-icR" customClass="CharacterTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -72,13 +83,15 @@
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="0Za-Fd-w1s" id="NtO-1M-3Wr"/>
-                            <outlet property="delegate" destination="0Za-Fd-w1s" id="5lr-th-id6"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="characterSearchBar" destination="uXp-UY-Rbu" id="afH-ij-fKP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iln-gA-ofz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="740" y="369"/>
+            <point key="canvasLocation" x="737" y="368"/>
         </scene>
     </scenes>
 </document>

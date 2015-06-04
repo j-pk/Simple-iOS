@@ -23,22 +23,26 @@
 #define PUBLIC_KEY @"8954b10f8579696c76039c701fb23658" 
 #define PRIVATE_KEY @"377a086a27bb149c7f787a42b4f097bfd7079363"
 
-@interface CharacterTableViewController () <UIScrollViewDelegate>
+@interface CharacterTableViewController () <UIScrollViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate>
 
 @end
+
 
 @implementation CharacterTableViewController
 {
     NSArray * characters;
 }
 
+@synthesize characterSearchBar;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    characterSearchBar.delegate = self;
     
     characters = @[];
     
     [self getCharacters];
-    
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
 }
@@ -49,27 +53,24 @@
     float scrollContentSizeHeight = scrollView.contentSize.height;
     float scrollOffset = scrollView.contentOffset.y;
     
-    if (scrollOffset == 0)
-    {
-
+    if (scrollOffset == 0){ //no code - if it it all the top
     }
     else if (scrollOffset + scrollViewHeight == scrollContentSizeHeight)
     {
-    
         [self getCharacters];
     }
-    
 }
 
-
-- (void)getCharacters {
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
     
     int timeStamp = [NSDate date].timeIntervalSince1970;
     
     NSString * hash = [self MD5String:[NSString stringWithFormat:@"%d%@%@", timeStamp, PRIVATE_KEY, PUBLIC_KEY]];
     
+    NSString * searchString = [NSString stringWithFormat:@"%@", characterSearchBar.text];
+    
     //connecting the base url with the endpoint
-    NSString * endpoint = [NSString stringWithFormat:@"%@characters?limit=50&offset=%d&ts=%d&apikey=%@&hash=%@", API_BASE,characters.count,timeStamp, PUBLIC_KEY, hash];
+    NSString * endpoint = [NSString stringWithFormat:@"%@characters?name=%@&ts=%d&apikey=%@&hash=%@",searchString,API_BASE,timeStamp, PUBLIC_KEY, hash];
     
     NSLog(@"%@", endpoint);
     
@@ -86,20 +87,52 @@
         
         //NSLog(@"%@", JSON);
         
-//        characters = JSON [@"data"][@"results"];
+        characters = JSON [@"data"][@"results"];
         
-        characters = [characters arrayByAddingObjectsFromArray:JSON [@"data"][@"results"]];
-        
+//      characters = [characters arrayByAddingObjectsFromArray:JSON [@"data"][@"results"]];
         
         NSLog(@"%@", characters);
         
         [self.tableView reloadData];
         
     }];
-    
-    //    portrait_xlarge.jpg
-    
 
+    
+}
+
+- (void)getCharacters {
+    
+    int timeStamp = [NSDate date].timeIntervalSince1970;
+    
+    NSString * hash = [self MD5String:[NSString stringWithFormat:@"%d%@%@", timeStamp, PRIVATE_KEY, PUBLIC_KEY]];
+    
+    //connecting the base url with the endpoint
+    NSString * endpoint = [NSString stringWithFormat:@"%@characters?limit=50&offset=%d&ts=%d&apikey=%@&hash=%@", API_BASE,characters.count,timeStamp, PUBLIC_KEY, hash];
+    
+//    NSLog(@"%@", endpoint);
+    
+    //processing the URL as an URL
+    NSURL * url = [NSURL URLWithString:endpoint];
+    
+    //send a request
+    NSURLRequest * request = [NSURLRequest requestWithURL:url];
+    
+    //connect to the server
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        
+        NSDictionary * JSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        
+        //NSLog(@"%@", JSON);
+        
+        //characters = JSON [@"data"][@"results"];
+        
+        characters = [characters arrayByAddingObjectsFromArray:JSON [@"data"][@"results"]];
+        
+//        NSLog(@"%@", characters);
+        
+        [self.tableView reloadData];
+        
+    }];
     
 }
 
@@ -128,13 +161,6 @@
 }
 
 #pragma mark - Table view data source
-
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Potentially incomplete method implementation.
-//    // Return the number of sections.
-//    return 0;
-//}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
@@ -153,8 +179,6 @@
     int comicBookCount = [character[@"comics"][@"available"] intValue];
     NSString * comicBookCountText = [NSString stringWithFormat:@"%i", comicBookCount];
     cell.charComicCountLabel.text = comicBookCountText;
-
-    
     
 //    NSURLRequest * imageUrlRequest = [NSURLRequest requestWithURL:imageUrl];
     
@@ -168,7 +192,7 @@
           
             NSString * completeImagePath = [NSString stringWithFormat:@"%@%@%@",imagePath,imageSize,extension];
             
-            NSLog(@"%@",completeImagePath);
+//            NSLog(@"%@",completeImagePath);
             
             NSURL * imageUrl = [NSURL URLWithString:completeImagePath];
             
@@ -184,55 +208,10 @@
         }
         
     });
-                           
+    
     cell.charComicCountLabel.layer.cornerRadius = 30;
     cell.charComicCountLabel.layer.masksToBounds = YES;
     return cell;
 }
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
