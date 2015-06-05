@@ -36,8 +36,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8GB-Mm-RL0">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="500"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fAC-db-eu2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="503"/>
+                                <color key="backgroundColor" red="0.058823533359999999" green="0.050980396570000003" blue="0.0078431377190000002" alpha="1" colorSpace="deviceRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8GB-Mm-RL0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="503"/>
+                                <color key="backgroundColor" red="0.058823533359999999" green="0.050980396570000003" blue="0.0078431377190000002" alpha="1" colorSpace="deviceRGB"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZNe-ms-EnZ">
                                 <rect key="frame" x="0.0" y="501" width="600" height="99"/>
@@ -74,17 +79,34 @@
                                             <constraint firstItem="PKD-b8-5EQ" firstAttribute="leading" secondItem="0Ad-0v-S6u" secondAttribute="leading" id="cdV-Uv-9kx"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="imageVIew" destination="PKD-b8-5EQ" id="LCJ-y4-51Y"/>
+                                            <outlet property="imageView" destination="PKD-b8-5EQ" id="XKW-fw-FZf"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EXv-2p-G8Z">
-                                <rect key="frame" x="21" y="463" width="572" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEU-0b-gMX">
+                                <rect key="frame" x="9" y="4" width="30" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="MzP-EN-aAV"/>
+                                    <constraint firstAttribute="height" constant="36" id="To8-fI-R3T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                                <state key="normal" title="✕">
+                                    <color key="titleColor" red="0.9960784912109375" green="0.99215692281723022" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AKq-tc-cVO"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EXv-2p-G8Z">
+                                <rect key="frame" x="14" y="469" width="572" height="31"/>
+                                <color key="tintColor" red="0.99215692280000001" green="0.99607849120000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="K0o-DV-po7"/>
                                     <constraint firstAttribute="width" constant="568" id="mA8-nL-wpp"/>
                                 </constraints>
+                                <color key="maximumTrackTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="filterSliderValue:" destination="vXZ-lx-hvc" eventType="valueChanged" id="MU6-RL-OhZ"/>
                                 </connections>
@@ -94,22 +116,29 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ZNe-ms-EnZ" secondAttribute="trailing" id="9xO-ot-QLr"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ZNe-ms-EnZ" secondAttribute="bottom" id="G3O-IT-dBC"/>
+                            <constraint firstItem="bEU-0b-gMX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="9" id="Ht2-LQ-Vlq"/>
+                            <constraint firstItem="bEU-0b-gMX" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-16" id="J0z-Hd-F6x"/>
                             <constraint firstItem="ZNe-ms-EnZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="KoB-Un-4GH"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="8GB-Mm-RL0" secondAttribute="bottom" constant="100" id="OSJ-qU-Ush"/>
+                            <constraint firstItem="fAC-db-eu2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="LwA-EP-yJy"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="8GB-Mm-RL0" secondAttribute="bottom" constant="97" id="OSJ-qU-Ush"/>
+                            <constraint firstItem="fAC-db-eu2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Pbw-JT-EH9"/>
+                            <constraint firstAttribute="trailing" secondItem="fAC-db-eu2" secondAttribute="trailing" id="Qx8-TM-QC8"/>
                             <constraint firstItem="8GB-Mm-RL0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="UJS-JV-A8S"/>
-                            <constraint firstItem="EXv-2p-G8Z" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="7" id="XA2-lN-uN9"/>
-                            <constraint firstItem="ZNe-ms-EnZ" firstAttribute="top" secondItem="8GB-Mm-RL0" secondAttribute="bottom" constant="1" id="kkT-BX-Epo"/>
+                            <constraint firstItem="EXv-2p-G8Z" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="XA2-lN-uN9"/>
+                            <constraint firstItem="ZNe-ms-EnZ" firstAttribute="top" secondItem="8GB-Mm-RL0" secondAttribute="bottom" constant="-2" id="kkT-BX-Epo"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="fAC-db-eu2" secondAttribute="bottom" constant="97" id="n0q-23-DlG"/>
                             <constraint firstItem="8GB-Mm-RL0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="nvM-Ay-rHh"/>
-                            <constraint firstItem="ZNe-ms-EnZ" firstAttribute="top" secondItem="EXv-2p-G8Z" secondAttribute="bottom" constant="8" id="tBW-kJ-n9S"/>
+                            <constraint firstItem="ZNe-ms-EnZ" firstAttribute="top" secondItem="EXv-2p-G8Z" secondAttribute="bottom" constant="2" id="tBW-kJ-n9S"/>
                             <constraint firstAttribute="trailing" secondItem="8GB-Mm-RL0" secondAttribute="trailing" id="wrI-rx-acv"/>
-                            <constraint firstItem="EXv-2p-G8Z" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="23" id="x7p-io-ozz"/>
-                            <constraint firstAttribute="trailing" secondItem="EXv-2p-G8Z" secondAttribute="trailing" constant="9" id="xQl-G8-cfc"/>
+                            <constraint firstItem="EXv-2p-G8Z" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="x7p-io-ozz"/>
+                            <constraint firstAttribute="trailing" secondItem="EXv-2p-G8Z" secondAttribute="trailing" constant="16" id="xQl-G8-cfc"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="filterCollectionView" destination="ZNe-ms-EnZ" id="ZDF-Pv-xYQ"/>
                         <outlet property="filterSliderValue" destination="EXv-2p-G8Z" id="8Yy-ic-GDF"/>
                         <outlet property="imageView" destination="8GB-Mm-RL0" id="bUu-z6-uS5"/>
+                        <outlet property="unFilteredImageView" destination="fAC-db-eu2" id="Qo7-Pn-v0e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

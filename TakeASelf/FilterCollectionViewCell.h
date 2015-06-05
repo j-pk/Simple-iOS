@@ -10,7 +10,7 @@
 
 @interface FilterCollectionViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageVIew;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 
 @end

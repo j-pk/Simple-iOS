@@ -12,6 +12,7 @@
 
 @property (nonatomic) UIImage * original; 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIImageView *unFilteredImageView;
 
 @property (weak, nonatomic) IBOutlet UISlider *filterSliderValue;
 - (IBAction)filterSliderValue:(id)sender;
