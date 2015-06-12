@@ -18,6 +18,9 @@
 		C01F32761B25D1FC009716E2 /* PIxelAdventureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C01F32751B25D1FC009716E2 /* PIxelAdventureTests.m */; };
 		C01F32811B25F064009716E2 /* Attack.sks in Resources */ = {isa = PBXBuildFile; fileRef = C01F327F1B25F064009716E2 /* Attack.sks */; };
 		C01F32821B25F064009716E2 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = C01F32801B25F064009716E2 /* spark.png */; };
+		C0650ADC1B26861E0063F05A /* mario.png in Resources */ = {isa = PBXBuildFile; fileRef = C0650ADB1B26861E0063F05A /* mario.png */; };
+		C0650ADE1B268CAC0063F05A /* smw_jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = C0650ADD1B268CAC0063F05A /* smw_jump.wav */; };
+		C0650AE01B2720050063F05A /* smw_fireball.wav in Resources */ = {isa = PBXBuildFile; fileRef = C0650ADF1B2720050063F05A /* smw_fireball.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		C01F32751B25D1FC009716E2 /* PIxelAdventureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PIxelAdventureTests.m; sourceTree = "<group>"; };
 		C01F327F1B25F064009716E2 /* Attack.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Attack.sks; sourceTree = "<group>"; };
 		C01F32801B25F064009716E2 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		C0650ADB1B26861E0063F05A /* mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario.png; sourceTree = "<group>"; };
+		C0650ADD1B268CAC0063F05A /* smw_jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = smw_jump.wav; sourceTree = "<group>"; };
+		C0650ADF1B2720050063F05A /* smw_fireball.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = smw_fireball.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,9 @@
 				C01F32631B25D1FC009716E2 /* Main.storyboard */,
 				C01F327F1B25F064009716E2 /* Attack.sks */,
 				C01F32801B25F064009716E2 /* spark.png */,
+				C0650ADD1B268CAC0063F05A /* smw_jump.wav */,
+				C0650ADF1B2720050063F05A /* smw_fireball.wav */,
+				C0650ADB1B26861E0063F05A /* mario.png */,
 				C01F325B1B25D1FC009716E2 /* GameScene.h */,
 				C01F325C1B25D1FC009716E2 /* GameScene.m */,
 				C01F325E1B25D1FC009716E2 /* GameScene.sks */,
@@ -214,11 +223,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C01F326A1B25D1FC009716E2 /* LaunchScreen.xib in Resources */,
+				C0650ADC1B26861E0063F05A /* mario.png in Resources */,
+				C0650ADE1B268CAC0063F05A /* smw_jump.wav in Resources */,
 				C01F32821B25F064009716E2 /* spark.png in Resources */,
 				C01F32811B25F064009716E2 /* Attack.sks in Resources */,
 				C01F32671B25D1FC009716E2 /* Images.xcassets in Resources */,
 				C01F325F1B25D1FC009716E2 /* GameScene.sks in Resources */,
 				C01F32651B25D1FC009716E2 /* Main.storyboard in Resources */,
+				C0650AE01B2720050063F05A /* smw_fireball.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +446,7 @@
 				C01F327B1B25D1FC009716E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C01F327C1B25D1FC009716E2 /* Build configuration list for PBXNativeTarget "PIxelAdventureTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +455,7 @@
 				C01F327E1B25D1FC009716E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -58,7 +58,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="moveButtonPressed:" destination="LVB-YS-i5n" eventType="touchUpInside" id="ZTD-kf-Iya"/>
+                                    <action selector="pressedButton:" destination="LVB-YS-i5n" eventType="touchDown" id="mca-Qn-rz9"/>
+                                    <action selector="releasedButton:" destination="LVB-YS-i5n" eventType="touchUpInside" id="sJz-zc-uFs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZu-FM-tpf">
@@ -73,7 +74,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="moveButtonPressed:" destination="LVB-YS-i5n" eventType="touchUpInside" id="fCr-JE-GES"/>
+                                    <action selector="pressedButton:" destination="LVB-YS-i5n" eventType="touchDown" id="ZhV-Hi-Xcp"/>
+                                    <action selector="releasedButton:" destination="LVB-YS-i5n" eventType="touchUpInside" id="KdX-JC-oax"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTR-Hk-EI2">

@@ -8,6 +8,7 @@
 
 #import "GameViewController.h"
 #import "GameScene.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation SKScene (Unarchive)
 
@@ -33,9 +34,9 @@
     GameScene * scene;
 }
 
-- (void)viewDidLoad
+- (void)viewWillLayoutSubviews
 {
-    [super viewDidLoad];
+    [super viewWillLayoutSubviews];
 
     // Configure the view.
     SKView * skView = (SKView *)self.view;
@@ -45,8 +46,8 @@
     skView.ignoresSiblingOrder = YES;
     
     // Create and configure the scene.
-    scene = [GameScene unarchiveFromFile:@"GameScene"];
-    scene.scaleMode = SKSceneScaleModeResizeFill;
+    scene = [GameScene sceneWithSize:skView.bounds.size];
+    scene.scaleMode = SKSceneScaleModeFill;
     
     // Present the scene.
     [skView presentScene:scene];
@@ -72,6 +73,22 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+- (IBAction)pressedButton:(UIButton *)sender {
+    
+    //if sender isequalto then move -1, else 1
+    CGFloat direction = ([sender.titleLabel.text isEqualToString:@"A"]) ? -1 : 1;
+    
+    [scene changePixelDirection:direction];
+    
+}
+
+- (IBAction)releasedButton:(id)sender {
+    
+    [scene changePixelDirection:0];
+    
+    
+}
+
 - (IBAction)moveButtonPressed:(UIButton *)sender {
     
     NSArray * letters = @[@"W", @"A", @"S", @"D"];
@@ -88,6 +105,7 @@
     [scene movePixelInDirection:[directions[index] CGVectorValue]];
     
 }
+
 
 - (IBAction)fireButtonPressed:(UIButton *)sender {
     

@@ -10,8 +10,9 @@
 
 @interface GameScene : SKScene
 
-- (void)movePixelInDirection:(CGVector)direction;
 
+- (void)movePixelInDirection:(CGVector)direction;
+- (void)changePixelDirection:(CGFloat)direction;
 - (void)normalAttack;
 - (void)specialAttack;
 

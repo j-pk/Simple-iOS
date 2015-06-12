@@ -8,10 +8,12 @@
 
 #import "GameScene.h"
 
+
 @implementation GameScene
 
 {
-    SKShapeNode * pixel;
+    SKSpriteNode * pixel;
+    CGFloat characerDirection;
 }
 
 
@@ -28,31 +30,37 @@
 //    field.strength = 100;
 //    
 //    [self addChild:field];
-    pixel = [SKShapeNode shapeNodeWithEllipseOfSize:CGSizeMake(10, 10)];
-
-    pixel.fillColor = [UIColor cyanColor];
-    pixel.strokeColor = [UIColor clearColor];
+    pixel = [SKSpriteNode spriteNodeWithImageNamed:@"mario"];
     
-    pixel.position = CGPointMake(10, 10);
+    pixel.position = CGPointMake(150, 50);
     
     //adding gravity to the pixel to fall
     //physicbody is going to have mass
-    pixel.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:5];
+    pixel.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(10, 20) center:CGPointMake(0, 0)];
     pixel.physicsBody.friction = 10;
     
     [self addChild:pixel];
 
 }
 
-- (void)movePixelInDirection:(CGVector)direction {
+//changes pixel direction to move left and right
+- (void)changePixelDirection:(CGFloat)direction {
     
-//    [pixel.physicsBody  applyForce:direction];
+    characerDirection = direction;
+    
+    
+}
+
+// allows pixel to jump
+- (void)movePixelInDirection:(CGVector)direction {
     
     CGFloat newX = pixel.position.x + direction.dx;
     CGFloat newY = pixel.position.y + direction.dy;
     
     pixel.position = CGPointMake(newX, newY);
+    [pixel.physicsBody applyImpulse:CGVectorMake(newX + 0.5, newY + 0.5)];
     
+        [self runAction:[SKAction playSoundFileNamed:@"smw_jump.wav" waitForCompletion:NO]];
     
 }
 
@@ -62,7 +70,7 @@
     babyPixel.fillColor = [UIColor redColor];
     babyPixel.strokeColor = [UIColor clearColor];
     
-    babyPixel.position = CGPointMake(pixel.position.x + 10, pixel.position.y);
+    babyPixel.position = CGPointMake(pixel.position.x + 10, pixel.position.y + 10);
     
     [self addChild:babyPixel];
     
@@ -70,6 +78,10 @@
     babyPixel.physicsBody.affectedByGravity = NO;
     
     [babyPixel.physicsBody applyImpulse:CGVectorMake(10, 0)];
+    
+    SKAction * soundEffect = [SKAction playSoundFileNamed:@"smw_fireball.wav" waitForCompletion:NO];
+    
+    [self runAction:soundEffect];
     
 }
 
@@ -107,6 +119,8 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+    
+    pixel.position = CGPointMake(pixel.position.x + characerDirection, pixel.position.y);
 }
 
 @end
