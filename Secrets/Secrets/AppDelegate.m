@@ -23,12 +23,12 @@
                   clientKey:@"5DwVJXZXM9RGvK0HjCbnmG4iSCitIYdqqXQDL2cW"];
     
     [PFUser enableAutomaticUser];
-    PFUser * user = [PFUser user];
-    user.username = @"pk2";
-    user.password = @"pk2";
-    [user signUpInBackground];
+//    PFUser * user = [PFUser user];
+//    user.username = @"pk2";
+//    user.password = @"pk2";
+//    [user signUpInBackground];
     
-//    [PFUser logInWithUsernameInBackground:@"pk" password:@"pk"];
+    [PFUser logInWithUsernameInBackground:@"pk" password:@"pk"];
     
     // Register for Push Notitications
     UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound);

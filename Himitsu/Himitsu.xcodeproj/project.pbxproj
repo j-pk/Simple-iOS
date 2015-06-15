@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C015AA341B2F585000BC6A73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015AA331B2F585000BC6A73 /* AppDelegate.swift */; };
+		C015AA361B2F585000BC6A73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015AA351B2F585000BC6A73 /* ViewController.swift */; };
+		C015AA391B2F585000BC6A73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C015AA371B2F585000BC6A73 /* Main.storyboard */; };
+		C015AA3B1B2F585000BC6A73 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C015AA3A1B2F585000BC6A73 /* Images.xcassets */; };
+		C015AA3E1B2F585000BC6A73 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C015AA3C1B2F585000BC6A73 /* LaunchScreen.xib */; };
+		C015AA4A1B2F585000BC6A73 /* HimitsuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015AA491B2F585000BC6A73 /* HimitsuTests.swift */; };
+		C015AA551B2F58AA00BC6A73 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C015AA541B2F58AA00BC6A73 /* Firebase.framework */; };
+		C015AA571B2F58BB00BC6A73 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C015AA561B2F58BB00BC6A73 /* libicucore.dylib */; };
+		C015AA591B2F58C700BC6A73 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C015AA581B2F58C700BC6A73 /* libc++.dylib */; };
+		C015AA5B1B2F58D200BC6A73 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C015AA5A1B2F58D200BC6A73 /* CFNetwork.framework */; };
+		C015AA5D1B2F58E100BC6A73 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C015AA5C1B2F58E100BC6A73 /* Security.framework */; };
+		C015AA5F1B2F58EA00BC6A73 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C015AA5E1B2F58EA00BC6A73 /* SystemConfiguration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C015AA441B2F585000BC6A73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C015AA261B2F585000BC6A73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C015AA2D1B2F585000BC6A73;
+			remoteInfo = Himitsu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C015AA2E1B2F585000BC6A73 /* Himitsu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Himitsu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C015AA321B2F585000BC6A73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C015AA331B2F585000BC6A73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C015AA351B2F585000BC6A73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C015AA381B2F585000BC6A73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C015AA3A1B2F585000BC6A73 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C015AA3D1B2F585000BC6A73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C015AA431B2F585000BC6A73 /* HimitsuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HimitsuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C015AA481B2F585000BC6A73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C015AA491B2F585000BC6A73 /* HimitsuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HimitsuTests.swift; sourceTree = "<group>"; };
+		C015AA541B2F58AA00BC6A73 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		C015AA561B2F58BB00BC6A73 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		C015AA581B2F58C700BC6A73 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		C015AA5A1B2F58D200BC6A73 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C015AA5C1B2F58E100BC6A73 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C015AA5E1B2F58EA00BC6A73 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C015AA601B2F59FB00BC6A73 /* Himitsu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Himitsu-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C015AA2B1B2F585000BC6A73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C015AA5F1B2F58EA00BC6A73 /* SystemConfiguration.framework in Frameworks */,
+				C015AA5D1B2F58E100BC6A73 /* Security.framework in Frameworks */,
+				C015AA5B1B2F58D200BC6A73 /* CFNetwork.framework in Frameworks */,
+				C015AA591B2F58C700BC6A73 /* libc++.dylib in Frameworks */,
+				C015AA571B2F58BB00BC6A73 /* libicucore.dylib in Frameworks */,
+				C015AA551B2F58AA00BC6A73 /* Firebase.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C015AA401B2F585000BC6A73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C015AA251B2F585000BC6A73 = {
+			isa = PBXGroup;
+			children = (
+				C015AA301B2F585000BC6A73 /* Himitsu */,
+				C015AA461B2F585000BC6A73 /* HimitsuTests */,
+				C015AA2F1B2F585000BC6A73 /* Products */,
+				C015AA531B2F585900BC6A73 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C015AA2F1B2F585000BC6A73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C015AA2E1B2F585000BC6A73 /* Himitsu.app */,
+				C015AA431B2F585000BC6A73 /* HimitsuTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C015AA301B2F585000BC6A73 /* Himitsu */ = {
+			isa = PBXGroup;
+			children = (
+				C015AA331B2F585000BC6A73 /* AppDelegate.swift */,
+				C015AA351B2F585000BC6A73 /* ViewController.swift */,
+				C015AA371B2F585000BC6A73 /* Main.storyboard */,
+				C015AA311B2F585000BC6A73 /* Supporting Files */,
+			);
+			path = Himitsu;
+			sourceTree = "<group>";
+		};
+		C015AA311B2F585000BC6A73 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C015AA3A1B2F585000BC6A73 /* Images.xcassets */,
+				C015AA3C1B2F585000BC6A73 /* LaunchScreen.xib */,
+				C015AA601B2F59FB00BC6A73 /* Himitsu-Bridging-Header.h */,
+				C015AA321B2F585000BC6A73 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C015AA461B2F585000BC6A73 /* HimitsuTests */ = {
+			isa = PBXGroup;
+			children = (
+				C015AA491B2F585000BC6A73 /* HimitsuTests.swift */,
+				C015AA471B2F585000BC6A73 /* Supporting Files */,
+			);
+			path = HimitsuTests;
+			sourceTree = "<group>";
+		};
+		C015AA471B2F585000BC6A73 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C015AA481B2F585000BC6A73 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C015AA531B2F585900BC6A73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C015AA5E1B2F58EA00BC6A73 /* SystemConfiguration.framework */,
+				C015AA5C1B2F58E100BC6A73 /* Security.framework */,
+				C015AA5A1B2F58D200BC6A73 /* CFNetwork.framework */,
+				C015AA581B2F58C700BC6A73 /* libc++.dylib */,
+				C015AA561B2F58BB00BC6A73 /* libicucore.dylib */,
+				C015AA541B2F58AA00BC6A73 /* Firebase.framework */,
+			);
+			name = Frameworks;
+			path = Himitsu;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C015AA2D1B2F585000BC6A73 /* Himitsu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C015AA4D1B2F585000BC6A73 /* Build configuration list for PBXNativeTarget "Himitsu" */;
+			buildPhases = (
+				C015AA2A1B2F585000BC6A73 /* Sources */,
+				C015AA2B1B2F585000BC6A73 /* Frameworks */,
+				C015AA2C1B2F585000BC6A73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Himitsu;
+			productName = Himitsu;
+			productReference = C015AA2E1B2F585000BC6A73 /* Himitsu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C015AA421B2F585000BC6A73 /* HimitsuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C015AA501B2F585000BC6A73 /* Build configuration list for PBXNativeTarget "HimitsuTests" */;
+			buildPhases = (
+				C015AA3F1B2F585000BC6A73 /* Sources */,
+				C015AA401B2F585000BC6A73 /* Frameworks */,
+				C015AA411B2F585000BC6A73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C015AA451B2F585000BC6A73 /* PBXTargetDependency */,
+			);
+			name = HimitsuTests;
+			productName = HimitsuTests;
+			productReference = C015AA431B2F585000BC6A73 /* HimitsuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C015AA261B2F585000BC6A73 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Parker Kirby";
+				TargetAttributes = {
+					C015AA2D1B2F585000BC6A73 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					C015AA421B2F585000BC6A73 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = C015AA2D1B2F585000BC6A73;
+					};
+				};
+			};
+			buildConfigurationList = C015AA291B2F585000BC6A73 /* Build configuration list for PBXProject "Himitsu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C015AA251B2F585000BC6A73;
+			productRefGroup = C015AA2F1B2F585000BC6A73 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C015AA2D1B2F585000BC6A73 /* Himitsu */,
+				C015AA421B2F585000BC6A73 /* HimitsuTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C015AA2C1B2F585000BC6A73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C015AA391B2F585000BC6A73 /* Main.storyboard in Resources */,
+				C015AA3E1B2F585000BC6A73 /* LaunchScreen.xib in Resources */,
+				C015AA3B1B2F585000BC6A73 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C015AA411B2F585000BC6A73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C015AA2A1B2F585000BC6A73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C015AA361B2F585000BC6A73 /* ViewController.swift in Sources */,
+				C015AA341B2F585000BC6A73 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C015AA3F1B2F585000BC6A73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C015AA4A1B2F585000BC6A73 /* HimitsuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C015AA451B2F585000BC6A73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C015AA2D1B2F585000BC6A73 /* Himitsu */;
+			targetProxy = C015AA441B2F585000BC6A73 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C015AA371B2F585000BC6A73 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C015AA381B2F585000BC6A73 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C015AA3C1B2F585000BC6A73 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C015AA3D1B2F585000BC6A73 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C015AA4B1B2F585000BC6A73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C015AA4C1B2F585000BC6A73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C015AA4E1B2F585000BC6A73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Himitsu",
+				);
+				INFOPLIST_FILE = Himitsu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Himitsu/Himitsu-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C015AA4F1B2F585000BC6A73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Himitsu",
+				);
+				INFOPLIST_FILE = Himitsu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Himitsu/Himitsu-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		C015AA511B2F585000BC6A73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HimitsuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Himitsu.app/Himitsu";
+			};
+			name = Debug;
+		};
+		C015AA521B2F585000BC6A73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HimitsuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Himitsu.app/Himitsu";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C015AA291B2F585000BC6A73 /* Build configuration list for PBXProject "Himitsu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C015AA4B1B2F585000BC6A73 /* Debug */,
+				C015AA4C1B2F585000BC6A73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C015AA4D1B2F585000BC6A73 /* Build configuration list for PBXNativeTarget "Himitsu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C015AA4E1B2F585000BC6A73 /* Debug */,
+				C015AA4F1B2F585000BC6A73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C015AA501B2F585000BC6A73 /* Build configuration list for PBXNativeTarget "HimitsuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C015AA511B2F585000BC6A73 /* Debug */,
+				C015AA521B2F585000BC6A73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C015AA261B2F585000BC6A73 /* Project object */;
+}
