@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var messageButton: UIButton!
     
@@ -18,23 +18,47 @@ class ViewController: UIViewController {
     
     var myName: String?
     
-    var myFireBase = Firebase(url:"https://himitsu.firebaseio.com")
+    var myFireBase = Firebase(url:"https://secret-room.firebaseio.com")
     
-    var chatMessages: [[String:AnyObject]] = []
+    var chatMessages: [String:[String:AnyObject]] = [:]
     
+    @IBOutlet weak var messagesTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        messagesTableView.dataSource = self
+        messagesTableView.delegate = self 
     
         // Read data and react to changes
         myFireBase.observeEventType(.Value, withBlock: {
             snapshot in
             
-            let data = snapshot.value as! [String:AnyObject]
+            if let data = snapshot.value as? [String:AnyObject] {
             
-            self.chatMessages = data["messages"] as! [[String:AnyObject]]
+                self.chatMessages = data["messages"] as! [String:[String:AnyObject]]
+                
+                self.messagesTableView.reloadData()
+            }
             
         })
     
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return chatMessages.values.array.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("messageCell") as! UITableViewCell
+        
+        let message = chatMessages.values.array[indexPath.row]
+        
+        cell.textLabel?.text = message["name"] as? String
+        cell.detailTextLabel?.text = message["message"] as? String
+        
+            return cell
     }
 
     @IBAction func saveName(sender: AnyObject) {
@@ -43,6 +67,8 @@ class ViewController: UIViewController {
         
         nameButton.hidden = true
         messageButton.hidden = false
+        
+        chatField.text = ""
         
     }
     
@@ -60,7 +86,9 @@ class ViewController: UIViewController {
             
         ]
         
-        fireBaseMessages.setValue(message)
+        chatField.text = ""
+
+        fireBaseMessage.setValue(message)
         
     }
     
