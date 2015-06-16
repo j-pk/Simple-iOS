@@ -18,6 +18,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var myName: String?
     
+    var section: [String] = []
+    
+    var messageArrayToInt: [Int] = []
+    
     var myFireBase = Firebase(url:"https://secret-room.firebaseio.com")
     
     var chatMessages: [String:[String:AnyObject]] = [:]
@@ -27,22 +31,36 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         
         messagesTableView.dataSource = self
-        messagesTableView.delegate = self 
-    
+        messagesTableView.delegate = self
+        
         // Read data and react to changes
         myFireBase.observeEventType(.Value, withBlock: {
             snapshot in
             
             if let data = snapshot.value as? [String:AnyObject] {
+                
+                println(snapshot.value)
             
                 self.chatMessages = data["messages"] as! [String:[String:AnyObject]]
                 
                 self.messagesTableView.reloadData()
-            }
+                
+                let sortedKeys = Array(self.chatMessages.keys).sorted(<)
+                println(sortedKeys)
+                
+                self.section = sortedKeys
+                
+                let myArrayOfInt = Array(arrayLiteral: self.section.startIndex)
+                
+                self.messageArrayToInt = myArrayOfInt
             
+            }
+          
         })
+        
     
     }
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -54,12 +72,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCellWithIdentifier("messageCell") as! UITableViewCell
         
         let message = chatMessages.values.array[indexPath.row]
-        
+
         cell.textLabel?.text = message["name"] as? String
         cell.detailTextLabel?.text = message["message"] as? String
         
-            return cell
+        
+        return cell
     }
+
+    func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int {
+        
+        return messageArrayToInt.count
+    }
+    
 
     @IBAction func saveName(sender: AnyObject) {
         
@@ -82,13 +107,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let message = [
         
             "message" : chatField.text,
-            "name" : myName
+            "name" : myName,
             
         ]
         
         chatField.text = ""
 
         fireBaseMessage.setValue(message)
+        
         
     }
     
