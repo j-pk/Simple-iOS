@@ -1,1 +1,1 @@
-**Group Therapy** is an app in Objective-C that uses the Marvel API to pull the complete list of characters, the image of the character, and how many comic book appearances that have made in a tableview.
+**Group Therapy** is an app in Objective-C that uses the Marvel API to pull the complete list of characters, the image of the character, and how many comic book appearances it has made in a tableview.
