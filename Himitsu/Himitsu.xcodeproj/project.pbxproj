@@ -459,6 +459,7 @@
 				C015AA4F1B2F585000BC6A73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C015AA501B2F585000BC6A73 /* Build configuration list for PBXNativeTarget "HimitsuTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +468,7 @@
 				C015AA521B2F585000BC6A73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

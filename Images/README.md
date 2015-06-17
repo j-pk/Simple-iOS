@@ -1,0 +1,1 @@
+**Images** is a an app that uses the iTunes API. You can search for the artist and it will pull up an album with artwork, album name, and number of songs. 

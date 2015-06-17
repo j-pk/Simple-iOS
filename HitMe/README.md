@@ -1,0 +1,1 @@
+**Hit Me** is a an app that is similar to a bullseye app. You're given a random value and you try to adjust the slider to match the given value. Scores are given according to how well placed the slider is. 

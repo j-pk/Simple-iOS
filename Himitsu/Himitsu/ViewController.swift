@@ -18,14 +18,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var myName: String?
     
-    var myFireBase = Firebase(url:"https://secret-room.firebaseio.com")
+    var savedName: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    
+    var myDate: Double {
+//        let dateFormatter = NSDateFormatter()
+//        dateFormatter.dateFormat = "yyyy-MM-dd 'at' h:mm a"
+//        return dateFormatter.stringFromDate(NSDate())
+        return NSDate().timeIntervalSince1970
+    }
+
+    
+    var myFireBase = Firebase(url:"https://himitsu.firebaseio.com")
     
     var chatMessages: [String:[String:AnyObject]] = [:]
     
     @IBOutlet weak var messagesTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        println(myDate)
+    
         messagesTableView.dataSource = self
         messagesTableView.delegate = self 
     
@@ -34,6 +47,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             snapshot in
             
             if let data = snapshot.value as? [String:AnyObject] {
+                
+                println(snapshot.value)
             
                 self.chatMessages = data["messages"] as! [String:[String:AnyObject]]
                 
@@ -41,27 +56,63 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
             
         })
+        
+        if let loadSavedName = savedName.objectForKey("savedNameToDefaults") as? String {
+            myName = savedName.objectForKey("savedNameToDefaults") as? String
+            nameButton.hidden = true
+            messageButton.hidden = false
+        }
+        
+        
     
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        
+//        map(chatMessages, { (message) -> [String:AnyObject] in
+//            
+//            
+//            
+//        })
+        
+        
         return chatMessages.values.array.count
+    
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("messageCell") as! UITableViewCell
         
-        let message = chatMessages.values.array[indexPath.row]
+        
+        var sortedArray = sorted(chatMessages.values.array, { (message1, message2) -> Bool in
+            
+            let time1 = message1["time"] as! Double
+            let time2 = message2["time"] as! Double
+            
+            return time1 > time2
+            
+        })
+        
+        
+        let message = sortedArray[indexPath.row]
         
         cell.textLabel?.text = message["name"] as? String
         cell.detailTextLabel?.text = message["message"] as? String
         
-            return cell
+        var sortedByTime = message["time"] as? String
+
+        
+        return cell
+        
     }
 
     @IBAction func saveName(sender: AnyObject) {
+        
+        
+        savedName.setObject(self.chatField.text, forKey: "savedNameToDefaults")
+        savedName.synchronize()
         
         myName = chatField.text
         
@@ -74,7 +125,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBAction func sendMessage(sender: AnyObject) {
         
-        //appeding info to messages
+        //appending info to messages
         let fireBaseMessages = myFireBase.childByAppendingPath("messages")
         //give user an unique id
         let fireBaseMessage = fireBaseMessages.childByAutoId()
@@ -82,9 +133,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let message = [
         
             "message" : chatField.text,
-            "name" : myName
+            "name" : myName!,
+            "time" : myDate
             
         ]
+        
+        println(myDate)
         
         chatField.text = ""
 

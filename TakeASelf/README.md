@@ -1,0 +1,1 @@
+**Take A Self** Objective-C app that takes photos and allows you to apply filters to the picture. Pretty cool little app. 

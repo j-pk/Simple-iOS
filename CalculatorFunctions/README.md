@@ -5,11 +5,7 @@
 - Label displays value 
 - Clear button removes value 
 
- - Bugs
-
-		- % function partially works, I think it's my math on this one. 
-		- Switching sign (+/-) partially working, again likely my math and code. 
-
-  - Todo 
-
+   Todo 
+   
 		- Add decimal functionality 
+		- % operator
