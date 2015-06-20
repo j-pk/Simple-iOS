@@ -1,0 +1,1183 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00B3033A83C9FDDD2767392A /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 221064E5E12C7397157758FF /* AFSecurityPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05AAFC816E5D65CCBDA67FD1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4F950BAED945B237AAA4FE /* MobileCoreServices.framework */; };
+		08BF8E0B7F872028658F5092 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C5DC4132F8C5D7B7B4934A2E /* AFNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BFB4671E15259302B34D253 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E81F5A53437F039F64B4CBD /* AFHTTPRequestOperation.m */; };
+		0CB17D7C93F3AB0DB0DC8B8E /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FF979816A0C9EE883931C /* Download.swift */; };
+		0CF6BD99189607EA6B17690A /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3091EF860A0DDD0D3207A66 /* AFNetworking.framework */; };
+		0D7BD2E16A86E9ED90B38A36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FCE7BB4D2EA6F2B84A17C4 /* Foundation.framework */; };
+		118EACEC9EEDCFDF038C8CB8 /* AmazonS3ACL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9EFC81DE6F69B1EEE9C2E /* AmazonS3ACL.swift */; };
+		1384D6C4AD4E2B3EC7383551 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA2E729BBB42F4B10D9952D /* Alamofire.framework */; };
+		164C9B5DEEC2277F19C8A632 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D758F72359F4B6BCA29C97D /* Alamofire.swift */; };
+		1EA6B6239C39D148539E5A7D /* AFAmazonS3RequestSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 62047E2A7C69D43E705E8ACA /* AFAmazonS3RequestSerializer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20C8870B5571901957C7E714 /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 198DB7C76881C3454E677DB5 /* AFHTTPRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22CB60DA0C7EAA3C24CADB4C /* Pods-s3project2-AFAmazonS3Manager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B22E88592EC49136D15BBC89 /* Pods-s3project2-AFAmazonS3Manager-dummy.m */; };
+		24CD9FFAD15097E3303ADF7B /* AFAmazonS3Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 08303F27D86602F1BABD67C1 /* AFAmazonS3Manager.m */; };
+		26B5DC113E758835E2ED53EF /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DE72495CF5F4A68D016C25A9 /* AFHTTPRequestOperationManager.m */; };
+		2C4024DB8FBCA8A5907B9065 /* Pods-s3project2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48E7236C20DB7F5357A9331F /* Pods-s3project2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CCDC2E5FF608EF6888EBE41 /* AFAmazonS3ResponseSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 233D147FE83C80AE50EB0A9A /* AFAmazonS3ResponseSerializer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FA706464379078649F0840F /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 51968BD47C59B213F069DF1D /* AFNetworkReachabilityManager.m */; };
+		31E765602905FC749E3FC866 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC80080AF91798CECA4F6C /* AFURLConnectionOperation.m */; };
+		36FD180E9D540D25181C3ACB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FCE7BB4D2EA6F2B84A17C4 /* Foundation.framework */; };
+		4375F1D60196591F7DCF53C5 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B468C888BEE4FA5276CF8 /* Upload.swift */; };
+		43831278B10F2E1CC5601FED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FCE7BB4D2EA6F2B84A17C4 /* Foundation.framework */; };
+		4BDA8F1C08DE3C745C1E24C6 /* AmazonS3RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41842060F0EC6B1632D8A16E /* AmazonS3RequestManager.swift */; };
+		50F7553D62BEAA1C533F60A5 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799C2B5C8CFB3E9D1AA92978 /* Validation.swift */; };
+		52D3F2E7C052B07EE51499C2 /* AmazonS3SignatureHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E4455C790CD4DFC364F4BB6 /* AmazonS3SignatureHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EA3229A91E254152B6A4B7E /* Pods-s3project2-AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB321BA69A64035FE5EDBF17 /* Pods-s3project2-AFNetworking-dummy.m */; };
+		63704C8BF844B724C7DE6BCF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C276C5A8B8AF0848F116751 /* SystemConfiguration.framework */; };
+		69CCEB8C8F2387A3E6CD9094 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BE18B8D7FFE5A3638D5258 /* AFURLResponseSerialization.m */; };
+		6C6F43B417DB484433EBE0C5 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BDC1268CF8A97C6144F133 /* AFURLRequestSerialization.m */; };
+		6FC3F15B98036523D46ECB2B /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BC1C691B8FC8B52182CCC1 /* Manager.swift */; };
+		75463CBBD662D852EADE2254 /* Pods-s3project2-AmazonS3RequestManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 886E80216429A700F40817E3 /* Pods-s3project2-AmazonS3RequestManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A7EB11CA6B5CCF150AA0ECD /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E5FE20A9AADD7B8848A62A37 /* AFURLConnectionOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7AA0F9313CCC17DE473B1D7B /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B8380B6DB5D4366AEBBFD92 /* AFURLRequestSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81B2ABDB83A69520FBEE642C /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 31E62A0161EAD477B30C638C /* AFURLResponseSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EED3732A6048D36496258B2 /* AFAmazonS3Manager.h in Headers */ = {isa = PBXBuildFile; fileRef = EB267EE967F59A563854E6AE /* AFAmazonS3Manager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		914BE8B275765AC833319AA3 /* Pods-s3project2-AmazonS3RequestManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 104DFEF8EFB42F144B97F6A1 /* Pods-s3project2-AmazonS3RequestManager-dummy.m */; };
+		92EAAC5C5B4B285A8C9FA95B /* Pods-s3project2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC72DE986064D09DFD681CED /* Pods-s3project2-dummy.m */; };
+		930AC9DE7B848F117ED1C989 /* AmazonS3SignatureHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 2357F7B32F42845F96B72526 /* AmazonS3SignatureHelpers.m */; };
+		A167D1955E60167AC04D6167 /* AFAmazonS3RequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F57937A0909B1B3B6B908E66 /* AFAmazonS3RequestSerializer.m */; };
+		AF7A75B73B9D3D29354C5B5B /* AFAmazonS3ResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 838FFF1442321F72F9786472 /* AFAmazonS3ResponseSerializer.m */; };
+		B417317B6678916A5D6DACB4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422D511ECF3DEB5576C58DF /* Request.swift */; };
+		B78B9A2E0AC156C6EEECD6A1 /* Pods-s3project2-Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EFFC85C52362485D2AE9228 /* Pods-s3project2-Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7DAF88F53A291BA73F6B292 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCEDB62A4E4695909F6E9FDE /* CoreGraphics.framework */; };
+		B91D84E5A44DF900C9A7D279 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FCE7BB4D2EA6F2B84A17C4 /* Foundation.framework */; };
+		BD6C6181666CFD1ED82F7354 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD0764537D062CD2E33A218 /* ResponseSerialization.swift */; };
+		C17365E1D60DD5B9B559FFB7 /* Pods-s3project2-AFNetworking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A8A7EC90F0D121A32BB109E /* Pods-s3project2-AFNetworking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CACA8E60556322AD59EB20DB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4F950BAED945B237AAA4FE /* MobileCoreServices.framework */; };
+		CE9D75B7D2F092735481336D /* Pods-s3project2-AFAmazonS3Manager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A3855D0FE97A5CD15ABEB4C /* Pods-s3project2-AFAmazonS3Manager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D022DA8D9CE110E6B14BC854 /* Pods-s3project2-Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D45FFEB769CBE8140CA8D83F /* Pods-s3project2-Alamofire-dummy.m */; };
+		E2C7AD8B06956F2456EA5EF9 /* AFHTTPRequestOperationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F78CB448961C6023800A4A5 /* AFHTTPRequestOperationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E489454CF0A536679B5BC504 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A5B133FD37D7E2522D315 /* ParameterEncoding.swift */; };
+		E94B6E89F70AF15A9C66C21E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33343E048D638C558A494002 /* Security.framework */; };
+		F142F83B0F44BAE8BA377005 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DCDEE55DA00B6E8CB22569 /* AFSecurityPolicy.m */; };
+		FA1CC882F8B077A180144DE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FCE7BB4D2EA6F2B84A17C4 /* Foundation.framework */; };
+		FF3057324097D069A20F53D2 /* AmazonS3RequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F714F83AE5A3F4E2F8C48518 /* AmazonS3RequestManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0A8E0DF388464393078144AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12ADEE6F3AC15716340FA63C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07B4F23C64E2410726BCAFAB;
+			remoteInfo = "Pods-s3project2-AFNetworking";
+		};
+		5F3798F6EB6A78EF8D0B6C1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12ADEE6F3AC15716340FA63C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB652EFBC67795E230BD789C;
+			remoteInfo = "Pods-s3project2-AFAmazonS3Manager";
+		};
+		7C164E325304A9A592C64448 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12ADEE6F3AC15716340FA63C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1DDEEC01C2E0C84E0FEB566;
+			remoteInfo = "Pods-s3project2-Alamofire";
+		};
+		82A890DC1D64EF0421474D31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12ADEE6F3AC15716340FA63C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07B4F23C64E2410726BCAFAB;
+			remoteInfo = "Pods-s3project2-AFNetworking";
+		};
+		B365280FE606CD475F8EA4F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12ADEE6F3AC15716340FA63C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06EDF2726CA393C41735CA52;
+			remoteInfo = "Pods-s3project2-AmazonS3RequestManager";
+		};
+		B5C9EEDE86F6912466648C72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12ADEE6F3AC15716340FA63C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1DDEEC01C2E0C84E0FEB566;
+			remoteInfo = "Pods-s3project2-Alamofire";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07BC1C691B8FC8B52182CCC1 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
+		08303F27D86602F1BABD67C1 /* AFAmazonS3Manager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFAmazonS3Manager.m; path = AFAmazonS3Manager/AFAmazonS3Manager.m; sourceTree = "<group>"; };
+		09F44A507F16E42169E5CB81 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A95B3EBB2212F5F405155C9 /* Pods-s3project2-AFNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-s3project2-AFNetworking.modulemap"; sourceTree = "<group>"; };
+		0F0F8CBCE970E40260BCF7AD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		104DFEF8EFB42F144B97F6A1 /* Pods-s3project2-AmazonS3RequestManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-s3project2-AmazonS3RequestManager-dummy.m"; sourceTree = "<group>"; };
+		11F7900C6123A35A5BACC198 /* Pods-s3project2-AFNetworking-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-s3project2-AFNetworking-Private.xcconfig"; sourceTree = "<group>"; };
+		14187BBB1E4AC20593E88C7A /* Pods-s3project2-AmazonS3RequestManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-s3project2-AmazonS3RequestManager.xcconfig"; sourceTree = "<group>"; };
+		14FCE7BB4D2EA6F2B84A17C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		170E52418409C24084037663 /* Pods-s3project2-AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-s3project2-AFNetworking.xcconfig"; sourceTree = "<group>"; };
+		198DB7C76881C3454E677DB5 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		1A4F950BAED945B237AAA4FE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		1E4455C790CD4DFC364F4BB6 /* AmazonS3SignatureHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AmazonS3SignatureHelpers.h; path = AmazonS3RequestManager/AmazonS3SignatureHelpers.h; sourceTree = "<group>"; };
+		207E9BF642A24846BB3A2D1B /* Pods-s3project2-AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-s3project2-AFNetworking-prefix.pch"; sourceTree = "<group>"; };
+		221064E5E12C7397157758FF /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
+		233D147FE83C80AE50EB0A9A /* AFAmazonS3ResponseSerializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAmazonS3ResponseSerializer.h; path = AFAmazonS3Manager/AFAmazonS3ResponseSerializer.h; sourceTree = "<group>"; };
+		2357F7B32F42845F96B72526 /* AmazonS3SignatureHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AmazonS3SignatureHelpers.m; path = AmazonS3RequestManager/AmazonS3SignatureHelpers.m; sourceTree = "<group>"; };
+		2F78CB448961C6023800A4A5 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperationManager.h; path = AFNetworking/AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		30C9EFC81DE6F69B1EEE9C2E /* AmazonS3ACL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AmazonS3ACL.swift; path = AmazonS3RequestManager/AmazonS3ACL.swift; sourceTree = "<group>"; };
+		31E62A0161EAD477B30C638C /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		33343E048D638C558A494002 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		3B3A55D73B48D6FCBA10F8E2 /* Pods-s3project2-Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-s3project2-Alamofire.modulemap"; sourceTree = "<group>"; };
+		3E7DC79AFED099E8A99680AB /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41842060F0EC6B1632D8A16E /* AmazonS3RequestManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AmazonS3RequestManager.swift; path = AmazonS3RequestManager/AmazonS3RequestManager.swift; sourceTree = "<group>"; };
+		41ECA6AE4DBD22D81BE9943D /* Pods-s3project2-AFAmazonS3Manager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-s3project2-AFAmazonS3Manager.modulemap"; sourceTree = "<group>"; };
+		43A8D65132C5A14B26C1D94F /* Pods-s3project2-AmazonS3RequestManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-s3project2-AmazonS3RequestManager.modulemap"; sourceTree = "<group>"; };
+		48DCDEE55DA00B6E8CB22569 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
+		48E7236C20DB7F5357A9331F /* Pods-s3project2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-s3project2-umbrella.h"; sourceTree = "<group>"; };
+		4958B3C3C84322FF2BACF222 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		495F914E00C7E537E0D71C6A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A4379CFE70FA61BAEEEB38C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A8A7EC90F0D121A32BB109E /* Pods-s3project2-AFNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-s3project2-AFNetworking-umbrella.h"; sourceTree = "<group>"; };
+		4D758F72359F4B6BCA29C97D /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		4E318CB6765559A3E878A0C4 /* Pods-s3project2-AFAmazonS3Manager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-s3project2-AFAmazonS3Manager.xcconfig"; sourceTree = "<group>"; };
+		51968BD47C59B213F069DF1D /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		56D7239F34F35DE266C29315 /* Pods-s3project2-Alamofire-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-s3project2-Alamofire-Private.xcconfig"; sourceTree = "<group>"; };
+		58EF4E38E6283803F025DFED /* Pods-s3project2-AmazonS3RequestManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-s3project2-AmazonS3RequestManager-prefix.pch"; sourceTree = "<group>"; };
+		5FDC80080AF91798CECA4F6C /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLConnectionOperation.m; path = AFNetworking/AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		62047E2A7C69D43E705E8ACA /* AFAmazonS3RequestSerializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAmazonS3RequestSerializer.h; path = AFAmazonS3Manager/AFAmazonS3RequestSerializer.h; sourceTree = "<group>"; };
+		6AC5C8DA55E368C7F0325087 /* Pods-s3project2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-s3project2.release.xcconfig"; sourceTree = "<group>"; };
+		6C276C5A8B8AF0848F116751 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		6E81F5A53437F039F64B4CBD /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = AFNetworking/AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		799C2B5C8CFB3E9D1AA92978 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		7A3855D0FE97A5CD15ABEB4C /* Pods-s3project2-AFAmazonS3Manager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-s3project2-AFAmazonS3Manager-umbrella.h"; sourceTree = "<group>"; };
+		7AA2E729BBB42F4B10D9952D /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B8380B6DB5D4366AEBBFD92 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		838FFF1442321F72F9786472 /* AFAmazonS3ResponseSerializer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFAmazonS3ResponseSerializer.m; path = AFAmazonS3Manager/AFAmazonS3ResponseSerializer.m; sourceTree = "<group>"; };
+		841F898C7D4BD6D66F6A293B /* Pods-s3project2-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-s3project2-frameworks.sh"; sourceTree = "<group>"; };
+		873E24BA3B9BB3D4EF2B1478 /* AmazonS3RequestManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AmazonS3RequestManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		886E80216429A700F40817E3 /* Pods-s3project2-AmazonS3RequestManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-s3project2-AmazonS3RequestManager-umbrella.h"; sourceTree = "<group>"; };
+		89BDC1268CF8A97C6144F133 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		8EFFC85C52362485D2AE9228 /* Pods-s3project2-Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-s3project2-Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		9422D511ECF3DEB5576C58DF /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		966FB38A2A41DDC7FF570840 /* Pods-s3project2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-s3project2.modulemap"; sourceTree = "<group>"; };
+		9D5558EB37FE9320D08CDDEF /* Pods-s3project2-AFAmazonS3Manager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-s3project2-AFAmazonS3Manager-prefix.pch"; sourceTree = "<group>"; };
+		AA7CD64C97E2914B1CB295D3 /* Pods-s3project2-Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-s3project2-Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		B22A5B133FD37D7E2522D315 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		B22E88592EC49136D15BBC89 /* Pods-s3project2-AFAmazonS3Manager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-s3project2-AFAmazonS3Manager-dummy.m"; sourceTree = "<group>"; };
+		B4BE18B8D7FFE5A3638D5258 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		BAD0764537D062CD2E33A218 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		C5DC4132F8C5D7B7B4934A2E /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		C7C786385EDA0DBF8365FAD3 /* Pods-s3project2-AFAmazonS3Manager-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-s3project2-AFAmazonS3Manager-Private.xcconfig"; sourceTree = "<group>"; };
+		C888D7E4137FCBB396D5AD00 /* Pods-s3project2-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-s3project2-resources.sh"; sourceTree = "<group>"; };
+		CB321BA69A64035FE5EDBF17 /* Pods-s3project2-AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-s3project2-AFNetworking-dummy.m"; sourceTree = "<group>"; };
+		CE9FF979816A0C9EE883931C /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
+		CF65AC12C5410BF1D12C956C /* Pods-s3project2-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-s3project2-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D3091EF860A0DDD0D3207A66 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D45FFEB769CBE8140CA8D83F /* Pods-s3project2-Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-s3project2-Alamofire-dummy.m"; sourceTree = "<group>"; };
+		DA75B377F810CDFE7B2389F4 /* Pods_s3project2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_s3project2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAD6FB08AB76FC0EFFC15BD0 /* Pods-s3project2-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-s3project2-environment.h"; sourceTree = "<group>"; };
+		DE72495CF5F4A68D016C25A9 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperationManager.m; path = AFNetworking/AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		E01D7F782D5B654F67DD0DC7 /* Pods-s3project2-AmazonS3RequestManager-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-s3project2-AmazonS3RequestManager-Private.xcconfig"; sourceTree = "<group>"; };
+		E25B468C888BEE4FA5276CF8 /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
+		E5FE20A9AADD7B8848A62A37 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLConnectionOperation.h; path = AFNetworking/AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		EB267EE967F59A563854E6AE /* AFAmazonS3Manager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAmazonS3Manager.h; path = AFAmazonS3Manager/AFAmazonS3Manager.h; sourceTree = "<group>"; };
+		EC11B929EDAE8470DF91CD6E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC1457815EF6777C9D4FCB09 /* Pods-s3project2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-s3project2.debug.xcconfig"; sourceTree = "<group>"; };
+		EC72DE986064D09DFD681CED /* Pods-s3project2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-s3project2-dummy.m"; sourceTree = "<group>"; };
+		F317D89A3542B7E5E4FA0839 /* AFAmazonS3Manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFAmazonS3Manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F41286AFA205BA1619E05FC2 /* Pods-s3project2-Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-s3project2-Alamofire.xcconfig"; sourceTree = "<group>"; };
+		F57937A0909B1B3B6B908E66 /* AFAmazonS3RequestSerializer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFAmazonS3RequestSerializer.m; path = AFAmazonS3Manager/AFAmazonS3RequestSerializer.m; sourceTree = "<group>"; };
+		F714F83AE5A3F4E2F8C48518 /* AmazonS3RequestManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AmazonS3RequestManager.h; path = AmazonS3RequestManager/AmazonS3RequestManager.h; sourceTree = "<group>"; };
+		F8E8FD871FE3E2E147E56FD8 /* Pods-s3project2-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-s3project2-acknowledgements.plist"; sourceTree = "<group>"; };
+		FCEDB62A4E4695909F6E9FDE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		FE3623EE171B07712DF0F513 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F312A2C27E689CEAF97DFF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CF6BD99189607EA6B17690A /* AFNetworking.framework in Frameworks */,
+				B91D84E5A44DF900C9A7D279 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75C02F4E9BC55EF824D6F7AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7DAF88F53A291BA73F6B292 /* CoreGraphics.framework in Frameworks */,
+				FA1CC882F8B077A180144DE0 /* Foundation.framework in Frameworks */,
+				CACA8E60556322AD59EB20DB /* MobileCoreServices.framework in Frameworks */,
+				E94B6E89F70AF15A9C66C21E /* Security.framework in Frameworks */,
+				63704C8BF844B724C7DE6BCF /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EC631A2D0DD684DE8F898DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D7BD2E16A86E9ED90B38A36 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8837AD26AC39D9607E0E1B10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43831278B10F2E1CC5601FED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD44C43D80EA4EAC84DD57DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1384D6C4AD4E2B3EC7383551 /* Alamofire.framework in Frameworks */,
+				36FD180E9D540D25181C3ACB /* Foundation.framework in Frameworks */,
+				05AAFC816E5D65CCBDA67FD1 /* MobileCoreServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C82416BA841D8E396D42302 = {
+			isa = PBXGroup;
+			children = (
+				4958B3C3C84322FF2BACF222 /* Podfile */,
+				714CB6169877A4DD7934D270 /* Frameworks */,
+				388DAB1B9CF1FE7A21137065 /* Pods */,
+				F62B9883EC39480D66BBBB8F /* Products */,
+				D35FCB0341D8371D90892AD4 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		2CBA22275ED5E66ACAB3E815 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F0F8CBCE970E40260BCF7AD /* Info.plist */,
+				0A95B3EBB2212F5F405155C9 /* Pods-s3project2-AFNetworking.modulemap */,
+				170E52418409C24084037663 /* Pods-s3project2-AFNetworking.xcconfig */,
+				11F7900C6123A35A5BACC198 /* Pods-s3project2-AFNetworking-Private.xcconfig */,
+				CB321BA69A64035FE5EDBF17 /* Pods-s3project2-AFNetworking-dummy.m */,
+				207E9BF642A24846BB3A2D1B /* Pods-s3project2-AFNetworking-prefix.pch */,
+				4A8A7EC90F0D121A32BB109E /* Pods-s3project2-AFNetworking-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-s3project2-AFNetworking";
+			sourceTree = "<group>";
+		};
+		388DAB1B9CF1FE7A21137065 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DC4E775911B0D20476D9B51 /* AFAmazonS3Manager */,
+				7DF0B197A36AA872A46F16BF /* AFNetworking */,
+				59B2D89D3403F4858F225BA3 /* Alamofire */,
+				4AFFA514F5D035158743018F /* AmazonS3RequestManager */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4AFFA514F5D035158743018F /* AmazonS3RequestManager */ = {
+			isa = PBXGroup;
+			children = (
+				30C9EFC81DE6F69B1EEE9C2E /* AmazonS3ACL.swift */,
+				F714F83AE5A3F4E2F8C48518 /* AmazonS3RequestManager.h */,
+				41842060F0EC6B1632D8A16E /* AmazonS3RequestManager.swift */,
+				1E4455C790CD4DFC364F4BB6 /* AmazonS3SignatureHelpers.h */,
+				2357F7B32F42845F96B72526 /* AmazonS3SignatureHelpers.m */,
+				AF7304843E4464362C2367FD /* Support Files */,
+			);
+			path = AmazonS3RequestManager;
+			sourceTree = "<group>";
+		};
+		535A045088BFB6F42923AA8D /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				7B8380B6DB5D4366AEBBFD92 /* AFURLRequestSerialization.h */,
+				89BDC1268CF8A97C6144F133 /* AFURLRequestSerialization.m */,
+				31E62A0161EAD477B30C638C /* AFURLResponseSerialization.h */,
+				B4BE18B8D7FFE5A3638D5258 /* AFURLResponseSerialization.m */,
+			);
+			name = Serialization;
+			sourceTree = "<group>";
+		};
+		59B2D89D3403F4858F225BA3 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				4D758F72359F4B6BCA29C97D /* Alamofire.swift */,
+				CE9FF979816A0C9EE883931C /* Download.swift */,
+				07BC1C691B8FC8B52182CCC1 /* Manager.swift */,
+				B22A5B133FD37D7E2522D315 /* ParameterEncoding.swift */,
+				9422D511ECF3DEB5576C58DF /* Request.swift */,
+				BAD0764537D062CD2E33A218 /* ResponseSerialization.swift */,
+				E25B468C888BEE4FA5276CF8 /* Upload.swift */,
+				799C2B5C8CFB3E9D1AA92978 /* Validation.swift */,
+				D414DA292E650F9D7BD1FE58 /* Support Files */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		5CC9CB2D3C58D5207563EC3F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				09F44A507F16E42169E5CB81 /* Info.plist */,
+				41ECA6AE4DBD22D81BE9943D /* Pods-s3project2-AFAmazonS3Manager.modulemap */,
+				4E318CB6765559A3E878A0C4 /* Pods-s3project2-AFAmazonS3Manager.xcconfig */,
+				C7C786385EDA0DBF8365FAD3 /* Pods-s3project2-AFAmazonS3Manager-Private.xcconfig */,
+				B22E88592EC49136D15BBC89 /* Pods-s3project2-AFAmazonS3Manager-dummy.m */,
+				9D5558EB37FE9320D08CDDEF /* Pods-s3project2-AFAmazonS3Manager-prefix.pch */,
+				7A3855D0FE97A5CD15ABEB4C /* Pods-s3project2-AFAmazonS3Manager-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-s3project2-AFAmazonS3Manager";
+			sourceTree = "<group>";
+		};
+		5DC4E775911B0D20476D9B51 /* AFAmazonS3Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EB267EE967F59A563854E6AE /* AFAmazonS3Manager.h */,
+				08303F27D86602F1BABD67C1 /* AFAmazonS3Manager.m */,
+				62047E2A7C69D43E705E8ACA /* AFAmazonS3RequestSerializer.h */,
+				F57937A0909B1B3B6B908E66 /* AFAmazonS3RequestSerializer.m */,
+				233D147FE83C80AE50EB0A9A /* AFAmazonS3ResponseSerializer.h */,
+				838FFF1442321F72F9786472 /* AFAmazonS3ResponseSerializer.m */,
+				5CC9CB2D3C58D5207563EC3F /* Support Files */,
+			);
+			path = AFAmazonS3Manager;
+			sourceTree = "<group>";
+		};
+		60FF31310E8BA155E9BC0D71 /* Pods-s3project2 */ = {
+			isa = PBXGroup;
+			children = (
+				FE3623EE171B07712DF0F513 /* Info.plist */,
+				966FB38A2A41DDC7FF570840 /* Pods-s3project2.modulemap */,
+				CF65AC12C5410BF1D12C956C /* Pods-s3project2-acknowledgements.markdown */,
+				F8E8FD871FE3E2E147E56FD8 /* Pods-s3project2-acknowledgements.plist */,
+				EC72DE986064D09DFD681CED /* Pods-s3project2-dummy.m */,
+				DAD6FB08AB76FC0EFFC15BD0 /* Pods-s3project2-environment.h */,
+				841F898C7D4BD6D66F6A293B /* Pods-s3project2-frameworks.sh */,
+				C888D7E4137FCBB396D5AD00 /* Pods-s3project2-resources.sh */,
+				48E7236C20DB7F5357A9331F /* Pods-s3project2-umbrella.h */,
+				EC1457815EF6777C9D4FCB09 /* Pods-s3project2.debug.xcconfig */,
+				6AC5C8DA55E368C7F0325087 /* Pods-s3project2.release.xcconfig */,
+			);
+			name = "Pods-s3project2";
+			path = "Target Support Files/Pods-s3project2";
+			sourceTree = "<group>";
+		};
+		714CB6169877A4DD7934D270 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3091EF860A0DDD0D3207A66 /* AFNetworking.framework */,
+				7AA2E729BBB42F4B10D9952D /* Alamofire.framework */,
+				B600967D681A0A8F8F65302B /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77265FD9660ECBE7DE6F53D0 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				C5DC4132F8C5D7B7B4934A2E /* AFNetworkReachabilityManager.h */,
+				51968BD47C59B213F069DF1D /* AFNetworkReachabilityManager.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		7DF0B197A36AA872A46F16BF /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				DC30E08F157B445E7329784F /* NSURLConnection */,
+				77265FD9660ECBE7DE6F53D0 /* Reachability */,
+				A9F41D061EDE9813862E9772 /* Security */,
+				535A045088BFB6F42923AA8D /* Serialization */,
+				2CBA22275ED5E66ACAB3E815 /* Support Files */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		A9F41D061EDE9813862E9772 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				221064E5E12C7397157758FF /* AFSecurityPolicy.h */,
+				48DCDEE55DA00B6E8CB22569 /* AFSecurityPolicy.m */,
+			);
+			name = Security;
+			sourceTree = "<group>";
+		};
+		AF7304843E4464362C2367FD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				495F914E00C7E537E0D71C6A /* Info.plist */,
+				43A8D65132C5A14B26C1D94F /* Pods-s3project2-AmazonS3RequestManager.modulemap */,
+				14187BBB1E4AC20593E88C7A /* Pods-s3project2-AmazonS3RequestManager.xcconfig */,
+				E01D7F782D5B654F67DD0DC7 /* Pods-s3project2-AmazonS3RequestManager-Private.xcconfig */,
+				104DFEF8EFB42F144B97F6A1 /* Pods-s3project2-AmazonS3RequestManager-dummy.m */,
+				58EF4E38E6283803F025DFED /* Pods-s3project2-AmazonS3RequestManager-prefix.pch */,
+				886E80216429A700F40817E3 /* Pods-s3project2-AmazonS3RequestManager-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-s3project2-AmazonS3RequestManager";
+			sourceTree = "<group>";
+		};
+		B600967D681A0A8F8F65302B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				FCEDB62A4E4695909F6E9FDE /* CoreGraphics.framework */,
+				14FCE7BB4D2EA6F2B84A17C4 /* Foundation.framework */,
+				1A4F950BAED945B237AAA4FE /* MobileCoreServices.framework */,
+				33343E048D638C558A494002 /* Security.framework */,
+				6C276C5A8B8AF0848F116751 /* SystemConfiguration.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D35FCB0341D8371D90892AD4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				60FF31310E8BA155E9BC0D71 /* Pods-s3project2 */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D414DA292E650F9D7BD1FE58 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC11B929EDAE8470DF91CD6E /* Info.plist */,
+				3B3A55D73B48D6FCBA10F8E2 /* Pods-s3project2-Alamofire.modulemap */,
+				F41286AFA205BA1619E05FC2 /* Pods-s3project2-Alamofire.xcconfig */,
+				56D7239F34F35DE266C29315 /* Pods-s3project2-Alamofire-Private.xcconfig */,
+				D45FFEB769CBE8140CA8D83F /* Pods-s3project2-Alamofire-dummy.m */,
+				AA7CD64C97E2914B1CB295D3 /* Pods-s3project2-Alamofire-prefix.pch */,
+				8EFFC85C52362485D2AE9228 /* Pods-s3project2-Alamofire-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-s3project2-Alamofire";
+			sourceTree = "<group>";
+		};
+		DC30E08F157B445E7329784F /* NSURLConnection */ = {
+			isa = PBXGroup;
+			children = (
+				198DB7C76881C3454E677DB5 /* AFHTTPRequestOperation.h */,
+				6E81F5A53437F039F64B4CBD /* AFHTTPRequestOperation.m */,
+				2F78CB448961C6023800A4A5 /* AFHTTPRequestOperationManager.h */,
+				DE72495CF5F4A68D016C25A9 /* AFHTTPRequestOperationManager.m */,
+				E5FE20A9AADD7B8848A62A37 /* AFURLConnectionOperation.h */,
+				5FDC80080AF91798CECA4F6C /* AFURLConnectionOperation.m */,
+			);
+			name = NSURLConnection;
+			sourceTree = "<group>";
+		};
+		F62B9883EC39480D66BBBB8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F317D89A3542B7E5E4FA0839 /* AFAmazonS3Manager.framework */,
+				3E7DC79AFED099E8A99680AB /* AFNetworking.framework */,
+				4A4379CFE70FA61BAEEEB38C /* Alamofire.framework */,
+				873E24BA3B9BB3D4EF2B1478 /* AmazonS3RequestManager.framework */,
+				DA75B377F810CDFE7B2389F4 /* Pods_s3project2.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		57309124281FB15F0E924FAC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF3057324097D069A20F53D2 /* AmazonS3RequestManager.h in Headers */,
+				52D3F2E7C052B07EE51499C2 /* AmazonS3SignatureHelpers.h in Headers */,
+				75463CBBD662D852EADE2254 /* Pods-s3project2-AmazonS3RequestManager-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E3A82FF32E1913F7FED27E8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EED3732A6048D36496258B2 /* AFAmazonS3Manager.h in Headers */,
+				1EA6B6239C39D148539E5A7D /* AFAmazonS3RequestSerializer.h in Headers */,
+				2CCDC2E5FF608EF6888EBE41 /* AFAmazonS3ResponseSerializer.h in Headers */,
+				CE9D75B7D2F092735481336D /* Pods-s3project2-AFAmazonS3Manager-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80C020186B2AD860ADE32EBB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C4024DB8FBCA8A5907B9065 /* Pods-s3project2-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6B821FA104ADDA9B2EAE56E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B78B9A2E0AC156C6EEECD6A1 /* Pods-s3project2-Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1E0DD1D24AC4125AB2EFC65 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C8870B5571901957C7E714 /* AFHTTPRequestOperation.h in Headers */,
+				E2C7AD8B06956F2456EA5EF9 /* AFHTTPRequestOperationManager.h in Headers */,
+				08BF8E0B7F872028658F5092 /* AFNetworkReachabilityManager.h in Headers */,
+				00B3033A83C9FDDD2767392A /* AFSecurityPolicy.h in Headers */,
+				7A7EB11CA6B5CCF150AA0ECD /* AFURLConnectionOperation.h in Headers */,
+				7AA0F9313CCC17DE473B1D7B /* AFURLRequestSerialization.h in Headers */,
+				81B2ABDB83A69520FBEE642C /* AFURLResponseSerialization.h in Headers */,
+				C17365E1D60DD5B9B559FFB7 /* Pods-s3project2-AFNetworking-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		06EDF2726CA393C41735CA52 /* Pods-s3project2-AmazonS3RequestManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A4C8A2F96291D5DF97F414F /* Build configuration list for PBXNativeTarget "Pods-s3project2-AmazonS3RequestManager" */;
+			buildPhases = (
+				3BEBB5F0AE83ECA4645B7266 /* Sources */,
+				DD44C43D80EA4EAC84DD57DF /* Frameworks */,
+				57309124281FB15F0E924FAC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B52B395CCAD07801D376F9D6 /* PBXTargetDependency */,
+			);
+			name = "Pods-s3project2-AmazonS3RequestManager";
+			productName = "Pods-s3project2-AmazonS3RequestManager";
+			productReference = 873E24BA3B9BB3D4EF2B1478 /* AmazonS3RequestManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		07B4F23C64E2410726BCAFAB /* Pods-s3project2-AFNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FF8FDC46B0EBE31FD0A404A /* Build configuration list for PBXNativeTarget "Pods-s3project2-AFNetworking" */;
+			buildPhases = (
+				FBCA5E71E6B4B09802AAAB3A /* Sources */,
+				75C02F4E9BC55EF824D6F7AF /* Frameworks */,
+				E1E0DD1D24AC4125AB2EFC65 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-s3project2-AFNetworking";
+			productName = "Pods-s3project2-AFNetworking";
+			productReference = 3E7DC79AFED099E8A99680AB /* AFNetworking.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AB652EFBC67795E230BD789C /* Pods-s3project2-AFAmazonS3Manager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D213E5B282357BE76CCCF7BB /* Build configuration list for PBXNativeTarget "Pods-s3project2-AFAmazonS3Manager" */;
+			buildPhases = (
+				121B5FF646BAD1AE57FE1CA3 /* Sources */,
+				0F312A2C27E689CEAF97DFF8 /* Frameworks */,
+				5E3A82FF32E1913F7FED27E8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DA0B732A99D16352BEE3AFF /* PBXTargetDependency */,
+			);
+			name = "Pods-s3project2-AFAmazonS3Manager";
+			productName = "Pods-s3project2-AFAmazonS3Manager";
+			productReference = F317D89A3542B7E5E4FA0839 /* AFAmazonS3Manager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C1DDEEC01C2E0C84E0FEB566 /* Pods-s3project2-Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED74C6543CFACC2C918F4A83 /* Build configuration list for PBXNativeTarget "Pods-s3project2-Alamofire" */;
+			buildPhases = (
+				1073B5600BE79466C21049DB /* Sources */,
+				7EC631A2D0DD684DE8F898DE /* Frameworks */,
+				C6B821FA104ADDA9B2EAE56E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-s3project2-Alamofire";
+			productName = "Pods-s3project2-Alamofire";
+			productReference = 4A4379CFE70FA61BAEEEB38C /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C93616B712EC0EAE61667BBB /* Pods-s3project2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B31692DC5CB31F6635FFC4B3 /* Build configuration list for PBXNativeTarget "Pods-s3project2" */;
+			buildPhases = (
+				09857645AE6DA58DF906E3A9 /* Sources */,
+				8837AD26AC39D9607E0E1B10 /* Frameworks */,
+				80C020186B2AD860ADE32EBB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21371623D437AF6A05E690C6 /* PBXTargetDependency */,
+				F42D735DCE548A869E516C27 /* PBXTargetDependency */,
+				4A2CE2EE34E1D6AA2061F4C6 /* PBXTargetDependency */,
+				AB099C3F800FD2BD00CED3D2 /* PBXTargetDependency */,
+			);
+			name = "Pods-s3project2";
+			productName = "Pods-s3project2";
+			productReference = DA75B377F810CDFE7B2389F4 /* Pods_s3project2.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		12ADEE6F3AC15716340FA63C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = 9E155D961488A35FEF7ACB2C /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2C82416BA841D8E396D42302;
+			productRefGroup = F62B9883EC39480D66BBBB8F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C93616B712EC0EAE61667BBB /* Pods-s3project2 */,
+				AB652EFBC67795E230BD789C /* Pods-s3project2-AFAmazonS3Manager */,
+				07B4F23C64E2410726BCAFAB /* Pods-s3project2-AFNetworking */,
+				C1DDEEC01C2E0C84E0FEB566 /* Pods-s3project2-Alamofire */,
+				06EDF2726CA393C41735CA52 /* Pods-s3project2-AmazonS3RequestManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09857645AE6DA58DF906E3A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92EAAC5C5B4B285A8C9FA95B /* Pods-s3project2-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1073B5600BE79466C21049DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				164C9B5DEEC2277F19C8A632 /* Alamofire.swift in Sources */,
+				0CB17D7C93F3AB0DB0DC8B8E /* Download.swift in Sources */,
+				6FC3F15B98036523D46ECB2B /* Manager.swift in Sources */,
+				E489454CF0A536679B5BC504 /* ParameterEncoding.swift in Sources */,
+				D022DA8D9CE110E6B14BC854 /* Pods-s3project2-Alamofire-dummy.m in Sources */,
+				B417317B6678916A5D6DACB4 /* Request.swift in Sources */,
+				BD6C6181666CFD1ED82F7354 /* ResponseSerialization.swift in Sources */,
+				4375F1D60196591F7DCF53C5 /* Upload.swift in Sources */,
+				50F7553D62BEAA1C533F60A5 /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		121B5FF646BAD1AE57FE1CA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24CD9FFAD15097E3303ADF7B /* AFAmazonS3Manager.m in Sources */,
+				A167D1955E60167AC04D6167 /* AFAmazonS3RequestSerializer.m in Sources */,
+				AF7A75B73B9D3D29354C5B5B /* AFAmazonS3ResponseSerializer.m in Sources */,
+				22CB60DA0C7EAA3C24CADB4C /* Pods-s3project2-AFAmazonS3Manager-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEBB5F0AE83ECA4645B7266 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				118EACEC9EEDCFDF038C8CB8 /* AmazonS3ACL.swift in Sources */,
+				4BDA8F1C08DE3C745C1E24C6 /* AmazonS3RequestManager.swift in Sources */,
+				930AC9DE7B848F117ED1C989 /* AmazonS3SignatureHelpers.m in Sources */,
+				914BE8B275765AC833319AA3 /* Pods-s3project2-AmazonS3RequestManager-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBCA5E71E6B4B09802AAAB3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BFB4671E15259302B34D253 /* AFHTTPRequestOperation.m in Sources */,
+				26B5DC113E758835E2ED53EF /* AFHTTPRequestOperationManager.m in Sources */,
+				2FA706464379078649F0840F /* AFNetworkReachabilityManager.m in Sources */,
+				F142F83B0F44BAE8BA377005 /* AFSecurityPolicy.m in Sources */,
+				31E765602905FC749E3FC866 /* AFURLConnectionOperation.m in Sources */,
+				6C6F43B417DB484433EBE0C5 /* AFURLRequestSerialization.m in Sources */,
+				69CCEB8C8F2387A3E6CD9094 /* AFURLResponseSerialization.m in Sources */,
+				5EA3229A91E254152B6A4B7E /* Pods-s3project2-AFNetworking-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21371623D437AF6A05E690C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-s3project2-AFAmazonS3Manager";
+			target = AB652EFBC67795E230BD789C /* Pods-s3project2-AFAmazonS3Manager */;
+			targetProxy = 5F3798F6EB6A78EF8D0B6C1E /* PBXContainerItemProxy */;
+		};
+		4A2CE2EE34E1D6AA2061F4C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-s3project2-Alamofire";
+			target = C1DDEEC01C2E0C84E0FEB566 /* Pods-s3project2-Alamofire */;
+			targetProxy = 7C164E325304A9A592C64448 /* PBXContainerItemProxy */;
+		};
+		4DA0B732A99D16352BEE3AFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-s3project2-AFNetworking";
+			target = 07B4F23C64E2410726BCAFAB /* Pods-s3project2-AFNetworking */;
+			targetProxy = 82A890DC1D64EF0421474D31 /* PBXContainerItemProxy */;
+		};
+		AB099C3F800FD2BD00CED3D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-s3project2-AmazonS3RequestManager";
+			target = 06EDF2726CA393C41735CA52 /* Pods-s3project2-AmazonS3RequestManager */;
+			targetProxy = B365280FE606CD475F8EA4F7 /* PBXContainerItemProxy */;
+		};
+		B52B395CCAD07801D376F9D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-s3project2-Alamofire";
+			target = C1DDEEC01C2E0C84E0FEB566 /* Pods-s3project2-Alamofire */;
+			targetProxy = B5C9EEDE86F6912466648C72 /* PBXContainerItemProxy */;
+		};
+		F42D735DCE548A869E516C27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-s3project2-AFNetworking";
+			target = 07B4F23C64E2410726BCAFAB /* Pods-s3project2-AFNetworking */;
+			targetProxy = 0A8E0DF388464393078144AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0860E2503A1F24925F391177 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E01D7F782D5B654F67DD0DC7 /* Pods-s3project2-AmazonS3RequestManager-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-s3project2-AmazonS3RequestManager/Pods-s3project2-AmazonS3RequestManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-s3project2-AmazonS3RequestManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-s3project2-AmazonS3RequestManager/Pods-s3project2-AmazonS3RequestManager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AmazonS3RequestManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0CAC2C9ACBB45B6ABAC0408F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7C786385EDA0DBF8365FAD3 /* Pods-s3project2-AFAmazonS3Manager-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-s3project2-AFAmazonS3Manager/Pods-s3project2-AFAmazonS3Manager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-s3project2-AFAmazonS3Manager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-s3project2-AFAmazonS3Manager/Pods-s3project2-AFAmazonS3Manager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AFAmazonS3Manager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		463049CA93775945F9168386 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7C786385EDA0DBF8365FAD3 /* Pods-s3project2-AFAmazonS3Manager-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-s3project2-AFAmazonS3Manager/Pods-s3project2-AFAmazonS3Manager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-s3project2-AFAmazonS3Manager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-s3project2-AFAmazonS3Manager/Pods-s3project2-AFAmazonS3Manager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AFAmazonS3Manager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		54017C8896BBF7959965168F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A9F7ED22F98C833015CADCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56D7239F34F35DE266C29315 /* Pods-s3project2-Alamofire-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-s3project2-Alamofire/Pods-s3project2-Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-s3project2-Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-s3project2-Alamofire/Pods-s3project2-Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		647C2DB6DCAABFA67C21C130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		818F637CB7E4A477C83A2076 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11F7900C6123A35A5BACC198 /* Pods-s3project2-AFNetworking-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-s3project2-AFNetworking/Pods-s3project2-AFNetworking-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-s3project2-AFNetworking/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-s3project2-AFNetworking/Pods-s3project2-AFNetworking.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AFNetworking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A5ED561B1D62D7D1E04832F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E01D7F782D5B654F67DD0DC7 /* Pods-s3project2-AmazonS3RequestManager-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-s3project2-AmazonS3RequestManager/Pods-s3project2-AmazonS3RequestManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-s3project2-AmazonS3RequestManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-s3project2-AmazonS3RequestManager/Pods-s3project2-AmazonS3RequestManager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AmazonS3RequestManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A80003CCFC7096CD4AF0E1F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56D7239F34F35DE266C29315 /* Pods-s3project2-Alamofire-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-s3project2-Alamofire/Pods-s3project2-Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-s3project2-Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-s3project2-Alamofire/Pods-s3project2-Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B85E6D3CDF5CF76525C1BB42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AC5C8DA55E368C7F0325087 /* Pods-s3project2.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-s3project2/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-s3project2/Pods-s3project2.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_s3project2;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CAA5B82527D5D8DBD93B3130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC1457815EF6777C9D4FCB09 /* Pods-s3project2.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-s3project2/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-s3project2/Pods-s3project2.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_s3project2;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DB598C8FF324FF6E2C1E0459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11F7900C6123A35A5BACC198 /* Pods-s3project2-AFNetworking-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-s3project2-AFNetworking/Pods-s3project2-AFNetworking-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-s3project2-AFNetworking/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-s3project2-AFNetworking/Pods-s3project2-AFNetworking.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AFNetworking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2FF8FDC46B0EBE31FD0A404A /* Build configuration list for PBXNativeTarget "Pods-s3project2-AFNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				818F637CB7E4A477C83A2076 /* Debug */,
+				DB598C8FF324FF6E2C1E0459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A4C8A2F96291D5DF97F414F /* Build configuration list for PBXNativeTarget "Pods-s3project2-AmazonS3RequestManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5ED561B1D62D7D1E04832F6 /* Debug */,
+				0860E2503A1F24925F391177 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E155D961488A35FEF7ACB2C /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				647C2DB6DCAABFA67C21C130 /* Debug */,
+				54017C8896BBF7959965168F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B31692DC5CB31F6635FFC4B3 /* Build configuration list for PBXNativeTarget "Pods-s3project2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAA5B82527D5D8DBD93B3130 /* Debug */,
+				B85E6D3CDF5CF76525C1BB42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D213E5B282357BE76CCCF7BB /* Build configuration list for PBXNativeTarget "Pods-s3project2-AFAmazonS3Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				463049CA93775945F9168386 /* Debug */,
+				0CAC2C9ACBB45B6ABAC0408F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED74C6543CFACC2C918F4A83 /* Build configuration list for PBXNativeTarget "Pods-s3project2-Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A80003CCFC7096CD4AF0E1F2 /* Debug */,
+				5A9F7ED22F98C833015CADCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 12ADEE6F3AC15716340FA63C /* Project object */;
+}

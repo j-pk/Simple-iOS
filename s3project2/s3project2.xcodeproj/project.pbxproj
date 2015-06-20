@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DF3DA70F0F989078B4973C7 /* Pods_s3project2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A1BB6AD3C4B87AA3F6FF3F /* Pods_s3project2.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C00EE2FC1B330BA600AF0A0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00EE2FB1B330BA600AF0A0D /* AppDelegate.swift */; };
+		C00EE2FE1B330BA600AF0A0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00EE2FD1B330BA600AF0A0D /* ViewController.swift */; };
+		C00EE3011B330BA600AF0A0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00EE2FF1B330BA600AF0A0D /* Main.storyboard */; };
+		C00EE3031B330BA600AF0A0D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00EE3021B330BA600AF0A0D /* Images.xcassets */; };
+		C00EE3061B330BA600AF0A0D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C00EE3041B330BA600AF0A0D /* LaunchScreen.xib */; };
+		C00EE3121B330BA600AF0A0D /* s3project2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00EE3111B330BA600AF0A0D /* s3project2Tests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C00EE30C1B330BA600AF0A0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C00EE2EE1B330BA600AF0A0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C00EE2F51B330BA600AF0A0D;
+			remoteInfo = s3project2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3BD4919AF212D4EEDB925271 /* Pods-s3project2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-s3project2.release.xcconfig"; path = "Pods/Target Support Files/Pods-s3project2/Pods-s3project2.release.xcconfig"; sourceTree = "<group>"; };
+		45A1BB6AD3C4B87AA3F6FF3F /* Pods_s3project2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_s3project2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BF67B963F067E8D24741D0F /* Pods-s3project2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-s3project2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-s3project2/Pods-s3project2.debug.xcconfig"; sourceTree = "<group>"; };
+		C00EE2F61B330BA600AF0A0D /* s3project2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = s3project2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C00EE2FA1B330BA600AF0A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C00EE2FB1B330BA600AF0A0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C00EE2FD1B330BA600AF0A0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C00EE3001B330BA600AF0A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C00EE3021B330BA600AF0A0D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C00EE3051B330BA600AF0A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C00EE30B1B330BA600AF0A0D /* s3project2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = s3project2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C00EE3101B330BA600AF0A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C00EE3111B330BA600AF0A0D /* s3project2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = s3project2Tests.swift; sourceTree = "<group>"; };
+		C0FF7EEE1B33210A000218D9 /* s3project2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "s3project2-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C00EE2F31B330BA600AF0A0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DF3DA70F0F989078B4973C7 /* Pods_s3project2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C00EE3081B330BA600AF0A0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		57F4F73CA261F17544186C56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45A1BB6AD3C4B87AA3F6FF3F /* Pods_s3project2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3F57E3A31F8355F49AED742 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4BF67B963F067E8D24741D0F /* Pods-s3project2.debug.xcconfig */,
+				3BD4919AF212D4EEDB925271 /* Pods-s3project2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C00EE2ED1B330BA600AF0A0D = {
+			isa = PBXGroup;
+			children = (
+				C00EE2F81B330BA600AF0A0D /* s3project2 */,
+				C00EE30E1B330BA600AF0A0D /* s3project2Tests */,
+				C00EE2F71B330BA600AF0A0D /* Products */,
+				A3F57E3A31F8355F49AED742 /* Pods */,
+				57F4F73CA261F17544186C56 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C00EE2F71B330BA600AF0A0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C00EE2F61B330BA600AF0A0D /* s3project2.app */,
+				C00EE30B1B330BA600AF0A0D /* s3project2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C00EE2F81B330BA600AF0A0D /* s3project2 */ = {
+			isa = PBXGroup;
+			children = (
+				C00EE2FB1B330BA600AF0A0D /* AppDelegate.swift */,
+				C00EE2FD1B330BA600AF0A0D /* ViewController.swift */,
+				C00EE2FF1B330BA600AF0A0D /* Main.storyboard */,
+				C00EE3021B330BA600AF0A0D /* Images.xcassets */,
+				C00EE3041B330BA600AF0A0D /* LaunchScreen.xib */,
+				C00EE2F91B330BA600AF0A0D /* Supporting Files */,
+				C0FF7EEE1B33210A000218D9 /* s3project2-Bridging-Header.h */,
+			);
+			path = s3project2;
+			sourceTree = "<group>";
+		};
+		C00EE2F91B330BA600AF0A0D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C00EE2FA1B330BA600AF0A0D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C00EE30E1B330BA600AF0A0D /* s3project2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C00EE3111B330BA600AF0A0D /* s3project2Tests.swift */,
+				C00EE30F1B330BA600AF0A0D /* Supporting Files */,
+			);
+			path = s3project2Tests;
+			sourceTree = "<group>";
+		};
+		C00EE30F1B330BA600AF0A0D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C00EE3101B330BA600AF0A0D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C00EE2F51B330BA600AF0A0D /* s3project2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C00EE3151B330BA600AF0A0D /* Build configuration list for PBXNativeTarget "s3project2" */;
+			buildPhases = (
+				82AACDA19E50BDD970C9D99B /* Check Pods Manifest.lock */,
+				C00EE2F21B330BA600AF0A0D /* Sources */,
+				C00EE2F31B330BA600AF0A0D /* Frameworks */,
+				C00EE2F41B330BA600AF0A0D /* Resources */,
+				24A8E0ED795D718BBDD4B667 /* Embed Pods Frameworks */,
+				17BB50FD0BC44EF284945C32 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = s3project2;
+			productName = s3project2;
+			productReference = C00EE2F61B330BA600AF0A0D /* s3project2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C00EE30A1B330BA600AF0A0D /* s3project2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C00EE3181B330BA600AF0A0D /* Build configuration list for PBXNativeTarget "s3project2Tests" */;
+			buildPhases = (
+				C00EE3071B330BA600AF0A0D /* Sources */,
+				C00EE3081B330BA600AF0A0D /* Frameworks */,
+				C00EE3091B330BA600AF0A0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C00EE30D1B330BA600AF0A0D /* PBXTargetDependency */,
+			);
+			name = s3project2Tests;
+			productName = s3project2Tests;
+			productReference = C00EE30B1B330BA600AF0A0D /* s3project2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C00EE2EE1B330BA600AF0A0D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Parker Kirby";
+				TargetAttributes = {
+					C00EE2F51B330BA600AF0A0D = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					C00EE30A1B330BA600AF0A0D = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = C00EE2F51B330BA600AF0A0D;
+					};
+				};
+			};
+			buildConfigurationList = C00EE2F11B330BA600AF0A0D /* Build configuration list for PBXProject "s3project2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C00EE2ED1B330BA600AF0A0D;
+			productRefGroup = C00EE2F71B330BA600AF0A0D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C00EE2F51B330BA600AF0A0D /* s3project2 */,
+				C00EE30A1B330BA600AF0A0D /* s3project2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C00EE2F41B330BA600AF0A0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C00EE3011B330BA600AF0A0D /* Main.storyboard in Resources */,
+				C00EE3061B330BA600AF0A0D /* LaunchScreen.xib in Resources */,
+				C00EE3031B330BA600AF0A0D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C00EE3091B330BA600AF0A0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17BB50FD0BC44EF284945C32 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-s3project2/Pods-s3project2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		24A8E0ED795D718BBDD4B667 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-s3project2/Pods-s3project2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82AACDA19E50BDD970C9D99B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C00EE2F21B330BA600AF0A0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C00EE2FE1B330BA600AF0A0D /* ViewController.swift in Sources */,
+				C00EE2FC1B330BA600AF0A0D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C00EE3071B330BA600AF0A0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C00EE3121B330BA600AF0A0D /* s3project2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C00EE30D1B330BA600AF0A0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C00EE2F51B330BA600AF0A0D /* s3project2 */;
+			targetProxy = C00EE30C1B330BA600AF0A0D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C00EE2FF1B330BA600AF0A0D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C00EE3001B330BA600AF0A0D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C00EE3041B330BA600AF0A0D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C00EE3051B330BA600AF0A0D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C00EE3131B330BA600AF0A0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C00EE3141B330BA600AF0A0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C00EE3161B330BA600AF0A0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BF67B963F067E8D24741D0F /* Pods-s3project2.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = s3project2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "s3project2/s3project2-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C00EE3171B330BA600AF0A0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BD4919AF212D4EEDB925271 /* Pods-s3project2.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = s3project2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "s3project2/s3project2-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		C00EE3191B330BA600AF0A0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = s3project2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/s3project2.app/s3project2";
+			};
+			name = Debug;
+		};
+		C00EE31A1B330BA600AF0A0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = s3project2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/s3project2.app/s3project2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C00EE2F11B330BA600AF0A0D /* Build configuration list for PBXProject "s3project2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00EE3131B330BA600AF0A0D /* Debug */,
+				C00EE3141B330BA600AF0A0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C00EE3151B330BA600AF0A0D /* Build configuration list for PBXNativeTarget "s3project2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00EE3161B330BA600AF0A0D /* Debug */,
+				C00EE3171B330BA600AF0A0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C00EE3181B330BA600AF0A0D /* Build configuration list for PBXNativeTarget "s3project2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00EE3191B330BA600AF0A0D /* Debug */,
+				C00EE31A1B330BA600AF0A0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C00EE2EE1B330BA600AF0A0D /* Project object */;
+}
