@@ -47,13 +47,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Dispose of any resources that can be recreated.
     }
     
-    
-    let amazonS3Manager = AmazonS3RequestManager(bucket: "tiyqpic",
+    let amazonS3Manager = AmazonS3RequestManager(bucket: bucket,
         region: .USStandard,
-        accessKey: "AKIAJV5BTC73BTEQ4RLA",
-        secret: "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")
+        accessKey: "",
+        secret: "")
     
-    let s3Manager = AFAmazonS3Manager(accessKeyID: "AKIAJV5BTC73BTEQ4RLA", secret: "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")
+    let s3Manager = AFAmazonS3Manager(accessKeyID: accessKey, secret: secret)
     
 //    let fileURL: NSURL = NSURL(fileURLWithPath: "pathToMyObject")
 //    amazonS3Manager.putObject(fileURL, destinationPath: "pathToSaveObjectTo/fileName.jpg")
@@ -66,7 +65,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         //
         let imageData = UIImagePNGRepresentation(image)
         
-        s3Manager.requestSerializer.bucket = "qpic"
+        s3Manager.requestSerializer.bucket = bucket
         s3Manager.requestSerializer.region = AFAmazonS3USStandardRegion
         
 //        amazonS3Manager.putObject(imageData, destinationPath: imageName + ".png", acl: nil)
