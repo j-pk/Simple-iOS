@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:s3project.xcodeproj">
+      location = "self:CoreNotes.xcodeproj">
    </FileRef>
 </Workspace>

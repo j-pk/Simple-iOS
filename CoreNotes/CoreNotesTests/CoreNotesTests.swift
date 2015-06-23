@@ -1,15 +1,15 @@
 //
-//  s3projectTests.swift
-//  s3projectTests
+//  CoreNotesTests.swift
+//  CoreNotesTests
 //
-//  Created by jpk on 6/18/15.
+//  Created by jpk on 6/23/15.
 //  Copyright (c) 2015 Parker Kirby. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class s3projectTests: XCTestCase {
+class CoreNotesTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
