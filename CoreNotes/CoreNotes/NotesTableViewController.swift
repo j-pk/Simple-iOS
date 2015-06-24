@@ -36,7 +36,10 @@ class NotesTableViewController: UITableViewController {
                     
                     request.entity = entity
                     
-                    // add predicate filter for category 
+                    // add predicate filter for category
+                    
+                    let wordPredicate = NSPredicate(format: "%K contains %@", "content","Yeti")
+                    request.predicate = wordPredicate
                     
                     if let objects = moc.executeFetchRequest(request, error: nil) as? [NSManagedObject] {
                         

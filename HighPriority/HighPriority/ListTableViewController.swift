@@ -10,9 +10,9 @@ import UIKit
 
 enum Priority {
     
-    case High
-    case Medium
-    case Low
+    case Completed
+    case Pending
+    case Casual
     
 }
 

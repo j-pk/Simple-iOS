@@ -48,3 +48,4 @@ func categoryColor(name: String) -> UIColor {
     return categories[name]!.1
 
 }
+
