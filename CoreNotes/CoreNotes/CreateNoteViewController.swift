@@ -1,10 +1,3 @@
-//
-//  CreateNoteViewController.swift
-//  CoreNotes
-//
-//  Created by jpk on 6/23/15.
-//  Copyright (c) 2015 Parker Kirby. All rights reserved.
-//
 
 import UIKit
 import CoreData
@@ -42,14 +35,11 @@ class CreateNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
         
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
         
         
     }
@@ -65,15 +55,27 @@ class CreateNoteViewController: UIViewController {
         
         if let moc = appDelegate.managedObjectContext {
         //this is going to be object that we store in our database
-            var newObject = NSEntityDescription.insertNewObjectForEntityForName("Note", inManagedObjectContext: moc) as! NSManagedObject
-            var colorObject = NSEntityDescription.insertNewObjectForEntityForName("Category", inManagedObjectContext: moc) as! NSManagedObject
-           
-            var relatedObject = NSManagedObject()
             
-            newObject.setValue(noteTextField.text, forKey: "content")
-            newObject.setValue(NSDate(), forKey: "created")
             
-            colorObject.setValue(priorityChoice, forKey: "color")
+            var catEntity = NSEntityDescription.entityForName("Category", inManagedObjectContext: moc)
+            
+            let request = NSFetchRequest()
+            
+            request.entity = catEntity
+            
+            if let catObjects = moc.executeFetchRequest(request, error: nil) as? [NSManagedObject] {
+                
+                var newObject = NSEntityDescription.insertNewObjectForEntityForName("Note", inManagedObjectContext: moc) as! NSManagedObject
+
+                newObject.setValue(noteTextField.text, forKey: "content")
+                newObject.setValue(NSDate(), forKey: "created")
+                
+                let catObject = catObjects[0]
+                
+                newObject.setValue(catObjects, forKey: "category")
+                
+            }
+
             
             // add five button and set category relationship
             

@@ -25,7 +25,7 @@ class NotesTableViewController: UITableViewController {
             
             request.entity = catEntity
             
-            if let catObjects = moc.executeFetchRequest(request, error: nil) {
+            if let catObjects = moc.executeFetchRequest(request, error: nil) as? [NSManagedObject] {
                 
                 //looping through the category objects in the appdelegate (color,name)
                 for catObject in catObjects {
@@ -38,8 +38,12 @@ class NotesTableViewController: UITableViewController {
                     
                     // add predicate filter for category
                     
-                    let wordPredicate = NSPredicate(format: "%K contains %@", "content","Yeti")
-                    request.predicate = wordPredicate
+                    // let wordPredicate = NSPredicate(format: "%K contains %@", "content", catObject.valueForKey("name") as! String)
+                    
+                    let catPredicate = NSPredicate(format: "%K == %@", "category", catObject)
+
+                    request.predicate = catPredicate
+                    
                     
                     if let objects = moc.executeFetchRequest(request, error: nil) as? [NSManagedObject] {
                         
