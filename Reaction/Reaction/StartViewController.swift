@@ -4,11 +4,12 @@
 import UIKit
 import GameKit
 
-class StartViewController: UIViewController {
+class StartViewController: UIViewController, GKGameCenterControllerDelegate {
 
     @IBOutlet weak var topScoreLabel: UILabel!
     @IBOutlet weak var goButton: CircleButton!
     
+    @IBOutlet weak var gameCenter: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,6 +59,7 @@ class StartViewController: UIViewController {
         
     }
     
+
     override func viewWillAppear(animated: Bool) {
         
         loadScore()
@@ -104,4 +106,20 @@ class StartViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func showLeaderBoard(sender: AnyObject) {
+        
+        let gameVC = GKGameCenterViewController()
+        gameVC.leaderboardIdentifier = "circles_touched"
+        gameVC.gameCenterDelegate = self
+        presentViewController(gameVC, animated: true, completion: nil)
+        
+    }
+    
+    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController!) {
+        
+        gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
 }
