@@ -4,13 +4,15 @@
 import UIKit
 import GameKit
 
+let π = M_PI
+
 class GameViewController: UIViewController {
     
     var currentCircles: [CircleButton] = []
     var timerBar = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 10))
     var currentCorrectChoice = Int(arc4random_uniform(4))
-    var rotatingView = UIView()
-    let π = M_PI
+    var circle = CircleButton()
+    var rotatingView = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 600))
     var currentScore = 0 {
         
         didSet { scoreLabel.text = "\(currentScore)" }
@@ -18,7 +20,7 @@ class GameViewController: UIViewController {
     }
     
     var scoreLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 100))
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,13 +33,9 @@ class GameViewController: UIViewController {
         scoreLabel.frame.origin.y = view.frame.height - 120
         scoreLabel.frame.size.width = view.frame.width
         scoreLabel.textAlignment = NSTextAlignment.Center
-        rotatingView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-        //rotatingView.center = view.center
-        rotatingView.backgroundColor = UIColor.lightGrayColor()
         view.addSubview(scoreLabel)
-        view.addSubview(rotatingView)
         
-        rotateView()
+        view.addSubview(rotatingView)
         
         animateNewCirclesIn()
     }
@@ -52,17 +50,17 @@ class GameViewController: UIViewController {
             
             self.timerBar.frame.size.width = 0
             
-        }) { (finished) -> Void in
-            
-            if finished { self.gameOver() }
-
+            }) { (finished) -> Void in
+                
+                if finished { self.gameOver() }
+                
         }
-
+        
     }
-
+    
     func animateNewCirclesIn() {
         
-        runTimer(10.0)
+        runTimer(1.0)
         
         var cW = (view.frame.width - 120) / 2
         var cR = cW / 2
@@ -73,11 +71,10 @@ class GameViewController: UIViewController {
         
         for c in 0..<4 {
             
-            var circle = CircleButton()
             circle.choice = c
             circle.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
             circle.center = view.center
-            rotatingView.addSubview(circle)
+            view.addSubview(circle)
             
             //if current circle 1.0 else 0.5
             circle.alpha = c == currentCorrectChoice ? 1.0 : 0.5
@@ -89,21 +86,49 @@ class GameViewController: UIViewController {
             let (dx, dy) = directions[c]
             
             let randomAnimationSpeed = Double(arc4random_uniform(60) + 40) / 100
-
+            
             UIView.animateWithDuration(randomAnimationSpeed, delay: 0.0, options: UIViewAnimationOptions.AllowUserInteraction, animations: { () -> Void in
                 
-                circle.alpha = 0.5
+                self.circle.alpha = 0.5
                 
-                circle.frame.size.width = cW
-                circle.frame.size.height = cW
+                self.circle.frame.size.width = cW
+                self.circle.frame.size.height = cW
                 
                 let x = self.view.center.x + dx * (cR + 10)
                 let y = self.view.center.y + dy * (cR + 10)
                 
-                circle.center = CGPoint(x: x, y: y)
+                self.circle.center = CGPoint(x: x, y: y)
                 
-            }, completion: nil)
+                }, completion: nil)
             
+        }
+        
+    }
+    
+    func rotateView() {
+        
+        UIView.animateWithDuration(1.0, delay: 1.0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+            
+            self.rotatingView.transform = CGAffineTransformRotate(self.rotatingView.transform, CGFloat(π))
+            
+            }) { (finished) -> Void in
+                
+                self.rotateAgain()
+                
+        }
+        
+    }
+    
+    func rotateAgain() {
+        
+        UIView.animateWithDuration(1.0, delay: 1.0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+            
+            self.rotatingView.transform = CGAffineTransformRotate(self.rotatingView.transform, CGFloat(π))
+            
+            }) { (finished) -> Void in
+                
+                self.rotateView()
+                
         }
         
     }
@@ -114,7 +139,7 @@ class GameViewController: UIViewController {
         
         for circle in currentCircles {
             
-            circle.choice = 4 
+            circle.choice = 4
             
             let distX = circle.center.x - view.center.x
             let distY = circle.center.y - view.center.y
@@ -126,40 +151,12 @@ class GameViewController: UIViewController {
                 
                 circle.center = CGPoint(x: distX * 6 + self.view.center.x, y: distY * 6 + self.view.center.y)
                 
-            }, completion: { (finished) -> Void in
-                
-                circle.removeFromSuperview()
-            
+                }, completion: { (finished) -> Void in
+                    
+                    circle.removeFromSuperview()
+                    
             })
             
-        }
-        
-    }
-    
-    func rotateView() {
-        
-        UIView.animateWithDuration(2.0, delay: 0.0, options: UIViewAnimationOptions.CurveLinear | UIViewAnimationOptions.AllowUserInteraction, animations: { () -> Void in
-            
-            self.rotatingView.transform = CGAffineTransformRotate(self.rotatingView.transform, CGFloat(self.π))
-            
-            }) { (finished) -> Void in
-                
-                //self.rotateAgain()
-                
-        }
-        
-    }
-    
-    func rotateAgain() {
-        
-        UIView.animateWithDuration(0.0, delay: 0.0, options: UIViewAnimationOptions.CurveLinear | UIViewAnimationOptions.AllowUserInteraction, animations: { () -> Void in
-            
-            self.rotatingView.transform = CGAffineTransformRotate(self.rotatingView.transform, CGFloat(self.π))
-            
-            }) { (finished) -> Void in
-                
-                self.rotateView()
-                
         }
         
     }
@@ -180,7 +177,7 @@ class GameViewController: UIViewController {
             gameOverLabel.alpha = 1
             
             }) { (finished) -> Void in
-         
+                
                 UIView.animateWithDuration(1.6, animations: { () -> Void in
                     
                     gameOverLabel.alpha = 0
@@ -190,12 +187,12 @@ class GameViewController: UIViewController {
                         
                         self.endGame()
                         
-            }
+                }
                 
         }
         
     }
-
+    
     func endGame() {
         
         if let startVC = storyboard?.instantiateViewControllerWithIdentifier("startVC") as? StartViewController {
@@ -214,7 +211,7 @@ class GameViewController: UIViewController {
             
             currentScore++
             
-            //report score to leaderboard 
+            //report score to leaderboard
             let reportScore = GKScore(leaderboardIdentifier: "circles_touched")
             reportScore.value = Int64(currentScore)
             GKScore.reportScores([reportScore], withCompletionHandler: { (error) -> Void in
@@ -222,7 +219,7 @@ class GameViewController: UIViewController {
             })
             
             currentCorrectChoice = Int(arc4random_uniform(4))
-
+            
             animateOldCirclesOut()
             
             currentCircles = []
@@ -230,7 +227,7 @@ class GameViewController: UIViewController {
             animateNewCirclesIn()
             
         } else {
-
+            
             gameOver()
         }
         
